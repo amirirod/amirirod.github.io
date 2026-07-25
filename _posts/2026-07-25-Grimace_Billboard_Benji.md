@@ -9,7 +9,7 @@ Give it a listen:
   data-testid="embed-iframe" 
   style="display: block; border-radius:12px; margin: 0 auto" 
   src="https://open.spotify.com/embed/track/4KOlRlB81TAmDXHQZiVTbY?utm_source=generator&si=f79b647587164543" 
-  width="65%" 
+  width="250" 
   height="250" 
   frameBorder="0" 
   allowfullscreen="" 
