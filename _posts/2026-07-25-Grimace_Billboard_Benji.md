@@ -1,6 +1,6 @@
 ## The Song of the Day is...
 # Grimace by Billboard Benji
-Its simple, its catchy, its gritty, its hard.
+Its simple, its catchy, its gritty, its hard
 
 Give it a listen:
 <html>
