@@ -1,4 +1,4 @@
-## July 25, 2026
+## Grimace
 # Grimace by Billboard Benji
 Its simple, its catchy, its gritty, its hard
 
