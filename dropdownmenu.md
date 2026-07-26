@@ -1,9 +1,9 @@
 ---
 
-title: <div class="dropdown"><button class="dropbtn">Hover Me</button><div class="dropdown-content">
-    <a class="post_navi-item nav_next" href="{{ 'albums.html' | absolute_url }}" title="Albums">Albums</a></div></div>
+title: select
 ---
-
+<div class="dropdown"><button class="dropbtn">Hover Me</button><div class="dropdown-content">
+    <a class="post_navi-item nav_next" href="{{ 'albums.html' | absolute_url }}" title="Albums">Albums</a></div></div>
 <style>
 .dropdown {
   position: relative;
