@@ -6,6 +6,17 @@ window_text: "This text loads directly inside the window overlay."
 ---
 Just some music.
 <button onclick="openWindow()">Open Window</button>
+<div class="content-section">
+  <h2 class="sticky-text">
+    <p>
+      Today's date is: <span id="current-date"></span>
+    </p>
+  </h2>
+
+<script>
+  const dateElement = document.getElementById('current-date');
+  dateElement.textContent = new Date().toLocaleDateString();
+</script>
 <ul>
   {% for post in site.posts %}
     {% if post.tags contains 'song' %}
