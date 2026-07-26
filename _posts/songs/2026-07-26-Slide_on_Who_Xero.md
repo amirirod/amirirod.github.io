@@ -1,5 +1,6 @@
 ---
 tags: song
+date: 2026-07-26 
 ---
 ## Slide on Who
 # Slide on Who by Xero
