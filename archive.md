@@ -2,6 +2,7 @@
 layout: page
 title: Blog Archive
 ---
+<html>
 <style>
 .dropdown {
   position: relative;
@@ -38,7 +39,7 @@ title: Blog Archive
 <div class="dropdown">
   <button class="dropbtn">Hover Me</button>
   <div class="dropdown-content">
-<a class="post_navi-item nav_next" href="{{ 'albums.html' | absolute_url }}" title="Albums">Albums</a>
+    <a class="post_navi-item nav_next" href="{{ 'albums.html' | absolute_url }}" title="Albums">Albums</a>
     <a href="#">Link 2</a>
     <a href="#">Link 3</a>
   </div>
@@ -51,3 +52,4 @@ title: Blog Archive
     {% endfor %}
   </ul>
 {% endfor %}
+</html>
