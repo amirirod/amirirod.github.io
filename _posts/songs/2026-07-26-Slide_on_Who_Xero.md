@@ -2,10 +2,9 @@
 tags: song
 date: 2026-07-26 
 ---
-## Slide on Who
-# Slide on Who by Xero
+## "Slide on Who" by Xero
 
-2 million listers since Xero dropped this on his debut album "Welcome to 4way", and yet I've never heard anyone mention how hard it is. Maybe I'm out the loop, but this deserves way more attention.
+  2 million listers since Xero dropped this on his debut album "Welcome to 4way", and yet I've never heard anyone mention how hard it is. Maybe I'm out the loop, but this deserves way more attention.
 
 Give it a listen:
 <html>
