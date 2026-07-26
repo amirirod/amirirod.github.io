@@ -3,8 +3,10 @@ layout: page
 title: Albums of the Month
 ---
 
-{% for album in site.tags %}
-  <ul>
-      <li><a href="{{ post.url }}">{{ post.date | date: "%B %Y" }} - {{ post.title }}</a></li>
-  </ul>
-{% endfor %}
+<ul>
+  {% for album in site.albums %}
+    <li>
+      <a href="{{ album.url }}">{{ album.date | date: "%B %Y" }} - {{ album.title }}</a>
+    </li>
+  {% endfor %}
+</ul>
