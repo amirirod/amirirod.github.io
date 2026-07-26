@@ -6,7 +6,7 @@ window_text: "This text loads directly inside the window overlay."
 ---
 Just some music.
 <button onclick="openWindow()">Open Window</button>
-<div class="content-section">
+<div class="content-section" text-align="center">
   <h2 class="sticky-text">
     <p>
       <span id="date-display"></span>:
