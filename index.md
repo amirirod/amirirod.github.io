@@ -4,7 +4,7 @@ title: Primary Page
 window_title: "Surprise Alert!"
 window_text: "This text loads directly inside the window overlay."
 ---
-Just some music.
+Just some music
 <button onclick="openWindow()">Open Window</button>
 <div class="content-section" text-align="center">
   <h2 class="sticky-text">
@@ -55,7 +55,7 @@ Just some music.
         <div class="post-content">
           {{ post.content }}
         </div>
-        <hr style="border: 3px solid grey; height: 7px;" background-color: "#ebdcb9;" >
+        <hr style="border: 3px solid grey; height: 7px; background-color: #ebdcb9;">
       </li>
     {% endif %}
   {% endfor %}
