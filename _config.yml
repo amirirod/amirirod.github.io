@@ -11,7 +11,9 @@ description: "putting you on to quality music since 2026" # This will show up in
 #pinterest_username: username
 #youtube_username: username
 #googleplus_username: +username
-
+<div class="dropdown"><button class="dropbtn">Hover Me</button><div class="dropdown-content">
+    <a class="post_navi-item nav_next" href="{{ 'albums.html' | absolute_url }}" title="Albums">Albums</a></div>
+</div>
 #########################################################################################
 ######### Nothing below needs to be changed (unless you know what you're doing) #########
 #########################################################################################
