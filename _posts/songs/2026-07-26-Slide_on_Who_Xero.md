@@ -8,7 +8,7 @@ date: 2026-07-26
 
 Give it a listen:
 <html>
-<div class="spotify-container">
+<div class="spotify-container;" style="text-align: center">
 <iframe 
   data-testid="embed-iframe" 
   style="display: block; border-radius:12px; margin: 0 auto" 
