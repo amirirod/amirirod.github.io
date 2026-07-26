@@ -4,7 +4,7 @@ tags: album
 ## musik is noise
 # musik is noise by muney capri
 
-Its simple, its catchy, its gritty, its hard
+Going 13/13 on a new rage album that not only perfectly embodies the characteristics and style of the recently created subsubgenre but also manages to serve up an interesting and unique take on it, especially as an artist with as little mainstream attention as muney capri, is definitely grounds for album of the month. Not to mention, this is muney capri's 3rd album sized release this year (previous being 727 and 727 (Ken vs. Capri Deluxe)), highlighting his insanse work ethic, the kind that modern mainstream artists can't seem to put in to save their lives. Even as a Ken Carson fan, and even moreso as a fan of xperiment, I had no choice to pass up everything else for this dude's peice of literal gold.
 
 Give it a listen:
 <html>
