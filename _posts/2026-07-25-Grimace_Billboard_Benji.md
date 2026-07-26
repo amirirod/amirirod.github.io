@@ -1,9 +1,7 @@
 
 ## Grimace
 # Grimace by Billboard Benji
----
-tags: song
----
+
 Its simple, its catchy, its gritty, its hard
 
 Give it a listen:
