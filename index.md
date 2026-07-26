@@ -9,7 +9,7 @@ Just some music.
 <div class="content-section">
   <h2 class="sticky-text">
     <p>
-      Today's date is: <span id="date-display"></span>       <div class="dropdown">
+      <span id="date-display"></span>:        <div class="dropdown">
   <button class="dropbtn">Some Other Stuff</button>
   <div class="dropdown-content">
     <a class="post_navi-item nav_next" href="{{ 'menu/albums.html' | absolute_url }}" title="Albums">Albums</a>
