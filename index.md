@@ -7,9 +7,12 @@ window_text: "This text loads directly inside the window overlay."
 Just some music.
 <button onclick="openWindow()">Open Window</button>
 <ul>
-  {% for post in site.tags %}
+  {% for post in site.posts %}
     <li>
-      <iframe src="{{ post.url }}" width="100%" height="500px" frameborder="0"></iframe>
+      <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
+      <div class="post-content">
+        {{ post.content }}
+      </div>
     </li>
   {% endfor %}
 </ul>
