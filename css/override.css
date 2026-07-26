@@ -128,3 +128,7 @@ hr {
     height: 80px !important;
   }
 }
+ .custom-underline {
+    text-decoration: underline;
+    color: white;
+  }
