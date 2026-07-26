@@ -1,4 +1,4 @@
-Just some music.
+Just some music
 ---
 layout: window
 title: Primary Page
