@@ -1,5 +1,6 @@
 ---
 tags: album
+date: 2026-07-25
 ---
 ## "musik is noise" by muney capri
 
