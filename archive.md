@@ -2,15 +2,6 @@
 layout: page
 title: Blog Archive
 ---
-<div class="dropdown">
-  <button class="dropbtn">Hover Me</button>
-  <div class="dropdown-content">
-<a class="post_navi-item nav_next" href="{{ 'albums.html' | absolute_url }}" title="Albums">
-    Albums
-  </a>
-    <a href="#">Link 2</a>
-    <a href="#">Link 3</a>
-  </div>
 .dropdown {
   position: relative;
   display: inline-block;
@@ -41,12 +32,15 @@ title: Blog Archive
 /* SHOW the dropdown menu when hovering over the container */
 .dropdown:hover .dropdown-content {
   display: block;
-}
+  }
+<div class="dropdown">
+  <button class="dropbtn">Hover Me</button>
+  <div class="dropdown-content">
+<a class="post_navi-item nav_next" href="{{ 'albums.html' | absolute_url }}" title="Albums">Albums</a>
+    <a href="#">Link 2</a>
+    <a href="#">Link 3</a>
+  </div>
 </div>
-<button onmouseover= 
-  
-  >
-</button>
 {% for tag in site.tags %}
   <h3>{{ tag[0] }}</h3>
   <ul>
