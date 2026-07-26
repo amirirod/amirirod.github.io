@@ -1,4 +1,5 @@
 ---
+Layout: Page
 Title: Select
 ---
 <html>
