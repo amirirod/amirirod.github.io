@@ -1,4 +1,6 @@
-
+---
+tags: song
+---
 ## Grimace
 # Grimace by Billboard Benji
 
