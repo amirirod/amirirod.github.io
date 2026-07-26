@@ -2,7 +2,7 @@
 layout: default
 ---
 <link href="/css/override.css" rel="stylesheet" type="text/css">
-<article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting" style= "background-color: black; color: white; font-family: Palatino; text-indent: 2rem">
+<article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting" style= "background-color: black; color: white; font-family: Palatino;">
 
   <header class="post-header">
     <h1 class="post-title p-name" itemprop="name headline">{{ page.title | escape }}</h1>
@@ -60,7 +60,9 @@ layout: default
 </div>
 
   <div class="post-content e-content" itemprop="articleBody">
+    <style="text-indent: 2rem">
     {{ content }}
+    </style>
     {% include navlinks.html %}
   </div>
   <div class="share-links">
