@@ -10,15 +10,18 @@ Just some music.
   <h2 class="sticky-text">
     <p>
       <span id="date-display"></span>:
-      {% for post in site.posts %}
-    {% if post.tags contains 'song' %}
-      {if post.date == <span id="date-display"></span>}
-        <div class="post-content">
-          {{ post.title }}
-        </div>
+      {% assign today = site.time | date: "%Y-%m-%d" %}
+
+{% for post in site.posts %}
+  {% if post.tags contains 'song' %}
+    {% assign post_date = post.date | date: "%Y-%m-%d" %}
+    {% if post_date == today %}
+      <div class="post-content">
+        {{ post.title }}
+      </div>
     {% endif %}
-    {% endif %}
-  {% endfor %}
+  {% endif %}
+{% endfor %}
   <div class="dropdown">
   <button class="dropbtn">Some Other Stuff</button>
   <div class="dropdown-content">
