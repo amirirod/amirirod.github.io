@@ -36,7 +36,6 @@ Just some music.
     </p>
     <hr style="background-color: white">
   </h2>
-
  <script>
         // Get the current date
         const today = new Date();
