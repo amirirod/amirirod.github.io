@@ -15,7 +15,7 @@ Just some music.
         <div class="post-content">
           {{ post.content }}
         </div>
-        <hr style="border: none; height: 3px; background-color: #3498db;">
+        <hr style="border: none; height: 3px; background-color: #C7B99E;">
       </li>
     {% endif %}
   {% endfor %}
