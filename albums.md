@@ -4,9 +4,9 @@ title: Albums of the Month
 ---
 
 <ul>
-  {% for album in site.tags %}
+  {% for post in site.tags['album'] %}
     <li>
-      <a href="{{ album.url }}">{{ album.date | date: "%B %Y" }} - {{ album.title }}</a>
+      <a href="{{ post.url }}">{{ post.date | date: "%B %Y" }} - {{ post.title }}</a>
     </li>
   {% endfor %}
 </ul>
