@@ -10,7 +10,7 @@ Just some music.
   {% for post in site.posts %}
     {% if post.tags contains 'song' %}
       <li>
-        <h2><a href="{{ post.url }}">{{ page.date | date: date_format }}</a>
+        <h2><a href="{{ post.url }}">{{ post.title }}</a>
         </h2>
         <div class="post-content">
           {{ post.content }}
