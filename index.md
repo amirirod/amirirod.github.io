@@ -8,11 +8,13 @@ Just some music.
 <button onclick="openWindow()">Open Window</button>
 <ul>
   {% for post in site.posts %}
-    <li>
-      <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
-      <div class="post-content">
-        {{ post.content }}
-      </div>
-    </li>
+    {% if post.tags contains 'song' %}
+      <li>
+        <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
+        <div class="post-content">
+          {{ post.content }}
+        </div>
+      </li>
+    {% endif %}
   {% endfor %}
 </ul>
