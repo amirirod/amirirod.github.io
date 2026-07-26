@@ -34,7 +34,7 @@ Just some music.
   </div>
 </div>
     </p>
-    <hr style="background-color: white"
+    <hr style="background-color: white">
   </h2>
 
  <script>
