@@ -9,4 +9,4 @@ title: Albums of the Month
       <li><a href="{{ post.url }}">{{ post.date | date: "%B %Y" }} - {{ post.title }}</a></li>
     {% endfor %}
   </ul>
-
+{% endfor %}
