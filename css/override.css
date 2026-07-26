@@ -115,3 +115,15 @@ hr {
     background-color: #c7b99e !important;
     filter: none !important;
 }
+.spotify-container {
+  width: 65%;
+  max-width: 600px;
+}
+
+/* Switch to compact view on mobile screens to prevent clipping */
+@media (max-width: 400px) {
+  .spotify-container iframe {
+    width: 80%
+    height: 80px !important;
+  }
+}
