@@ -54,7 +54,7 @@ Just some music.
   {% for post in site.posts %}
     {% if post.tags contains 'song' %}
       <li>
-        <h2 ><a style="color: #BB0000; letter-spacing: -1px; font-weight: 320" href="{{ post.url }}">{{ post.date | date: "%B %d, %Y"}} - {{ post.title }}</a>
+        <h2 ><a style="color: #BB0000; letter-spacing: -1px; font-weight: 320; text-decoration: underline;" href="{{ post.url }}">{{ post.date | date: "%B %d, %Y"}} - {{ post.title }}</a>
         </h2>
         <div class="post-content;" style="font-family: Palatino">
           {{ post.content }}
