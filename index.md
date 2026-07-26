@@ -6,7 +6,7 @@ window_text: "This text loads directly inside the window overlay."
 ---
 Just some music.
 <button onclick="openWindow()">Open Window</button>
-<div class="content-section" background-image: linear-gradient(135deg, #020024 0%, #090979>
+<div class="content-section" style="background-image: linear-gradient(135deg, #020024 0%, #090979">
   <h2 class="sticky-text">
     <p 
       style="text-align:center;
