@@ -55,7 +55,7 @@ Just some music.
         <div class="post-content">
           {{ post.content }}
         </div>
-        <hr class="custom-divider" data-darkreader-inline-border-color="#c7b99e" data-darkreader-inline-background-color="#c7b99e">
+        <hr class="custom-divider" data-darkreader-inline-border-color=grey" data-darkreader-inline-background-color="#c7b99e">
       </li>
     {% endif %}
   {% endfor %}
