@@ -1,6 +1,6 @@
 ---
-Layout: Page
-Title: Select
+layout: Page
+title: Select
 ---
 <html>
 <style>
