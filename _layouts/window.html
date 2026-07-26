@@ -1,0 +1,24 @@
+---
+layout: default
+---
+<!-- The Main Page Content Displays Normally -->
+<div class="main-page-content">
+  {{ content }}
+</div>
+
+<!-- The Overlay Window Structure -->
+<div id="customWindow" class="window-overlay">
+  <div class="window-content">
+    <span class="close-btn" onclick="closeWindow()">&times;</span>
+    <h2>{{ page.window_title }}</h2>
+    <p>{{ page.window_text }}</p>
+  </div>
+</div>
+<script>
+  function openWindow() {
+    document.getElementById("customWindow").style.display = "block";
+  }
+  function closeWindow() {
+    document.getElementById("customWindow").style.display = "none";
+  }
+</script>
