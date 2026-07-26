@@ -10,12 +10,12 @@ Just some music.
       font-family: Palatino;"
       >
       <span id="date-display"></span>:
-      {% assign today = site.time | date: "%Y-%m-%d" %}
+      {% assign thismonth = site.time | date: "%Y-%m" %}
 
 {% for post in site.posts %}
   {% if post.tags contains 'album' %}
-    {% assign post_date = post.date | date: "%Y-%m-%d" %}
-    {% if post_date == today %}
+    {% assign post_date = post.date | date: "%Y-%m" %}
+    {% if post_date == thismonth %}
       <div class="post-content" style="text-align:center; font-size: 2.5rem; font-family: Palatino">
         {{ post.title }}
       </div>
