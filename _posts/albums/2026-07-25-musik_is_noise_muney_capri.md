@@ -1,3 +1,6 @@
+---
+tags: album
+---
 ## musik is noise
 # musik is noise by muney capri
 
