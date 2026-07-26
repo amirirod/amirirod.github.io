@@ -9,12 +9,17 @@ Just some music.
 <div class="content-section">
   <h2 class="sticky-text">
     <p>
-      <span id="date-display"></span>: 
+      <span id="date-display"></span>:
       {% for post in site.posts %}
-  {% if post.date == "2026-07-25" %}
-    <h1>{{ post.title }}</h1>
-  {% endif %}
-{% endfor %}       <div class="dropdown">
+    {% if post.tags contains 'song' %}
+      {if post.date == <span id="date-display"></span>}
+        <div class="post-content">
+          {{ post.title }}
+        </div>
+    {% endif %}
+    {% endif %}
+  {% endfor %}
+  <div class="dropdown">
   <button class="dropbtn">Some Other Stuff</button>
   <div class="dropdown-content">
     <a class="post_navi-item nav_next" href="{{ 'menu/albums.html' | absolute_url }}" title="Albums">Albums</a>
