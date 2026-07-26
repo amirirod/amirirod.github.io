@@ -116,7 +116,7 @@ hr {
     filter: none !important;
 }
 .spotify-container {
-  width: 300px;
+  width: 80%;
   max-width: 600px;
   border: 5px solid grey
 }
