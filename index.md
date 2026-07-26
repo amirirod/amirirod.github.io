@@ -9,8 +9,9 @@ Just some music.
 <div class="content-section">
   <h2 class="sticky-text">
     <p>
-      <span id="date-display"></span>: {% for post in site.posts %}
-  {% if post.date == "2026-06-01" %}
+      <span id="date-display"></span>: 
+      {% for post in site.posts %}
+  {% if post.date == "2026-07-25" %}
     <h1>{{ post.title }}</h1>
   {% endif %}
 {% endfor %}       <div class="dropdown">
