@@ -8,7 +8,7 @@ Just some music.
 <button onclick="openWindow()">Open Window</button>
 <div class="content-section">
   <h2 class="sticky-text">
-    <p text-align="center">
+    <p style="text-align:center">
       <span id="date-display"></span>:
       {% assign today = site.time | date: "%Y-%m-%d" %}
 
