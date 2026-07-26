@@ -10,7 +10,7 @@ Just some music.
   <h2 class="sticky-text">
     <p 
       style="text-align:center;
-      'font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;'
+      font-family: "Palatino;"
       >
       <span id="date-display"></span>:
       {% assign today = site.time | date: "%Y-%m-%d" %}
