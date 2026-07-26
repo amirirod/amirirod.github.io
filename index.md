@@ -55,7 +55,7 @@ Just some music.
       <li>
         <h2><a href="{{ post.url }}">{{ post.date | date: "%B %d, %Y"}}</a>
         </h2>
-        <div class="post-content">
+        <div class="post-content;" style="font-family: Palatino">
           {{ post.content }}
         </div>
         <hr class="custom-divider;" data-darkreader-inline-border-color="grey;" data-darkreader-inline-background-color="#c7b99e">
