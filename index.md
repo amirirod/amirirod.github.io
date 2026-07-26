@@ -10,8 +10,8 @@ Just some music.
   <h2 class="sticky-text">
     <p 
       style="text-align:center;
-      font-family: Palatino;"
-      style="background-image: linear-gradient(45deg, #F10000 0%, #020000");
+      font-family: Palatino;
+      background-image: linear-gradient(45deg, #F10000 0%, #020000)";
       >
       <span id="date-display"></span>:
       {% assign today = site.time | date: "%Y-%m-%d" %}
