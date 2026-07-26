@@ -9,7 +9,7 @@ Just some music.
 <ul>
   {% for post in site.tags %}
     <li>
-      <iframe src="{{ post.url }}" width="100%" height="300px" frameborder="0"></iframe>
+      <iframe src="{{ post.url }}" width="100%" height="500px" frameborder="0"></iframe>
     </li>
   {% endfor %}
 </ul>
