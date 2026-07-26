@@ -6,11 +6,12 @@ window_text: "This text loads directly inside the window overlay."
 ---
 Just some music.
 <button onclick="openWindow()">Open Window</button>
-<div class="content-section" style="background-image: linear-gradient(135deg, #020024 0%, #090979">
+<div class="content-section">
   <h2 class="sticky-text">
     <p 
       style="text-align:center;
       font-family: Palatino;"
+      style="background-image: linear-gradient(45deg, #F10000 0%, #020000");
       >
       <span id="date-display"></span>:
       {% assign today = site.time | date: "%Y-%m-%d" %}
