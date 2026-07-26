@@ -1,4 +1,4 @@
-title: <a class="post_navi-item nav_next" href="{{ 'albums.html' | absolute_url }}" title="Albums">Albums</a>
+title: <html><a class="post_navi-item nav_next" href="{{ 'albums.html' | absolute_url }}" title="Albums">Albums</a></html>
 author: "Amiri"
 description: "putting you on to quality music since 2026" # This will show up in places like twitter, linkedin, etc, if you share your sites url as a post.<style>
 
