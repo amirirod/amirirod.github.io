@@ -33,7 +33,7 @@ Just some music.
         <div class="post-content">
           {{ post.content }}
         </div>
-        <hr style="border: 3px solid grey; height: 7px; background-color: #e4dec2;">
+        <hr style="border: 3px solid grey; height: 7px; background-color: #c7b99e;">
       </li>
     {% endif %}
   {% endfor %}
