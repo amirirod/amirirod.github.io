@@ -13,7 +13,6 @@ Give it a listen:
   data-testid="embed-iframe" 
   style="display: block; border-radius:12px; margin: 0 auto" 
   src="https://open.spotify.com/embed/track/0XUDWaVc2PabUZg344iKBB?utm_source=generator&si=12e83eb296784597" 
-  width="65%" 
   height="250" 
   frameBorder="0" 
   allowfullscreen="" 
