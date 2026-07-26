@@ -1,6 +1,6 @@
 ---
 
-title: select
+title: selecta
 ---
 <div class="dropdown"><button class="dropbtn">Hover Me</button><div class="dropdown-content">
     <a class="post_navi-item nav_next" href="{{ 'albums.html' | absolute_url }}" title="Albums">Albums</a></div>
