@@ -9,7 +9,7 @@ Just some music.
 <ul>
   {% for song in site.tags %}
     <li>
-      <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
+      <h2><a href="{{ post.url }}">{{ post.date | date: "%B %Y" }} - {{ post.title }}</a></h2>
       <div class="post-content">
         {{ post.content }}
       </div>
