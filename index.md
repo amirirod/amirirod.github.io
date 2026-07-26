@@ -8,7 +8,10 @@ Just some music.
 <button onclick="openWindow()">Open Window</button>
 <div class="content-section">
   <h2 class="sticky-text">
-    <p style="text-align:center;font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;'>
+    <p 
+      style="text-align:center;
+      'font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;'
+      >
       <span id="date-display"></span>:
       {% assign today = site.time | date: "%Y-%m-%d" %}
 
