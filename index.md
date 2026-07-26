@@ -9,7 +9,11 @@ Just some music.
 <div class="content-section">
   <h2 class="sticky-text">
     <p>
-      <span id="date-display"></span>:        <div class="dropdown">
+      <span id="date-display"></span>: {% for post in site.posts %}
+  {% if post.date == "2026-06-01" %}
+    <h1>{{ post.title }}</h1>
+  {% endif %}
+{% endfor %}       <div class="dropdown">
   <button class="dropbtn">Some Other Stuff</button>
   <div class="dropdown-content">
     <a class="post_navi-item nav_next" href="{{ 'menu/albums.html' | absolute_url }}" title="Albums">Albums</a>
