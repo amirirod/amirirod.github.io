@@ -23,7 +23,6 @@ Just some music.
   {% endif %}
 {% endfor %}
 
-</div>
     </p>
     <hr style="background-color: white">
   </h2>
