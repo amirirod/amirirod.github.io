@@ -1,5 +1,6 @@
 ---
 tags: song
+date: 2026-07-25
 ---
 ## Grimace
 # Grimace by Billboard Benji
