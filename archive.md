@@ -2,6 +2,7 @@
 layout: page
 title: Blog Archive
 ---
+<style>
 .dropdown {
   position: relative;
   display: inline-block;
@@ -33,6 +34,7 @@ title: Blog Archive
 .dropdown:hover .dropdown-content {
   display: block;
   }
+</style>
 <div class="dropdown">
   <button class="dropbtn">Hover Me</button>
   <div class="dropdown-content">
