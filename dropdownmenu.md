@@ -2,7 +2,7 @@
 
 title: Select
 ---
-<html>
+
 <style>
 .dropdown {
   position: relative;
@@ -45,4 +45,4 @@ title: Select
   </div>
 </div>
 
-</html>
+
