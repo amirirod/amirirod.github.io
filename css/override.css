@@ -123,7 +123,7 @@ hr {
 /* Switch to compact view on mobile screens to prevent clipping */
 @media (max-width: 400px) {
   .spotify-container iframe {
-    width: 100%
+    width: 80%
     height: 80px !important;
   }
 }
