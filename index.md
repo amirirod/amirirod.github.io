@@ -11,7 +11,7 @@ Just some music.
     <p 
       style="text-align:center;
       font-family: Palatino;
-      background-image: linear-gradient(45deg, #F10000 0%, #020000)";
+      background: linear-gradient(45deg, #F10000 0%, #020000)";
       >
       <span id="date-display"></span>:
       {% assign today = site.time | date: "%Y-%m-%d" %}
