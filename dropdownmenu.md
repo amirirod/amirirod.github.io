@@ -1,5 +1,5 @@
 ---
-layout: Page
+
 title: Select
 ---
 <html>
