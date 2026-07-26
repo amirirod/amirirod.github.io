@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Albums of the Month
+title: Album of the Month
 ---
 
 <ul>
