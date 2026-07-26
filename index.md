@@ -10,10 +10,8 @@ Just some music.
   {% for post in site.posts %}
     {% if post.tags contains 'song' %}
       <li>
-        <h2><a href="{{ post.url }}"><time class="dt-published" datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
-        {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
-        {{ page.date | date: date_format }}
-      </time></a></h2>
+        <h2><a href="{{ post.url }}">{%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}{{ page.date | date: date_format }}</a>
+        </h2>
         <div class="post-content">
           {{ post.content }}
         </div>
