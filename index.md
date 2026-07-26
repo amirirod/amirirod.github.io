@@ -34,6 +34,7 @@ Just some music.
   </div>
 </div>
     </p>
+    <hr style="background-color: white"
   </h2>
 
  <script>
@@ -53,7 +54,7 @@ Just some music.
   {% for post in site.posts %}
     {% if post.tags contains 'song' %}
       <li>
-        <h2><a href="{{ post.url }}">{{ post.date | date: "%B %d, %Y"}}{{ post.title }}</a>
+        <h2><a href="{{ post.url }}">{{ post.date | date: "%B %d, %Y"}}-{{ post.title }}</a>
         </h2>
         <div class="post-content;" style="font-family: Palatino">
           {{ post.content }}
