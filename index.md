@@ -31,9 +31,12 @@ Just some music.
        >
     </div>
     
-    /* <hr style="background-color: white"> */
+
     
   </h2>
+  
+
+  
  <script>
         const today = new Date();
 const options = { year: 'numeric', month: 'long', day: 'numeric' };
