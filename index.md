@@ -22,7 +22,6 @@ Just some music.
     {% endif %}
   {% endif %}
 {% endfor %}
-</div>
     </p>
     <hr style="background-color: white">
   </h2>
