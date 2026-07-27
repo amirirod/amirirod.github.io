@@ -7,11 +7,11 @@ Just some music.
   <h2 class="pinned-sticky">
     <p style="text-align: center; font-family: Palatino;">
       <span id="date-display"></span>:
-      {% assign thisweek = site.time | date: "%Y-%W" %}
+      {% assign thisweek = site.time | date: "%Y-%V" %}
 
 {% for post in site.posts %}
   {% if post.tags contains 'Artists' %}
-    {% assign post_date = post.date | date: "%Y-%W" %}
+    {% assign post_date = post.date | date: "%Y-%V" %}
     {% if post_date == thisweek %}
       <div class="post-content" style="text-align:center; font-size: 2.5rem; font-family: Palatino">
         {{ post.title }}
@@ -23,10 +23,10 @@ Just some music.
     <hr style="background-color: white">
   </h2>
 <script>
-  // Fetches the current week number and year for the headline
+  // Fetches the current ISO week number and year for the headline
   const today = new Date();
   
-  // Calculate the current ISO week number
+  // Calculate the current ISO week number (Matches Liquid's %V)
   const target = new Date(today.valueOf());
   const dayNr = (today.getDay() + 6) % 7;
   target.setDate(target.getDate() - dayNr + 3);
@@ -44,7 +44,7 @@ Just some music.
     {% if post.tags contains 'Artists' %}
       <li>
         <h2>
-          <a style="color: #BB0000; letter-spacing: -1px; font-weight: 320; text-decoration: underline white;" href="{{ post.url }}">Week {{ post.date | date: "%W, %Y"}} - {{ post.title }}</a>
+          <a style="color: #BB0000; letter-spacing: -1px; font-weight: 320; text-decoration: underline white;" href="{{ post.url }}">Week {{ post.date | date: "%V, %Y"}} - {{ post.title }}</a>
         </h2>
         <div class="post-content" style="font-family: Palatino">
           {{ post.content }}
@@ -54,5 +54,4 @@ Just some music.
     {% endif %}
   {% endfor %}
 </ul>
-
 
