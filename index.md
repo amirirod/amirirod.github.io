@@ -21,8 +21,14 @@ Just some music.
   {% endif %}
 {% endfor %}
     </p>
-    <img src="imgs/Pattern.png">
+    <div style="
+    background-image: url("imgs/Pattern.png");
+    background-repeat: repeat;
+    background-size: 20px;"
+    >
+    </div>
     <hr style="background-color: white">
+    
   </h2>
  <script>
         const today = new Date();
