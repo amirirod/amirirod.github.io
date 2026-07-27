@@ -18,6 +18,10 @@ Just some music.
       <div class="post-content" style="text-align:center; font-size: 2.5rem; font-family: Palatino">
         {{ post.title }}
       </div>
+      {% else %}
+      <div style="text-align:center; font-size: 2.5rem; font-family: Palatino">
+        Nothing to say today.
+      </div>
     {% endif %}
   {% endif %}
 {% endfor %}
