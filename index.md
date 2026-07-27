@@ -7,7 +7,7 @@ window_text: "This text loads directly inside the window overlay."
 Just some music.
 <button onclick="openWindow()">Open Window</button>
 <div class="content-section">
-  <h2 class="sticky-text;" >
+  <h2 class="sticky-text;">
     <p style="text-align: center; font-family: Palatino;">
       <span id="date-display"></span>:
       {% assign today = site.time | date: "%Y-%m-%d" %}
