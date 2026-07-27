@@ -2,7 +2,7 @@
 layout: page
 title: Albums of the Month
 ---
-Just some music.
+Just some music
 <div class="content-section">
   <h2 class="pinned-sticky">
     <p style="text-align: center; font-family: Palatino;">
