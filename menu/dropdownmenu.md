@@ -1,42 +1,47 @@
 ---
-
-title: selecta
+layout: page
+title: Albums of the Month
 ---
-<div class="dropdown"><button class="dropbtn">Hover Me</button><div class="dropdown-content">
-    <a class="post_navi-item nav_next" href="{{ 'albums.html' | absolute_url }}" title="Albums">Albums</a></div>
-</div>
-<style>
-.dropdown {
-  position: relative;
-  display: inline-block;
-}
+Just some music.
+<div class="content-section">
+  <h2 class="pinned-sticky">
+    <p style="text-align: center; font-family: Palatino;">
+      <span id="date-display"></span>:
+      {% assign thisweek = site.time | date: "%Y-%m-%W" %}
 
-.dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: #f1f1f1;
-  min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index: 1;
-}
-
-/* Links inside the dropdown */
-.dropdown-content a {
-  color: black;
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
-}
-
-/* Change color of dropdown links on hover */
-.dropdown-content a:hover {
-  background-color: #ddd;
-}
-
-/* SHOW the dropdown menu when hovering over the container */
-.dropdown:hover .dropdown-content {
-  display: block;
-  }
+{% for post in site.posts %}
+  {% if post.tags contains 'Artists' %}
+    {% assign post_date = post.date | date: "%Y-%m-W" %}
+    {% if post_date == thisweek %}
+      <div class="post-content" style="text-align:center; font-size: 2.5rem; font-family: Palatino">
+        {{ post.title }}
+      </div>
+    {% endif %}
+  {% endif %}
+{% endfor %}
+    </p>
+    <hr style="background-color: white">
+  </h2>
+<script>
+  // Fetches current date and updates the text to "Month Year" format
+  const dateOptions = { month: 'long', year: 'numeric' };
+  const formattedDate = new Date().toLocaleDateString('en-US', dateOptions);
+  document.getElementById('date-display').textContent = formattedDate;
+</script>
+<ul>
+  {% for post in site.posts %}
+    {% if post.tags contains 'Artists' %}
+      <li>
+        <h2 ><a style="color: #BB0000; letter-spacing: -1px; font-weight: 320; text-decoration: underline white;" href="{{ post.url }}">{{ post.date | date: "%B %W, %Y"}} - {{ post.title }}</a>
+        </h2>
+        <div class="post-content;" style="font-family: Palatino">
+          {{ post.content }}
+        </div>
+        <hr class="custom-divider;" data-darkreader-inline-border-color="grey;" data-darkreader-inline-background-color="#c7b99e">
+      </li>
+    {% endif %}
+  {% endfor %}
+</ul>
 </style>
 
 
