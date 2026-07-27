@@ -26,7 +26,7 @@ Just some music.
     background-repeat: repeat;
     background-size: 5%;
     width: 100%;
-    height: 1.5rem;"
+    border: 3px solid white;"
        >
     </div>
     <hr style="background-color: white">
