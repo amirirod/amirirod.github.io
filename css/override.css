@@ -133,7 +133,7 @@ hr {
   background-color: white; 
   z-index: 1000;
 }
-.logo {
+.site-title::before{
     background-image: url('imgs/Logo.jpg');
     display: inline-block;
     position: relative;
