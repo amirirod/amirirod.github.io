@@ -23,9 +23,11 @@ Just some music.
     </p>
     <div style="
     background-image: url('imgs/Pattern.png');
-    background-repeat: repeat;
-    background-size: 20px;"
-    >
+    background-repeat: repeat-x;
+    background-size: 20%;
+    width: 100%;
+    height: 1.5rem;"
+       >
     </div>
     <hr style="background-color: white">
     
