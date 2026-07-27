@@ -133,9 +133,8 @@ hr {
   background-color: white; 
   z-index: 1000;
 }
-.site-title::before {
+.logo {
     background-image: url('imgs/Logo.jpg');
-    content: "";
     display: inline-block;
     position: relative;
     width: 32px;
