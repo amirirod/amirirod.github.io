@@ -1,5 +1,5 @@
 ---
-layout: window
+layout: page
 title: Commentary
 window_title: "Surprise Alert!"
 window_text: "This text loads directly inside the window overlay."
