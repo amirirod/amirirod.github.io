@@ -22,19 +22,10 @@ Just some music.
     {% endif %}
   {% endif %}
 {% endfor %}
-  <div class="dropdown">
-  <button class="dropbtn">Some Other Stuff</button>
-  <div class="dropdown-content">
-    <a class="post_navi-item nav_next" href="{{ 'menu/albums.html' | absolute_url }}" title="Albums">Albums</a>
-    <a href="#">Link 2</a>
-    <a href="#">Link 3</a>
-  </div>
 </div>
     </p>
-    <br>
     <hr style="background-color: white">
   </h2>
-  
  <script>
         const today = new Date();
 const options = { year: 'numeric', month: 'long', day: 'numeric' };
