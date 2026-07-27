@@ -5,10 +5,7 @@ title: Albums of the Month
 Just some music.
 <div class="content-section">
   <h2 class="pinned-sticky">
-    <p 
-      style="text-align:center;
-      font-family: Palatino;"
-      >
+    <p style="text-align: center; font-family: Palatino;">
       <span id="date-display"></span>:
       {% assign thismonth = site.time | date: "%Y-%m" %}
 
@@ -22,29 +19,21 @@ Just some music.
     {% endif %}
   {% endif %}
 {% endfor %}
-
+</div>
     </p>
     <hr style="background-color: white">
   </h2>
-
  <script>
-        // Get the current date
         const today = new Date();
-        
-        // Define options for MMMM DD, YYYY format
-        const options = { year: 'numeric', month: 'long', day: '2-digit' };
-        
-        // Format the date using the browser's language setting
-        const formattedDate = today.toLocaleDateString('en-US', options);
-        
-        // Insert the formatted date into the HTML span
-        document.getElementById('date-display').textContent = formattedDate;
+const options = { year: 'numeric', month: 'long', day: 'numeric' };
+const formattedDate = today.toLocaleDateString(undefined, options); 
+document.getElementById('date-display').textContent = formattedDate;
     </script>
 <ul>
   {% for post in site.posts %}
     {% if post.tags contains 'album' %}
       <li>
-        <h2><a href="{{ post.url }}">{{ post.date | date: "%B %Y"}} - {{ post.title }}</a>
+        <h2 ><a style="color: #BB0000; letter-spacing: -1px; font-weight: 320; text-decoration: underline white;" href="{{ post.url }}">{{ post.date | date: "%B %d, %Y"}} - {{ post.title }}</a>
         </h2>
         <div class="post-content;" style="font-family: Palatino">
           {{ post.content }}
