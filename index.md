@@ -34,17 +34,10 @@ Just some music.
     <hr style="background-color: white">
   </h2>
  <script>
-        // Get the current date
         const today = new Date();
-        
-        // Define options for MMMM DD, YYYY format
-        const options = { year: 'numeric', month: 'long', day: '2-digit' };
-        
-        // Format the date using the browser's language setting
-        const formattedDate = today.toLocaleDateString('en-US', options);
-        
-        // Insert the formatted date into the HTML span
-        document.getElementById('date-display').textContent = formattedDate;
+const options = { year: 'numeric', month: 'long', day: 'numeric' };
+const formattedDate = today.toLocaleDateString(undefined, options); 
+document.getElementById('date-display').textContent = formattedDate;
     </script>
 <ul>
   {% for post in site.posts %}
