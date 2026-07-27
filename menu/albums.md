@@ -4,7 +4,7 @@ title: Albums of the Month
 ---
 Just some music.
 <div class="content-section">
-  <h2 class="sticky-text">
+  <h2 class="pinned-sticky">
     <p 
       style="text-align:center;
       font-family: Palatino;"
