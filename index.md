@@ -22,11 +22,11 @@ Just some music.
 {% endfor %}
     </p>
     <div style="
-    background-image: url('imgs/Untitled-15.png');
+    background-image: url('imgs/Untitled15.png');
     background-repeat: repeat-x;
     background-size: 5%;
     width: 100%;
-    height: 7.5rem;"
+    height: 7.0rem;"
        >
     </div>
     <hr style="background-color: white">
