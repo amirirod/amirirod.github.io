@@ -127,4 +127,9 @@ hr {
     height: 80px !important;
   }
 }
-
+.pinned-sticky {
+  position: sticky;
+  top: 0;          /* Sticks exactly at the top edge of the screen */
+  background-color: white; 
+  z-index: 1000;
+}
