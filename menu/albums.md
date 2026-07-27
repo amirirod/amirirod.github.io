@@ -22,12 +22,12 @@ Just some music.
     </p>
     <hr style="background-color: white">
   </h2>
- <script>
-        const today = new Date();
-const options = { year: 'numeric', month: 'long', day: 'numeric' };
-const formattedDate = today.toLocaleDateString(undefined, options); 
-document.getElementById('date-display').textContent = formattedDate;
-    </script>
+<script>
+  // Fetches current date and updates the text to "Month Year" format
+  const dateOptions = { month: 'long', year: 'numeric' };
+  const formattedDate = new Date().toLocaleDateString('en-US', dateOptions);
+  document.getElementById('date-display').textContent = formattedDate;
+</script>
 <ul>
   {% for post in site.posts %}
     {% if post.tags contains 'album' %}
