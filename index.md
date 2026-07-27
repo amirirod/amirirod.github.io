@@ -22,7 +22,7 @@ Just some music.
 {% endfor %}
     </p>
     <div style="
-    background-image: url("imgs/Pattern.png");
+    background-image: url('imgs/Pattern.png');
     background-repeat: repeat;
     background-size: 20px;"
     >
