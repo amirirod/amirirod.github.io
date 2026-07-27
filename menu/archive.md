@@ -44,23 +44,33 @@ title: Blog Archive
     <a href="#">Link 3</a>
   </div>
 </div>
+{% for tag in site.tags %}
+  <!-- Use the tag name to create a unique ID for JavaScript to target -->
+  <h3>
+    <button onclick="toggleTagList('{{ tag[0] | slugify }}')">
+      {{ tag[0] }}
+    </button>
+  </h3>
+  
+  <!-- The list starts hidden by default using display:none -->
+  <ul id="{{ tag[0] | slugify }}" style="display: none;">
+    {% for post in tag[1] %}
+      <li>
+        <a href="{{ post.url }}">{{ post.date | date: "%B %Y" }} - {{ post.title }}</a>
+      </li>
+    {% endfor %}
+  </ul>
+{% endfor %}
+
 <script>
-function myFunction() {
-  var x = document.getElementById("myDIV");
-  if (x.style.display === "none") {
+function toggleTagList(tagId) {
+  var x = document.getElementById(tagId);
+  if (x.style.display === "none" || x.style.display === "") {
     x.style.display = "block";
   } else {
     x.style.display = "none";
   }
 }
 </script>
-{% for tag in site.tags %}
-  <h3><button onclick="myFunction()">{{ tag[0] }}</button></h3>
-  <ul>
-    {% for post in tag[1] %}
-      <li id="myDIV"><a href="{{ post.url }}">{{ post.date | date: "%B %Y" }} - {{ post.title }}</a></li>
-    {% endfor %}
-  </ul>
-{% endfor %}
 </html>
 
