@@ -23,10 +23,10 @@ Just some music.
     </p>
     <div style="
     background-image: url('imgs/Untitled15.png');
-    background-repeat: repeat-x;
+    background-repeat: repeat;
     background-size: 5%;
     width: 100%;
-    height: 1rem;"
+    height: 1.5rem;"
        >
     </div>
     <hr style="background-color: white">
