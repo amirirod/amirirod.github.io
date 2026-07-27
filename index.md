@@ -24,7 +24,7 @@ Just some music.
     <div style="
     background-image: url('imgs/Untitled-15.png');
     background-repeat: repeat-x;
-    background-size: 20%;
+    background-size: 5%;
     width: 100%;
     height: 3.5rem;"
        >
