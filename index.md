@@ -30,7 +30,8 @@ Just some music.
     border-block: 1px solid grey;"
        >
     </div>
-    <hr style="background-color: white">
+    
+    /* <hr style="background-color: white"> */
     
   </h2>
  <script>
