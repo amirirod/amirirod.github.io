@@ -15,7 +15,7 @@ description: "putting you on to quality music since 2026" # This will show up in
 ######### Nothing below needs to be changed (unless you know what you're doing) #########
 #########################################################################################
 theme: "minima"
-
+timezone: America/New_York
 
 
 kramdown:
