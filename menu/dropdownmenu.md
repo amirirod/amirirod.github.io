@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Albums of the Month
+title: Artists of the Week
 ---
 Just some music.
 <div class="content-section">
