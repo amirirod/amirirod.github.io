@@ -1,6 +1,6 @@
 ---
 tags: song
-date: 2026-07-27 
+date: 2026-07-25 
 ---
 ## "BETTER THAN MIC" by SlimeGetEm
 
