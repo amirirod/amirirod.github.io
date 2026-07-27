@@ -100,7 +100,7 @@ hr {
 .sticky-text {
   position: sticky;
   top: 0; /* Tells it where to lock into place */
-  background-color: white; /* Prevents background text from overlapping and looking messy */
+  background-color: radial-gradient(circle, #000000 0%, #0F0000);"; /* Prevents background text from overlapping and looking messy */
   z-index: 100; /* Ensures it stays on top of the scrolling text */
 }
 .custom-divider {
