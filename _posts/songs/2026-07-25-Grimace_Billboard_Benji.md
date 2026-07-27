@@ -9,11 +9,13 @@ date: 2026-07-25
 Give it a listen:
 <html>
 
+<html>
+<div class="spotify-container;">
 <iframe 
   data-testid="embed-iframe" 
   style="display: block; border-radius:12px; margin: 0 auto" 
   src="https://open.spotify.com/embed/track/4KOlRlB81TAmDXHQZiVTbY?utm_source=generator&si=f79b647587164543" 
-  width="65%" 
+  width="100%"
   height="250" 
   frameBorder="0" 
   allowfullscreen="" 
@@ -21,6 +23,7 @@ Give it a listen:
   loading="lazy">
   
 </iframe>
-
+</div>
+</html>
 </html>
 
