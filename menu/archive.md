@@ -56,7 +56,7 @@ title: Blog Archive
   <ul id="{{ tag[0] | slugify }}" style="display: none;">
     {% for post in tag[1] %}
       <li>
-        <a href="{{ post.url }}">{{ post.date | date: %D, %Y" }} - {{ post.title }}</a>
+        <a href="{{ post.url }}">{{ post.title }}</a>
       </li>
     {% endfor %}
   </ul>
