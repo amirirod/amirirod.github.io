@@ -27,7 +27,7 @@ Just some music.
     background-size: 5%;
     width: 100%;
       height: 40px;
-    border-block: 1px solid white;"
+    border-block: 1px solid grey;"
        >
     </div>
     <hr style="background-color: white">
