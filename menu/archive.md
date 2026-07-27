@@ -44,14 +44,7 @@ title: Blog Archive
     <a href="#">Link 3</a>
   </div>
 </div>
-function myFunction() {
-  var x = document.getElementById("myDIV");
-  if (x.style.display === "none") {
-    x.style.display = "block";
-  } else {
-    x.style.display = "none";
-  }
-}
+
 {% for tag in site.tags %}
   <h3><button onclick="myFunction()">{{ tag[0] }}</button></h3>
   <ul>
@@ -61,3 +54,11 @@ function myFunction() {
   </ul>
 {% endfor %}
 </html>
+function myFunction() {
+  var x = document.getElementById("myDIV");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+}
