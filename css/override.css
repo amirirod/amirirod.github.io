@@ -97,7 +97,7 @@ hr {
 .dropdown:hover .dropdown-content {
   display: block;
   }
-.sticky-text {
+.sticky-texts {
   position: sticky;
   top: 0; /* Tells it where to lock into place */
   background-color: black; 
