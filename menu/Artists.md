@@ -52,7 +52,7 @@ Just some music.
     {% if post.tags contains 'Artists' %}
       <li>
         <h2>
-          <a style="color: #BB0000; letter-spacing: -1px; font-weight: 320; text-decoration: underline white;" href="{{ post.url }}">Week {{ post.date | date: "%V, %Y"}} - {{ post.title }}</a>
+          <a style="color: #BB0000; letter-spacing: -1px; font-weight: 300; text-decoration: underline white;" href="{{ post.url }}">Week {{ post.date | date: "%V, %Y"}} - {{ post.title }}</a>
         </h2>
         <div class="post-content" style="font-family: Palatino">
           {{ post.content }}
