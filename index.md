@@ -21,7 +21,7 @@ Just some music.
   {% endif %}
 {% endfor %}
     </p>
-    <img src="imgs/pattern.png">
+    <img src="imgs/Pattern.png">
     <hr style="background-color: white">
   </h2>
  <script>
