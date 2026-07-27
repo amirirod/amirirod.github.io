@@ -26,7 +26,7 @@ Just some music.
     background-repeat: repeat;
     background-size: 5%;
     width: 100%;
-      height: 20px;
+      height: 40px;
     border: 1px solid white;"
        >
     </div>
