@@ -98,7 +98,7 @@ hr {
   }
 .sticky-texts {
   position: sticky;
-  top: 0; /* Tells it where to lock into place */
+  top: 212; /* Tells it where to lock into place */
   background-color: black; 
   z-index: 100; /* Ensures it stays on top of the scrolling text */
 }
@@ -128,7 +128,7 @@ hr {
 }
 .pinned-sticky {
   position: sticky;
-  top: 0;          /* Sticks exactly at the top edge of the screen */
+  top: 212;          /* Sticks exactly at the top edge of the screen */
   background-color: white; 
   z-index: 1000;
 }
