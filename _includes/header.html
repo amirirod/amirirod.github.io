@@ -1,10 +1,10 @@
 <header class="site-header">
 
-  <div class="wrapper" style="width: 1469px; position: absolute; top: 0; left: 0">
+  <div class="hordiv" style="width: 1469px; position: absolute; top: 0; left: 0">
     {%- assign default_paths = site.pages | map: "path" -%}
     {%- assign page_paths = site.minima.nav_pages | default: default_paths -%}
     {%- assign page_titles = site.pages | map: 'title' | compact %}
-    <a class="site-title" rel="author" href="{{ '/' | relative_url }}">{{ site.title | escape }}</a>
+    <div><a class="site-title" rel="author" href="{{ '/' | relative_url }}">{{ site.title | escape }}</a></div>
 <div class="hordiv" style="
   z-index: 1000;
   position: absolute;
