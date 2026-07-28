@@ -69,7 +69,7 @@ Most Recent Song of The Day:
         </h2>
         <div class="post-content;" style="font-family: Palatino">
          {% assign parts = post.content | split: "Give it a listen:" %}
-         {{ parts[0] | strip_html | truncatewords: 20}}
+         {{ parts[0] | strip_html | truncatewords: 40}} Read More
           {{ parts[1] }}
         </div>
         <hr class="custom-divider;" data-darkreader-inline-border-color="grey;" data-darkreader-inline-background-color="#c7b99e">
