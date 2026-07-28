@@ -93,7 +93,7 @@ hr {
 }
 
 /* SHOW the dropdown menu when hovering over the container */
-.dropdown:hover .dropdown-content {
+.dropdown:active .dropdown-content {
   display: block;
   }
 .sticky-texts {
