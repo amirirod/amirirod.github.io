@@ -10,8 +10,9 @@ Just some music.
 
 <div>
 <div class="content-section" style="background: black; z-index:1">
-  <div style="position: sticky; top: 95px; background: black; z-index: 1">
+  <div style="position: sticky; top: 90px; background: black; z-index: 1">
     <p style="text-align: center; font-family: Palatino;">
+      <hr>
       <span id="date-display" style="padding: 10px 0px"></span>:
       {% assign today = site.time | date: "%Y-%m-%d" %}
 
