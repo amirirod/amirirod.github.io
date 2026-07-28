@@ -121,39 +121,43 @@ hr {
   display: block;
   */
 .dropdown-content {
-  /* 1. RESTORE FORMATTING: Force block display permanently */
-  display: block; 
-  
+  /* 1. KEEP YOUR ORIGINAL LAYOUT EXACTLY AS IT WAS */
+  display: none;
   position: absolute;
   background-color: #f1f1f1;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   z-index: 1;
   
-  /* 2. HIDE MECHANISM: Hidden but keeps structure intact */
+  /* 2. SET UP ANIMATION STATES */
   opacity: 0;
-  visibility: hidden;
-  
-  /* 3. ANIMATION DETAILS */
   transform: translateY(-10px);
-  transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s ease;
+  
+  /* 3. ALLOW-DISCRETE SEAMLESSLY ANIMATES THE "DISPLAY" PROPERTY */
+  transition: opacity 0.3s ease, transform 0.3s ease, display 0.3s ease allow-discrete;
 }
 
 .dropdown-content a {
   color: black;
   padding: 12px 16px;
   text-decoration: none;
-  display: block; /* Keeps links stacked vertically */
+  display: block;
 }
 
 .dropdown-content a:hover {
   background-color: #ddd;
 }
 
-/* 4. REVEAL MECHANISM (No display properties here) */
+/* 4. THE ACTIVE STATE WHEN CLICKED */
 .dropdown.active .dropdown-content {
+  display: block !important;
   opacity: 1 !important;
-  visibility: visible !important;
   transform: translateY(0) !important;
+  
+  /* Tells the browser where the animation should start from */
+  @starting-style {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
 }
 
 .sticky-texts {
