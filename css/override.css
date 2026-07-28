@@ -141,9 +141,10 @@ hr {
 .dropdown-content a {
   color: black;
   background-image: url('/imgs/Back.png');
-  background-size: 20px;
+  background-size: 25% 25%;
   background-repeat: repeat;
   text-decoration: none;
+  padding: 12px 16px;
   display: block;
 }
 
