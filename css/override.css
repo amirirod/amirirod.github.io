@@ -138,7 +138,6 @@ hr{
 }
 
 .dropdown-content a {
-  border: 5px solid red !important; /* TEST: Does this appear? */
   color: black;
   background: url('/imgs/Back.png') repeat-x left center !important;
   background-size: 25% 100% !important;
