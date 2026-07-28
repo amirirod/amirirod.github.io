@@ -23,15 +23,15 @@
     
     <!-- Branding Text Details -->
     <div style="color: white; font-size: 1rem; font-weight: 300; letter-spacing: -1px; display: flex; flex-direction: column; justify-content: center; line-height: 1.2;">
-      <span style="font-weight: bold; cursor: pointer">AmiriRod</span>
-      <a rel="author" href="{{ '/' | relative_url }}" style="color: #ED6E69; text-decoration: none;">{{ site.title | escape }}</a>
+      <span style="font-weight: bold;">AmiriRod</span>
+      <a rel="author" href="{{ '/' | relative_url }}" style="color: #ED6E69; text-decoration: none; cursor: pointer">{{ site.title | escape }}</a>
     </div>
   </div> 
 
   <!-- Right Side Group: Navigation Menu -->
   <div>
   {%- unless page_titles == empty %}
-    <nav style="display: flex; align-items: center;">
+    <nav style="display: flex; align-items: center; cursor: pointer">
       <label for="nav-trigger">
         <span class="menu-icon"></span>
       </label>
