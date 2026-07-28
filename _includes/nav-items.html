@@ -14,16 +14,17 @@
 </div> 
  -->
 
-  <div class="dropdown">
-  <button class="dropdown-trigger">Menu</button>
+<div class="dropdown">
+  <!-- FIX: Added onclick attribute to toggle the menu open/closed -->
+  <button class="dropdown-trigger" onclick="this.parentElement.classList.toggle('active')">Menu</button>
   <div class="dropdown-content">
-      {%- for path in include.paths -%}
-  {%- assign hyperpage = site.pages | where: "path", path | first -%}
-  {%- if hyperpage.title %}
-    {%- if hyperpage.tags == "menu" -%}
-  <a class="nav-item" href="{{ hyperpage.url | relative_url }}">{{ hyperpage.title | escape }}</a>
+  {%- for path in include.paths -%}
+    {%- assign hyperpage = site.pages | where: "path", path | first -%}
+    {%- if hyperpage.title %}
+      {%- if hyperpage.tags == "menu" -%}
+        <a class="nav-item" href="{{ hyperpage.url | relative_url }}">{{ hyperpage.title | escape }}</a>
+      {%- endif -%}
     {%- endif -%}
-  {%- endif -%}
   {%- endfor %}
   </div>
 </div>
