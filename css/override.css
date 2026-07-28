@@ -112,10 +112,10 @@ hr {
 }
 
 .dropdown-content a:hover {
-  background-color: #ddd;
+  background-color: #ddd; /* This only hovers individual links inside */
 }
 
-/* FIX: Keeps menu open on hover OR when clicked/active */
+/* FIX: Menu now opens ONLY when the trigger button is clicked and the 'active' class is present */
 .dropdown.active .dropdown-content {
   display: block;
 }
