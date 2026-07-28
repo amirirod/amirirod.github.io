@@ -140,19 +140,16 @@ hr {
 .dropdown-content a {
   color: black;
   background-image: url('/imgs/Back.png');
-  background-width: 25%;
-  background-height: auto;
-  aspect-ratio: 1 / 1;
+  background-size: 25% auto;
   background-repeat: repeat-x;
   display: block;
 }
 
 .dropdown-content a:hover {
    background-image: url('/imgs/Back1.png');
-  background-width: 25%;
-  background-height: auto;
-  aspect-ratio: 1 / 1;
+  background-size: 25% auto;
   background-repeat: repeat-x;
+  display: block;
 }
 
 /* 4. ANIMATION STATES WHEN ACTIVE */
