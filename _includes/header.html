@@ -35,9 +35,6 @@
   <div style="cursor: pointer; border: 2px solid white; display: flex; align-content: center; height: 84px; width: 120px;">
   {%- unless page_titles == empty %}
     <nav>
-      <label for="nav-trigger">
-        <span style="text-align: center"></span>
-      </label>
       {% include nav-items.html paths = page_paths %}
     </nav>
   {%- endunless %}
