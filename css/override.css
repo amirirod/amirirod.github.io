@@ -66,6 +66,7 @@ hr {
   cursor: pointer;
   font-size: 24px;
 }
+/*
 .dropdown {
   position: relative;
   display: inline-block;
@@ -79,7 +80,6 @@ hr {
   z-index: 1;
 }
 
-/* Links inside the dropdown */
 .dropdown-content a {
   color: black;
   padding: 12px 16px;
@@ -87,15 +87,38 @@ hr {
   display: block;
 }
 
-/* Change color of dropdown links on hover */
+
 .dropdown-content a:hover {
   background-color: #ddd;
 }
-/* SHOW the dropdown menu when hovering over the container */
+
 .dropdown:active .dropdown-content {
   display: block;
   }
+*/
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
 
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+/* FIX: Keeps menu open when the trigger or its contents are focused */
+.dropdown:focus-within .dropdown-content {
+  display: block;
+}
 .sticky-texts {
   position: sticky;
   top: 212; /* Tells it where to lock into place */
