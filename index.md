@@ -9,7 +9,7 @@ Just some music.
 </button>
 <div>
 <div class="content-section">
-  <div style="position: sticky; top: 212px; background: black; z-index: 2000">
+  <div style="position: sticky; top: 0px; background: black; z-index: 2000">
     <p style="text-align: center; font-family: Palatino;">
       <span id="date-display"></span>:
       {% assign today = site.time | date: "%Y-%m-%d" %}
