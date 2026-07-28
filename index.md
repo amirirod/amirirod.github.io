@@ -29,6 +29,7 @@ Just some music.
     background-image: url('imgs/Untitled15.png');
     background-repeat: repeat;
     background-size: 5%;
+      position: relative;
     width: 100%;
       height: 40px;
     border-block: 1px solid grey;"
