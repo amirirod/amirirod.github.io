@@ -116,6 +116,7 @@ hr {
 }
 
 /* FIX: Keeps menu open when the trigger or its contents are focused */
+.dropdown:hover .dropdown-content,
 .dropdown:focus-within .dropdown-content {
   display: block;
 }
