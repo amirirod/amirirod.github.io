@@ -138,10 +138,10 @@ hr{
 }
 
 .dropdown-content a {
+  border: 5px solid red !important; /* TEST: Does this appear? */
   color: black;
-  /* Use the background shortcut to reset everything at once */
-  background: url('/imgs/Back.png') repeat-x left center;
-  background-size: 25% 25% !important; /* Forces 4 horizontal slices */
+  background: url('/imgs/Back.png') repeat-x left center !important;
+  background-size: 25% 100% !important;
   display: block;
   padding: 12px 16px;
 }
