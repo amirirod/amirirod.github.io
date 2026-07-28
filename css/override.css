@@ -140,15 +140,15 @@ hr {
 .dropdown-content a {
   color: black;
   background-image: url('/imgs/Back.png');
-  background-size: 25% 25%;
-  background-repeat: repeat-x;
+  background-size: 10px 10px;
+  background-repeat: repeat;
   display: block;
 }
 
 .dropdown-content a:hover {
    background-image: url('/imgs/Back1.png');
-  background-size: 25% 25%;
-  background-repeat: repeat-x;
+  background-size: 10px 10px;
+  background-repeat: repeat;
   display: block;
 }
 
