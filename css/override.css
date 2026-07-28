@@ -91,11 +91,11 @@ hr {
 .dropdown-content a:hover {
   background-color: #ddd;
 }
-
 /* SHOW the dropdown menu when hovering over the container */
 .dropdown:active .dropdown-content {
   display: block;
   }
+
 .sticky-texts {
   position: sticky;
   top: 212; /* Tells it where to lock into place */
