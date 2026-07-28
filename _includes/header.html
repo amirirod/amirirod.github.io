@@ -32,11 +32,11 @@
   </div> 
 
   <!-- Right Side Group: Navigation Menu -->
-  <div style="cursor: pointer; border: 2px solid white; display: flex; align-content: center; height: 84px; width: 120px;">
+ <div style="cursor: pointer; border: 2px solid white; display: flex; justify-content: center; align-items: center; height: 84px; width: 120px;">
   {%- unless page_titles == empty %}
     <nav>
       {% include nav-items.html paths = page_paths %}
     </nav>
   {%- endunless %}
-  </div>
+</div>
 </header>
