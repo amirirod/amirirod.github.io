@@ -47,6 +47,7 @@ const options = { year: 'numeric', month: 'long', day: 'numeric' };
 const formattedDate = today.toLocaleDateString(undefined, options); 
 document.getElementById('date-display').textContent = formattedDate;
     </script>
+Most Recent Song of The Day:
 <ul>
   {% for post in site.posts %}
     {% if post.tags contains 'song' %}
