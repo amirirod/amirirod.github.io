@@ -133,4 +133,9 @@ hr {
   background-color: white; 
   z-index: 1000;
 }
+.hordiv {
+  display: flex;         /* Activates flexbox layout */
+  flex-direction: row;   /* Arranges items horizontally (default) */
+  gap: 15px;            /* Adds uniform space between child divs */
+}
 
