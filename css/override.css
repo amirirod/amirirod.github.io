@@ -136,6 +136,7 @@ hr {
 .hordiv {
   display: flex;         /* Activates flexbox layout */
   flex-direction: row;   /* Arranges items horizontally (default) */
-  gap: 15px;            /* Adds uniform space between child divs */
+  gap: 15px;  
+  justify-content: space-between;/* Adds uniform space between child divs */
 }
 
