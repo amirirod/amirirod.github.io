@@ -11,7 +11,7 @@ Just some music.
 <div class="content-section">
   <div style="position: sticky; top: 90px; background: black; z-index: 0">
     <p style="text-align: center; font-family: Palatino;">
-      <span id="date-display" style="padding: 5px 0px"></span>:
+      <span id="date-display" style="padding: 10px 0px"></span>:
       {% assign today = site.time | date: "%Y-%m-%d" %}
 
 {% for post in site.posts %}
