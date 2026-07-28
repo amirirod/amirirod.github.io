@@ -3,7 +3,9 @@ window_title: "Surprise Alert!"
 window_text: "This text loads directly inside the window overlay."
 ---
 Just some music.
-<button onclick="openWindow()">Open Window</button>
+<button onclick="window.open('window.html', 'popup', 'width=600,height=400');" style="background:none; border:none; padding:0; cursor:pointer;">
+  Test
+</button>
 <div class="content-section">
   <h2 class="pinned-sticky">
     <p style="text-align: center; font-family: Palatino;">
