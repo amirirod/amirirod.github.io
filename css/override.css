@@ -115,8 +115,9 @@ hr {
   background-color: #ddd;
 }
 
-/* FIX: Keeps menu open when the trigger or its contents are focused */
-.dropdown:hover .dropdown:focus-within .dropdown-content {
+/* FIX: Keeps menu open on hover OR when clicked/active */
+.dropdown:hover .dropdown-content,
+.dropdown.active .dropdown-content {
   display: block;
 }
 .sticky-texts {
