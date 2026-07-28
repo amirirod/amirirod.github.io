@@ -201,9 +201,7 @@ hr {
   justify-content: space-between;/* Adds uniform space between child divs */
 }
 .shrink-btn {
-  padding: 12px 24px;
-  font-size: 16px;
-  background-color: #007bff;
+  background-color: none;
   color: white;
   border: none;
   border-radius: 6px;
