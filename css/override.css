@@ -141,7 +141,7 @@ hr{
   color: black;
   /* Use the background shortcut to reset everything at once */
   background: url('/imgs/Back.png') repeat-x left center;
-  background-size: 25% 100% !important; /* Forces 4 horizontal slices */
+  background-size: 25% 25% !important; /* Forces 4 horizontal slices */
   display: block;
   padding: 12px 16px;
 }
