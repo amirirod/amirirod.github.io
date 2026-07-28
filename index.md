@@ -68,7 +68,7 @@ Most Recent Song of The Day:
         <h2 ><a class="shrink-btn" onclick="this.parentElement.classList.toggle('active');" style="color: #BB0000; letter-spacing: -1px; font-weight: 300; text-decoration: underline white;" href="{{ post.url }}" >{{ post.date | date: "%B %d, %Y"}} - {{ post.title }}</a>
         </h2>
         <div class="post-content;" id="truncated-text" style="font-family: Palatino">
-          {{ post.content }}
+          {{ post.content | strip_html | truncatewords: 10}}
         </div>
         <hr class="custom-divider;" data-darkreader-inline-border-color="grey;" data-darkreader-inline-background-color="#c7b99e">
       </li>
