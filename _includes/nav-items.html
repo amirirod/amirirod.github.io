@@ -1,3 +1,4 @@
+<!-- 
 <div class="dropdown" style="position: relative; z-index: 2000; height: 100%; width: auto; aspect-ratio: 1/1; display: flex; align-items: center; justify-content: center;">
   <button class="dropbtn">Other Things</button>
   <div class="dropdown-content" style="position: absolute; top: 100%; left: 0;">
@@ -10,5 +11,18 @@
   {%- endif -%}
   {%- endfor %}
   </div>
+</div> 
+ -->
+  <div class="dropdown">
+  <button class="dropdown-trigger">Menu</button>
+  <div class="dropdown-content">
+      {%- for path in include.paths -%}
+  {%- assign hyperpage = site.pages | where: "path", path | first -%}
+  {%- if hyperpage.title %}
+    {%- if hyperpage.tags == "menu" -%}
+  <a class="nav-item" href="{{ hyperpage.url | relative_url }}">{{ hyperpage.title | escape }}</a>
+    {%- endif -%}
+  {%- endif -%}
+  {%- endfor %}
+  </div>
 </div>
-  
