@@ -146,6 +146,6 @@ hr {
 
 /* Triggers exactly when the button is clicked */
 .shrink-btn:active {
-  transform: scale(0.95);
+  transform: scale(0.75);
 }
 
