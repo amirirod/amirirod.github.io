@@ -6,7 +6,7 @@
     {%- assign page_titles = site.pages | map: 'title' | compact %}
     <a class="site-title" rel="author" href="{{ '/' | relative_url }}">{{ site.title | escape }}</a>
 <div style="
-  background-image: {{ '/imgs/Logo.jpg' | relative_url }}; 
+  background-image: url('/imgs/Logo.jpg'); 
   z-index: 1000;
   position: absolute;
   top: 0;
