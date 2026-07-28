@@ -10,7 +10,7 @@
     {%- assign default_paths = site.pages | map: "path" -%}
     {%- assign page_paths = site.minima.nav_pages | default: default_paths -%}
     {%- assign page_titles = site.pages | map: 'title' | compact %}
-    <div><a style="font-size: 1rem; z-index: 3000; font-weight: 300; letter-spacing: -1px; margin-bottom: 0;" rel="author" href="{{ '/' | relative_url }}">{{ site.title | escape }}</a></div>
+   
 <div class="hordiv" style="
   z-index: 1000;
   width: 25%;
@@ -28,7 +28,8 @@
     >
     AmiriRod
   </div>
-</div>
+</div> 
+<div><a style="font-size: 1rem; z-index: 3000; font-weight: 300; letter-spacing: -1px; margin-bottom: 0;" rel="author" href="{{ '/' | relative_url }}">{{ site.title | escape }}</a></div>
     <div>
     {%- unless page_titles == empty %}
       <nav>
