@@ -1,6 +1,6 @@
 <header class="site-header">
 
-  <div class="wrapper">
+  <div class="wrapper pinned-sticky">
     {%- assign default_paths = site.pages | map: "path" -%}
     {%- assign page_paths = site.minima.nav_pages | default: default_paths -%}
     {%- assign page_titles = site.pages | map: 'title' | compact %}
@@ -17,9 +17,11 @@
   <div style="
     font-size: 1.625rem;
     font-weight: 300;
-    align-items: center;
+    place-items: center;
     margin-bottom:0;
-    letter-spacing: -1px"
+    letter-spacing: -1px;
+    height: 2rem;
+    width: 50%;"
     >
     AmiriRod
   </div>
