@@ -6,15 +6,14 @@
     {%- assign page_titles = site.pages | map: 'title' | compact %}
     <a class="site-title" rel="author" href="{{ '/' | relative_url }}">{{ site.title | escape }}</a>
 <div style="
-  background-image: url('/imgs/Logo.jpg'); 
   z-index: 1000;
   position: absolute;
   top: 0;
   left: 0;
   width: 60px;
-  object-fit: contain;
   height: 60px;"
   >
+  <img src="{{ '/imgs/Logo.jpg' | relative_url}}"> AmiriRod
 </div>
     {%- unless page_titles == empty %}
       <nav class="site-nav">
