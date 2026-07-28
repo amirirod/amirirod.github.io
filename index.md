@@ -4,7 +4,7 @@ window_title: "Surprise Alert!"
 window_text: "This text loads directly inside the window overlay."
 ---
 Just some music.
-<button onclick="window.open('about.md', 'popup', 'width=600,height=400');" style="background:none; border:none; padding:0; cursor:pointer;">
+<button onclick="openWindow();" style="background:none; border:none; padding:0; cursor:pointer;">
   Test
 </button>
 <div class="content-section">
