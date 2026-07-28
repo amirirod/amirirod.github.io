@@ -14,7 +14,7 @@ Just some music.
   {% if post.tags contains 'song' %}
     {% assign post_date = post.date | date: "%Y-%m-%d" %}
     {% if post_date == today %}
-      <div class="post-content" style="text-align:center; font-size: 2.5rem; font-family: Palatino">
+      <div class="post-content" style="text-align:center; font-size: 2.5rem; font-family: Palatino; margin-bottom: 0px">
         {{ post.title }}
       </div>
     {% endif %}
