@@ -13,6 +13,7 @@ Just some music.
       <hr>
       <div style="text-align: center; font-family: Palatino;">
        <span id="date-display" style="padding: 10px 0px"></span> 
+      </div>
       {% assign today = site.time | date: "%Y-%m-%d" %}
 
 {% for post in site.posts %}
