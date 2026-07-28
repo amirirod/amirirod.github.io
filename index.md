@@ -51,6 +51,15 @@ const options = { year: 'numeric', month: 'long', day: 'numeric' };
 const formattedDate = today.toLocaleDateString(undefined, options); 
 document.getElementById('date-display').textContent = formattedDate;
     </script>
+   <script>
+  const limit = 10; // Change this to your preferred word count
+  const element = document.getElementById("truncated-text");
+  const words = element.innerText.split(" "); // Split text into words by spaces
+
+  if (words.length > limit) {
+    element.innerText = words.slice(0, limit).join(" ") + "...";
+  }
+</script>
 Most Recent Song of The Day:
 <ul>
   {% for post in site.posts %}
@@ -58,7 +67,7 @@ Most Recent Song of The Day:
       <li>
         <h2 ><a class="shrink-btn" onclick="this.parentElement.classList.toggle('active');" style="color: #BB0000; letter-spacing: -1px; font-weight: 300; text-decoration: underline white;" href="{{ post.url }}" >{{ post.date | date: "%B %d, %Y"}} - {{ post.title }}</a>
         </h2>
-        <div class="post-content;" style="font-family: Palatino">
+        <div class="post-content;" id="truncated-text" style="font-family: Palatino">
           {{ post.content }}
         </div>
         <hr class="custom-divider;" data-darkreader-inline-border-color="grey;" data-darkreader-inline-background-color="#c7b99e">
