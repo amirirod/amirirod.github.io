@@ -1,5 +1,6 @@
 ---
 title: Commentary
+tags: menu
 ---
 Just some music.
 <div class="content-section">
