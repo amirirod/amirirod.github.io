@@ -7,8 +7,9 @@ Just some music.
 <button onclick="openWindow();" style="background:none; border:none; padding:0; cursor:pointer;">
   Test
 </button>
+<div>
 <div class="content-section">
-  <h2 style="position: sticky; top: 0; z-index: 3000">
+  <div style="position: sticky; top: 212px; background: black; z-index: 2000">
     <p style="text-align: center; font-family: Palatino;">
       <span id="date-display"></span>:
       {% assign today = site.time | date: "%Y-%m-%d" %}
@@ -36,7 +37,7 @@ Just some music.
     
 
     
-  </h2>
+  </div>
   
 
   
@@ -60,3 +61,4 @@ document.getElementById('date-display').textContent = formattedDate;
     {% endif %}
   {% endfor %}
 </ul>
+</div>
