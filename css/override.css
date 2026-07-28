@@ -138,4 +138,20 @@ hr {
   gap: 15px;  
   justify-content: space-between;/* Adds uniform space between child divs */
 }
+.shrink-btn {
+  padding: 12px 24px;
+  font-size: 16px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  /* Smoothly transition back to normal scale */
+  transition: transform 0.1s ease; 
+}
+
+/* Triggers exactly when the button is clicked */
+.shrink-btn:active {
+  transform: scale(0.95);
+}
 
