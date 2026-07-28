@@ -140,7 +140,7 @@ hr {
 }
 .shrink-btn {
   cursor: pointer;
-  /* Smoothly transition back to normal scale */
+
   transition: transform 0.1s ease; 
 }
 
