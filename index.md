@@ -4,16 +4,14 @@ window_title: "About Me"
 window_text: "This text loads directly inside the window overlay."
 ---
 Just some music.
-<button onclick="openWindow();" style="background:none; border:none; padding:0; cursor:pointer; z-index: 6000">
-  Test
-</button>
+ <span id="date-display" style="padding: 10px 0px"></span>:
 
 <div>
 <div class="content-section" style="background: black; z-index:1">
   <div style="position: sticky; top: 90px; background: black; z-index: 1">
     <p style="text-align: center; font-family: Palatino;">
       <hr>
-      <span id="date-display" style="padding: 10px 0px"></span>:
+      The song of the day is...
       {% assign today = site.time | date: "%Y-%m-%d" %}
 
 {% for post in site.posts %}
