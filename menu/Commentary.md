@@ -12,7 +12,7 @@ Just some music.
   {% if post.tags contains 'commentary' %}
     {% assign post_date = post.date | date: "%Y-%m-%d" %}
     {% if post_date == today %}
-      <div class="post-content" style="text-align:center; font-size: 2.5rem; font-family: Palatino">
+      <div class="post-content" style="text-align:center; font-size: 2.5rem; font-family: Palatino; margin-bottom: 0px">
         {{ post.title }}
       </div>
       {% else %}
@@ -24,7 +24,7 @@ Just some music.
 {% endfor %}
     </p>
        <div style="
-    background-image: url('imgs/Untitled15.png');
+    background-image: url('/imgs/Untitled15.png');
     background-repeat: repeat;
     background-size: 5%;
     width: 100%;
