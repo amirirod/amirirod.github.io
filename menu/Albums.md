@@ -1,6 +1,7 @@
 ---
 layout: page
 title: Albums of the Month
+tags: menu
 ---
 Just some music
 <div class="content-section">
