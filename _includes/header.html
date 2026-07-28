@@ -5,7 +5,8 @@
     {%- assign page_paths = site.minima.nav_pages | default: default_paths -%}
     {%- assign page_titles = site.pages | map: 'title' | compact %}
     <a class="site-title" rel="author" href="{{ '/' | relative_url }}">{{ site.title | escape }}</a>
-<img src="{{ '/imgs/Logo.jpg' | relative_url }}" style="
+<div style="
+  background-image: {{ '/imgs/Logo.jpg' | relative_url }}; 
   z-index: 1000;
   position: absolute;
   top: 0;
@@ -14,6 +15,7 @@
   object-fit: contain;
   height: 60px;"
   >
+</div>
     {%- unless page_titles == empty %}
       <nav class="site-nav">
         <label for="nav-trigger">
