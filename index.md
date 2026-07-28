@@ -8,7 +8,7 @@ Just some music.
   Test
 </button>
 <div class="content-section">
-  <h2 class="pinned-sticky">
+  <h2 style="position: fixed">
     <p style="text-align: center; font-family: Palatino;">
       <span id="date-display"></span>:
       {% assign today = site.time | date: "%Y-%m-%d" %}
