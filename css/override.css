@@ -149,7 +149,6 @@ hr {
 
 /* 4. THE ACTIVE STATE WHEN CLICKED */
 .dropdown.active .dropdown-content {
-  display: block !important;
   opacity: 1 !important;
   transform: translateY(0) !important;
   
