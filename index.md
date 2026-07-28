@@ -9,9 +9,9 @@ Just some music.
 </button>
 <div>
 <div class="content-section">
-  <div style="position: sticky; top: 95px; background: black; z-index: 0">
+  <div style="position: sticky; top: 90px; background: black; z-index: 0">
     <p style="text-align: center; font-family: Palatino;">
-      <span id="date-display"></span>:
+      <span id="date-display" style="padding: 5px 0px"></span>:
       {% assign today = site.time | date: "%Y-%m-%d" %}
 
 {% for post in site.posts %}
