@@ -67,10 +67,10 @@ Most Recent Song of The Day:
       <li>
         <h2 ><a class="shrink-btn" onclick="this.parentElement.classList.toggle('active');" style="color: #BB0000; letter-spacing: -1px; font-weight: 300; text-decoration: underline white;" href="{{ post.url }}" >{{ post.date | date: "%B %d, %Y"}} - {{ post.title }}</a>
         </h2>
-        <div class="post-content;" id="truncated-text" style="font-family: Palatino">
-         {% assign parts = {{ post.content }} | split: "Give it a listen" %}
-         {{ parts[1] | truncatewords: 20}}
-          {{ parts[2] }}
+        <div class="post-content;" style="font-family: Palatino">
+         {% assign parts = post.content | split: "Give it a listen:" %}
+         {{ parts[0] | strip_html | truncatewords: 20}}
+          {{ parts[1] }}
         </div>
         <hr class="custom-divider;" data-darkreader-inline-border-color="grey;" data-darkreader-inline-background-color="#c7b99e">
       </li>
