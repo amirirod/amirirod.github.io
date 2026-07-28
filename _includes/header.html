@@ -3,7 +3,7 @@
   height: 122px;
   line-height: 122px;
   background-color: black;
-  border-top: 5px solid #BBOOOO;
+  border-top: 5px solid #BB0000;
   border-bottom: 1px solid grey;
   display: flex;
   justify-content: space-between">
@@ -13,9 +13,6 @@
     <div><a style="font-size: 1rem; z-index: 3000; font-weight: 300; letter-spacing: -1px; margin-bottom: 0;" rel="author" href="{{ '/' | relative_url }}">{{ site.title | escape }}</a></div>
 <div class="hordiv" style="
   z-index: 1000;
-  position: absolute;
-  top: 0;
-  left: 0;
   width: 25%;
   height: 122px;"
   >
@@ -32,7 +29,7 @@
     AmiriRod
   </div>
 </div>
-    <div style="float: right">
+    <div>
     {%- unless page_titles == empty %}
       <nav class="site-nav">
         <label for="nav-trigger">
