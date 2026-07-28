@@ -11,7 +11,7 @@ Just some music.
   <div style="position: sticky; top: 90px; background: black; z-index: 1">
     <p style="text-align: center; font-family: Palatino;">
       <hr>
-      The song of the day is...
+      <div style="text-align: center; font-family: Palatino;">Today is <span id="date-display" style="padding: 10px 0px"></span> and the song of the day is:</div>
       {% assign today = site.time | date: "%Y-%m-%d" %}
 
 {% for post in site.posts %}
