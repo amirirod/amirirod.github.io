@@ -8,7 +8,7 @@ Just some music.
   Test
 </button>
 <div>
-<div class="content-section">
+<div class="content-section" style="background: black">
   <div style="position: sticky; top: 95px; background: black; z-index: 0">
     <p style="text-align: center; font-family: Palatino;">
       <span id="date-display" style="padding: 10px 0px"></span>:
