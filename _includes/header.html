@@ -6,8 +6,6 @@
   border-top: 5px solid #BBOOOO;
   border-bottom: 1px solid grey;
   justify-content: space-between">
-
-  <div style="width: 1469px; height: 122px">
     {%- assign default_paths = site.pages | map: "path" -%}
     {%- assign page_paths = site.minima.nav_pages | default: default_paths -%}
     {%- assign page_titles = site.pages | map: 'title' | compact %}
@@ -44,5 +42,4 @@
       </nav>
     {%- endunless %}
       </div>
-  </div>
 </header>
