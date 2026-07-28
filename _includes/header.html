@@ -27,8 +27,9 @@
     AmiriRod
   </div>
 </div>
+    <div style="float: left">
     {%- unless page_titles == empty %}
-      <nav class="site-title" style="align-items: right">
+      <nav class="site-nav">
         <label for="nav-trigger">
           <span class="menu-icon"></span>
         </label>
@@ -36,5 +37,6 @@
         {% include nav-items.html paths = page_paths %}
       </nav>
     {%- endunless %}
+      </div>
   </div>
 </header>
