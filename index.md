@@ -12,10 +12,7 @@ Just some music.
     <p style="text-align: center; font-family: Palatino;">
       <hr>
       <div style="text-align: center; font-family: Palatino;">
-       Today is 
        <span id="date-display" style="padding: 10px 0px"></span> 
-       and the song of the day is:
-      </div>
       {% assign today = site.time | date: "%Y-%m-%d" %}
 
 {% for post in site.posts %}
