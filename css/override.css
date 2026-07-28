@@ -116,7 +116,6 @@ hr {
 }
 
 /* FIX: Keeps menu open on hover OR when clicked/active */
-.dropdown:hover .dropdown-content,
 .dropdown.active .dropdown-content {
   display: block;
 }
