@@ -154,7 +154,7 @@ hr {
   visibility: visible;
   transform: translateY(0);
 }
-}
+
 .sticky-texts {
   position: sticky;
   top: 212; /* Tells it where to lock into place */
