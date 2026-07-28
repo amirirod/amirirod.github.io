@@ -1,6 +1,7 @@
 ---
 layout: page
 title: Artists of the Week
+tags: menu
 ---
 Just some music
 <div class="content-section">
