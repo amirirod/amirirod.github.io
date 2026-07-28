@@ -154,6 +154,7 @@ hr {
 .dropdown.active .dropdown-content {
   opacity: 1 !important;
   transform: translateY(0) !important;
+  background-image: url('/imgs/Back1.png');
   
   /* Set this to a height larger than your menu content will ever be */
   max-height: 500px !important; 
