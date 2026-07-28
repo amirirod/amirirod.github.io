@@ -140,8 +140,8 @@ hr{
 .dropdown-content a {
   color: black;
   background-image: url('/imgs/Back.png');
-  background-size: 50% 50%;      /* Scales image to 1/4 of total area */
-  background-repeat: repeat;      /* Tiles the image to fill the grid */
+  background-size: 25% 100%;     /* 25% width means exactly 4 fit across */
+  background-repeat: repeat-x;    /* Tiles ONLY horizontally */
   display: block;
   padding: 12px 16px;
 }
