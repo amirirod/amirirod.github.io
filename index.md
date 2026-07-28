@@ -54,7 +54,7 @@ Most Recent Song of The Day:
   {% for post in site.posts %}
     {% if post.tags contains 'song' %}
       <li>
-        <h2 ><a class="shrink-btn" style="color: #BB0000; letter-spacing: -1px; font-weight: 300; text-decoration: underline white;" href="{{ post.url }}" onclick="this.parentElement.classList.toggle('active')>{{ post.date | date: "%B %d, %Y"}} - {{ post.title }}</a>
+        <h2 ><a class="shrink-btn" onclick="this.parentElement.classList.toggle('active')" style="color: #BB0000; letter-spacing: -1px; font-weight: 300; text-decoration: underline white;" href="{{ post.url }}" >{{ post.date | date: "%B %d, %Y"}} - {{ post.title }}</a>
         </h2>
         <div class="post-content;" style="font-family: Palatino">
           {{ post.content }}
