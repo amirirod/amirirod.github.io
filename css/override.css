@@ -123,7 +123,6 @@ hr{
   /* 1. KEEPS YOUR LAYOUT PERFECTLY FORMED BUT SHRUNK TO ZERO */
   display: block; 
   position: absolute;
-  background-color: #f1f1f1;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   z-index: 1;
   
@@ -138,7 +137,6 @@ hr{
 }
 
 .dropdown-content a {
-  color: black;
   background: url('/imgs/Back.png') repeat-x left center !important;
   background-size: 25% 100% !important;
   display: block;
