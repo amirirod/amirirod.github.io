@@ -11,7 +11,12 @@ layout: default
   <div class="window-content">
     <span class="close-btn" onclick="closeWindow()">&times;</span>
     <h2>{{ page.window_title }}</h2>
-    <p>{{ page.window_text }}</p>
+    <div>
+      {%- assign about_page = site.pages | where: "path", "about.md" | first -%}
+      {%- if about_page -%}
+        {{ about_page.content | markdownify }}
+      {%- endif -%}
+    </div>
   </div>
 </div>
 <script>
