@@ -67,11 +67,16 @@ Most Recent Song of The Day:
       <li>
         <h2 ><a class="shrink-btn" onclick="this.parentElement.classList.toggle('active');" style="color: #BB0000; letter-spacing: -1px; font-weight: 300; text-decoration: underline white;" href="{{ post.url }}" >{{ post.date | date: "%B %d, %Y"}} - {{ post.title }}</a>
         </h2>
-        <div class="post-content;" style="font-family: Palatino">
-         {% assign parts = post.content | split: "Give it a listen:" %}
-         {{ parts[0] | strip_html | truncatewords: 40}} Read More
-          {{ parts[1] }}
-        </div>
+        <div class="post-content" style="font-family: Palatino;">
+  {% assign parts = post.content | split: "Give it a listen:" %}
+  
+  <!-- Strip HTML from the excerpt, truncate it, and add the link -->
+  {{ parts[0] | strip_html | truncatewords: 40 }} 
+  <a href="{{ post.url }}">Read More</a>
+  
+  <!-- Strip HTML from the remaining part to prevent stray tags -->
+  {{ parts[1] | strip_html }}
+</div>
         <hr class="custom-divider;" data-darkreader-inline-border-color="grey;" data-darkreader-inline-background-color="#c7b99e">
       </li>
     {% endif %}
