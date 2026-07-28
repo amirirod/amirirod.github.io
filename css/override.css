@@ -96,6 +96,7 @@ hr {
   display: block;
   }
 */
+/*
 .dropdown-content {
   display: none;
   position: absolute;
@@ -112,12 +113,47 @@ hr {
 }
 
 .dropdown-content a:hover {
-  background-color: #ddd; /* This only hovers individual links inside */
+  background-color: #ddd; 
 }
 
-/* FIX: Menu now opens ONLY when the trigger button is clicked and the 'active' class is present */
+
 .dropdown.active .dropdown-content {
   display: block;
+  */
+.dropdown-content {
+  position: absolute;
+  background-color: #f1f1f1;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  
+  /* 1. HIDE MENU INSTEAD OF DISPLAY: NONE */
+  opacity: 0;
+  visibility: hidden;
+  
+  /* 2. POSITION IT SLIGHTLY HIGHER FOR THE SLIDE EFFECT */
+  transform: translateY(-10px);
+  
+  /* 3. DEFINE THE ANIMATION SPEED AND SMOOTHNESS */
+  transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s ease;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+/* 4. FIX: ANIMATE TO FULL VISIBILITY AND SLIDE INTO PLACE */
+.dropdown.active .dropdown-content {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
 }
 .sticky-texts {
   position: sticky;
