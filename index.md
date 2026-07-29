@@ -69,7 +69,7 @@ Most Recent Song of The Day:
         </h2>
         <div class="post-content" style="font-family: Palatino;">
   {% assign parts = post.content | split: "Give it a listen:" %}
-  {% assign part = parts | markdownify | remove: '</p>' | remove: '<p>'
+  {% assign part = parts | markdownify | remove: '</p>' | remove: '<p>' %}
   
   <!-- Strip HTML from the excerpt, truncate it, and add the link -->
   {{ part[0] | strip_html | truncatewords: 40 }} 
