@@ -59,7 +59,6 @@ document.getElementById('date-display').textContent = formattedDate;
     element.innerText = words.slice(0, limit).join(" ") + "...";
   }
 </script>
-Most Recent Song of The Day:
 <!--
 <ul>
   {% for post in site.posts %}
