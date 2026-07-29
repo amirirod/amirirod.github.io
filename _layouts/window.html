@@ -1,7 +1,7 @@
 ---
 layout: default
 ---
-<!-- 
+
 <div class="main-page-content">
   {{ content }}
 </div>
@@ -27,31 +27,4 @@ layout: default
     document.getElementById("customWindow").style.display = "none";
   }
 </script>
--->
 <!-- The Main Page Content Displays Normally -->
-<div class="main-page-content">
-  {{ content }}
-</div>
-
-<!-- The Overlay Window Structure -->
-<div id="customWindow" class="window-overlay">
-  <!-- Added max-height, overflow-y, and box-sizing to the style attribute below -->
-  <div class="window-content" style="z-index: 5000; max-height: 80vh; overflow-y: auto; box-sizing: border-box;">
-    <span class="close-btn" onclick="closeWindow()">&times;</span>
-    <h2>{{ page.window_title }}</h2>
-    <div>
-      {%- assign about_page = site.pages | where: "path", "about.md" | first -%}
-      {%- if about_page -%}
-        {{ about_page.content | markdownify }}
-      {%- endif -%}
-    </div>
-  </div>
-</div>
-<script>
-  function openWindow() {
-    document.getElementById("customWindow").style.display = "block";
-  }
-  function closeWindow() {
-    document.getElementById("customWindow").style.display = "none";
-  }
-</script>
