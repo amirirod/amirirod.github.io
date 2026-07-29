@@ -94,19 +94,17 @@ Most Recent Song of The Day:
           </a>
         </h2>
         <div class="post-content" style="font-family: Palatino;">
-          <!-- 1. Split the raw markdown content -->
-          {% assign parts = post.content | split: "Give it a listen:" %}
-          <!-- 2. Process the text BEFORE "Give it a listen:" -->
-          {% assign first_part = parts[0] | markdownify | strip_html | strip %}
+          <!-- 1. Split by the exact HTML paragraph Jekyll outputs -->
+          {% assign parts = post.content | split: "<p>Give it a listen:</p>" %}
+          <!-- 2. Clean up and output the preview text -->
+          {% assign first_part = parts[0] | strip_html | strip %}
           {{ first_part | truncatewords: 40 }} 
           <a href="{{ post.url }}">Read More</a>
-          <!-- 3. Convert part 1 to HTML and completely wipe out the invalid html root tags -->
-          {% assign second_part_html = parts[1] | markdownify | remove: '<html>' | remove: '</html>' %}
-          <!-- 4. Clean up any leading structural paragraph loops Jekyll injected -->
-          {% assign final_second_part = second_part_html | remove_first: '</p>' | remove_first: '<p></p>' %}
-          {{ final_second_part }}
+          <!-- 3. Clean up the iframe section by stripping the bad html/p wrapper blocks -->
+          {% assign second_part = parts[1] | remove: '<html>' | remove: '</html>' | remove: '<p>' | remove: '</p>' | strip %}
+          {{ second_part }}
         </div>
-        <hr>
+        <hr class="custom-divider" data-darkreader-inline-border-color="grey" data-darkreader-inline-background-color="#c7b99e">
       </li>
     {% endif %}
   {% endfor %}
