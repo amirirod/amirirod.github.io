@@ -96,13 +96,14 @@ Most Recent Song of The Day:
         <div class="post-content" style="font-family: Palatino;">
           <!-- 1. Split the raw markdown content -->
           {% assign parts = post.content | split: "Give it a listen:" %}
-          <!-- 2. Process the text BEFORE "Give it a listen:" -->
-          {% assign first_part = parts[0] | markdownify | strip_html | strip %}
-          {{ first_part | truncatewords: 40 }} 
+          <!-- 2. Strip HTML from raw parts FIRST, then markdownify if needed -->
+          {% assign raw_first = parts[0] | strip_html | strip %}
+          {% assign raw_second = parts[1] | strip_html | strip %}
+          <!-- 3. Render the first part safely truncated -->
+          {{ raw_first | truncatewords: 40 }} 
           <a href="{{ post.url }}">Read More</a>
-          <!-- 3. Process the text AFTER "Give it a listen:" (Fixed index to 1) -->
-          {% assign second_part = parts[1] | markdownify | strip_html | strip %}
-          {{ second_part }}
+          <!-- 4. Render the second part completely free of phantom tags -->
+          {{ raw_second }}
         </div>
         <hr class="custom-divider" data-darkreader-inline-border-color="grey" data-darkreader-inline-background-color="#c7b99e">
       </li>
