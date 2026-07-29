@@ -98,7 +98,7 @@ Most Recent Song of The Day:
           {% assign parts = post.content | split: "Give it a listen:" %}
           <!-- 2. Strip HTML from raw parts FIRST, then markdownify if needed -->
           {% assign raw_first = parts[0] | strip_html | strip %}
-          {% assign raw_second = parts[1] | strip_html | strip %}
+          {% assign raw_second = parts[1] | strip %}
           <!-- 3. Render the first part safely truncated -->
           {{ raw_first | truncatewords: 40 }} 
           <a href="{{ post.url }}">Read More</a>
