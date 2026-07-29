@@ -94,19 +94,16 @@ Most Recent Song of The Day:
           </a>
         </h2>
         <div class="post-content" style="font-family: Palatino;">
-          <!-- 1. Split the raw content at the phrase -->
+          <!-- 1. Split the raw markdown content -->
           {% assign parts = post.content | split: "Give it a listen:" %}
-          <!-- 2. Clean part 0 for a plain-text preview -->
+          <!-- 2. Process the text BEFORE "Give it a listen:" -->
           {% assign first_part = parts[0] | markdownify | strip_html | strip %}
           {{ first_part | truncatewords: 40 }} 
           <a href="{{ post.url }}">Read More</a>
-          <!-- 3. Convert part 1 to HTML -->
-          {% assign second_part_html = parts[1] | markdownify %}
-          <!-- 4. Clean up any leading broken tags -->
-          {% assign clean_start = second_part_html | remove_first: '</p>' | remove_first: '<p></p>' %}
-          <!-- 5. Split right after the iframe to isolate and drop trailing tags -->
-          {% assign iframe_split = clean_start | split: '</iframe>' %}
-          {% assign final_second_part = iframe_split[0] | append: '</iframe>' %}
+          <!-- 3. Convert part 1 to HTML and completely wipe out the invalid html root tags -->
+          {% assign second_part_html = parts[1] | markdownify | remove: '<html>' | remove: '</html>' %}
+          <!-- 4. Clean up any leading structural paragraph loops Jekyll injected -->
+          {% assign final_second_part = second_part_html | remove_first: '</p>' | remove_first: '<p></p>' %}
           {{ final_second_part }}
         </div>
         <hr class="custom-divider" data-darkreader-inline-border-color="grey" data-darkreader-inline-background-color="#c7b99e">
