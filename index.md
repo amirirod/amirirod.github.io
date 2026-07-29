@@ -3,7 +3,7 @@ layout: window
 window_title: "About Me"
 window_text: "This text loads directly inside the window overlay."
 ---
- <span id="date-display" style="text-align: center; font-family: Palatino; padding: 10px 0px"></span>:
+ <div style="width: 100%; text-align: center; font-family: Palatino;"><span id="date-display" style=" padding: 10px 0px"></span>:</div>
 
 <div>
 <div class="content-section" style="background: black; z-index:1">
