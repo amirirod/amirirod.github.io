@@ -15,7 +15,7 @@
  -->
 <div class="dropdown">
   <!-- FIX: Added onclick attribute to toggle the menu open/closed -->
-  <button class="dropdown-trigger" onclick="this.parentElement.classList.toggle('active')"><img src="/imgs/Menu.png" style="width: 84px; height: 84px"></button>
+  <button class="dropdown-trigger" onclick="this.parentElement.classList.toggle('active')"><img src="/imgs/Menu.png" style="width: 72px; height: 72px"></button>
   <div class="dropdown-content">
   {%- for path in include.paths -%}
     {%- assign hyperpage = site.pages | where: "path", path | first -%}
