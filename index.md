@@ -94,16 +94,17 @@ Most Recent Song of The Day:
           </a>
         </h2>
         <div class="post-content" style="font-family: Palatino;">
-          <!-- 1. Split the raw markdown content -->
+          <!-- 1. Split the raw content -->
           {% assign parts = post.content | split: "Give it a listen:" %}
-          <!-- 2. Strip HTML from raw parts FIRST, then markdownify if needed -->
-          {% assign raw_first = parts[0] | strip_html | strip %}
-          {% assign raw_second = parts[1] | strip %}
-          <!-- 3. Render the first part safely truncated -->
-          {{ raw_first | truncatewords: 40 }} 
+          <!-- 2. Clean part 0 for a plain-text preview -->
+          {% assign first_part = parts[0] | markdownify | strip_html | strip %}
+          {{ first_part | truncatewords: 40 }} 
           <a href="{{ post.url }}">Read More</a>
-          <!-- 4. Render the second part completely free of phantom tags -->
-          {{ raw_second }}
+          <!-- 3. Convert part 1 to HTML, then surgically remove ONLY the stray paragraph closure -->
+          {% assign second_part_html = parts[1] | markdownify %}
+          <!-- Remove the leading broken paragraph tags that Jekyll injects before the <div> -->
+          {% assign clean_second_part = second_part_html | remove_first: '</p>' | remove_first: '<p></p>' %}
+          {{ clean_second_part }}
         </div>
         <hr class="custom-divider" data-darkreader-inline-border-color="grey" data-darkreader-inline-background-color="#c7b99e">
       </li>
