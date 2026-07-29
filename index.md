@@ -83,23 +83,25 @@ Most Recent Song of The Day:
   {% endfor %}
 </ul>
 -->
+
 <ul>
   {% for post in site.posts %}
     {% if post.tags contains 'song' %}
       <li>
-        <h2 ><a class="shrink-btn" onclick="this.parentElement.classList.toggle('active');" style="color: #BB0000; letter-spacing: -1px; font-weight: 300; text-decoration: underline white;" href="{{ post.url }}" >{{ post.date | date: "%B %d, %Y"}} - {{ post.title }}</a>
+        <h2>
+          <a class="shrink-btn" onclick="this.parentElement.parentElement.classList.toggle('active');" style="color: #BB0000; letter-spacing: -1px; font-weight: 300; text-decoration: underline white;" href="{{ post.url }}">
+            {{ post.date | date: "%B %d, %Y"}} - {{ post.title }}
+          </a>
         </h2>
         <div class="post-content" style="font-family: Palatino;">
-  {% assign parts = post.content | split: "Give it a listen:" %}
-  {% assign part = parts | markdownify | remove: '</p>' | remove: '<p>'
-  
-  <!-- Strip HTML from the excerpt, truncate it, and add the link -->
-  {{ part[0] | strip_html | truncatewords: 40 }} 
-  <a href="{{ post.url }}">Read More</a>
-  
-  <!-- Strip HTML from the remaining part to prevent stray tags -->
-  {{ part[1] | markdownify | remove: '</p>' }}
-        <hr class="custom-divider;" data-darkreader-inline-border-color="grey;" data-darkreader-inline-background-color="#c7b99e">
+          {% assign parts = post.content | split: "Give it a listen:" %}
+          {% assign first_part = parts[0] | markdownify | remove: '<p>' | remove: '</p>' | strip_html %}
+          {{ first_part | truncatewords: 40 }}
+          <a href="{{ post.url }}">Read More</a>
+          {% assign second_part = parts[1] | markdownify | remove: '<p>' | remove: '</p>' %}
+          {{ second_part }}
+        </div>
+        <hr class="custom-divider" data-darkreader-inline-border-color="grey" data-darkreader-inline-background-color="#c7b99e">
       </li>
     {% endif %}
   {% endfor %}
