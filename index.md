@@ -69,13 +69,14 @@ Most Recent Song of The Day:
         </h2>
         <div class="post-content" style="font-family: Palatino;">
   {% assign parts = post.content | split: "Give it a listen:" %}
+  {% assign part = parts | markdownify | remove: '</p>' | remove: '<p>'
   
   <!-- Strip HTML from the excerpt, truncate it, and add the link -->
-  {{ parts[0] | strip_html | truncatewords: 40 }} 
+  {{ part[0] | strip_html | truncatewords: 40 }} 
   <a href="{{ post.url }}">Read More</a>
   
   <!-- Strip HTML from the remaining part to prevent stray tags -->
-  {{ parts[1] | markdownify | remove: '</p>' }}
+  {{ part[1] | markdownify | remove: '</p>' }}
         <hr class="custom-divider;" data-darkreader-inline-border-color="grey;" data-darkreader-inline-background-color="#c7b99e">
       </li>
     {% endif %}
