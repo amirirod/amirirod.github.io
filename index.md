@@ -75,7 +75,7 @@ Most Recent Song of The Day:
   <a href="{{ post.url }}">Read More</a>
   
   <!-- Strip HTML from the remaining part to prevent stray tags -->
-  {{ assign part = parts[1] | split: "</p>" }}
+  {{ assign part = parts[1] | split: '</p>' }}
   {{ part[1] }}
 </div>
         <hr class="custom-divider;" data-darkreader-inline-border-color="grey;" data-darkreader-inline-background-color="#c7b99e">
