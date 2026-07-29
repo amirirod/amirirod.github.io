@@ -99,7 +99,7 @@ Most Recent Song of The Day:
           <!-- 2. Clean up and output the preview text -->
           {% assign first_part = parts[0] | strip_html | strip %}
           {{ first_part | truncatewords: 40, "" }} 
-          <style="color: grey"> . . . Read More </style>
+          <style="color: grey !important ;"> . . . Read More </style>
           <!-- 3. Clean up the iframe section by stripping the bad html/p wrapper blocks -->
           {% assign second_part = parts[1] | remove: '<html>' | remove: '</html>' | remove: '<p>' | remove: '</p>' | strip %}
           {{ second_part }}
