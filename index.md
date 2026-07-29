@@ -94,11 +94,14 @@ Most Recent Song of The Day:
           </a>
         </h2>
         <div class="post-content" style="font-family: Palatino;">
+          <!-- 1. Isolate raw layout segments -->
           {% assign parts = post.content | split: "Give it a listen:" %}
-          {% assign first_part = parts[0] | markdownify | remove: '<p>' | remove: '</p>' | strip_html %}
-          {{ first_part | truncatewords: 40 }}
+          <!-- 2. Strip ALL native HTML formatting before rendering -->
+          {% assign first_part = parts[0] | markdownify | strip_html | strip %}
+          {% assign second_part = parts[1] | markdownify | strip_html | strip %}
+          <!-- 3. Display safe plain-text contents -->
+          {{ first_part | truncatewords: 40 }} 
           <a href="{{ post.url }}">Read More</a>
-          {% assign second_part = parts[1] | markdownify | remove: '<p>' | remove: '</p>' %}
           {{ second_part }}
         </div>
         <hr class="custom-divider" data-darkreader-inline-border-color="grey" data-darkreader-inline-background-color="#c7b99e">
