@@ -104,7 +104,7 @@ Most Recent Song of The Day:
           {% assign second_part = parts[1] | remove: '<html>' | remove: '</html>' | remove: '<p>' | remove: '</p>' | strip %}
           {{ second_part }}
         </div>
-        <hr class="custom-divider" data-darkreader-inline-border-color="grey" data-darkreader-inline-background-color="#c7b99e">
+        <hr>
       </li>
     {% endif %}
   {% endfor %}
