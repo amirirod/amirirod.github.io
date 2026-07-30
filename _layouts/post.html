@@ -61,7 +61,8 @@ layout: default
 
   <div class="post-content e-content" itemprop="articleBody">
     <style="text-indent: 2rem">
-    {{ content }}
+    {{ post.blurb_text }}
+      {{ post.tldr }}
     </style>
     {% include navlinks.html %}
   </div>
