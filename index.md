@@ -92,19 +92,22 @@ document.getElementById('date-display').textContent = formattedDate;
   {% endfor %}
 </ul>
 -->
-<script>
+
+<button id="global-music-toggle" style="margin-bottom: 20px; padding: 10px; border-radius: 8px; cursor: pointer;">
+  Switch to Apple Music
+</button>
+
+<ul>
+  {% for post in site.posts %}
+    {% if post.tags contains 'song' %}
+      <li>
+       <script>
 document.addEventListener("DOMContentLoaded", function () {
   const toggleBtn = document.getElementById("music-platform-toggle");
   const iframe = document.getElementById("music-embed");
-
-  // 1. Define your specific embed URLs
 const spotifyUrl = "{{ page.spotify_link }}";
 const appleUrl = "{{ page.apple_link }}";
-
-  // 2. Load the user's saved preference, or default to Spotify
   let savedPlatform = localStorage.getItem("preferred-music-platform") || "spotify";
-
-  // Function to update the UI based on the active platform
   function updateMusicEmbed(platform) {
     if (platform === "apple") {
       iframe.src = appleUrl;
@@ -114,32 +117,16 @@ const appleUrl = "{{ page.apple_link }}";
       toggleBtn.textContent = " Switch to Apple Music";
     }
   }
-
-  // Initial load
   updateMusicEmbed(savedPlatform);
-
-  // 3. Listen for clicks to swap the URLs
   toggleBtn.addEventListener("click", function () {
     if (savedPlatform === "spotify") {
       savedPlatform = "apple";
     } else {
       savedPlatform = "spotify";
     }
-
-    // Save choice to localStorage and update iframe
-    localStorage.setItem("preferred-music-platform", savedPlatform);
-    updateMusicEmbed(savedPlatform);
   });
 });
  </script>
-<button id="global-music-toggle" style="margin-bottom: 20px; padding: 10px; border-radius: 8px; cursor: pointer;">
-  Switch to Apple Music
-</button>
-
-<ul>
-  {% for post in site.posts %}
-    {% if post.tags contains 'song' %}
-      <li>
         <h2>
           <a class="shrink-btn" onclick="this.parentElement.parentElement.classList.toggle('active');" style="color: #BB0000; letter-spacing: -1px; font-weight: 300; text-decoration: underline white;" href="{{ post.url }}">
             {{ post.date | date: "%B %d, %Y"}} - {{ post.title }}
