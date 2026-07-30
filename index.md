@@ -118,7 +118,7 @@ document.getElementById('date-display').textContent = formattedDate;
         </h2>
         <div class="post-content" style="font-family: Palatino;">
           {{ post.tldr }}
-         {{ post.blurb_text | trunctatewords: 40, "" }}
+         {{ post.blurb_text | trunctatewords: 40 }}
          <div class="spotify-container;">
 <iframe 
   data-testid="embed-iframe" 
