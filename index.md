@@ -43,7 +43,6 @@ window_text: "This text loads directly inside the window overlay."
   </div>
   
 
-  
  <script>
         const today = new Date();
 const options = { year: 'numeric', month: 'long', day: 'numeric' };
