@@ -117,7 +117,7 @@ document.getElementById('date-display').textContent = formattedDate;
           </a>
         </h2>
         <div class="post-content" style="font-family: Palatino;">
-         TLDR: <u></u>{{ post.tldr }}</u><br>
+         TLDR: <u>{{ post.tldr }}</u><br>
          {{ post.blurb_text | truncatewords: 40 }}<br>
          <div>
 <iframe 
