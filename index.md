@@ -80,7 +80,7 @@ document.getElementById('date-display').textContent = formattedDate;
     {% endif %}
   {% endfor %}
 </ul>
--->
+
 
 <ul>
   {% for post in site.posts %}
@@ -92,15 +92,34 @@ document.getElementById('date-display').textContent = formattedDate;
           </a>
         </h2>
         <div class="post-content" style="font-family: Palatino;">
-          <!-- 1. Split by the exact HTML paragraph Jekyll outputs -->
+
           {% assign parts = post.content | split: "<p>Give it a listen:</p>" %}
-          <!-- 2. Clean up and output the preview text -->
+ 
           {% assign first_part = parts[0] | strip_html | strip %}
           {{ first_part | truncatewords: 40, "" }} 
           <span style="color: grey !important ;"> . . . Read More </span>
-          <!-- 3. Clean up the iframe section by stripping the bad html/p wrapper blocks -->
+ 
           {% assign second_part = parts[1] | remove: '<html>' | remove: '</html>' | remove: '<p>' | remove: '</p>' | strip %}
           {{ second_part }}
+        </div>
+        <hr>
+      </li>
+    {% endif %}
+  {% endfor %}
+</ul>
+-->
+<ul>
+  {% for post in site.posts %}
+    {% if post.tags contains 'song' %}
+      <li>
+        <h2>
+          <a class="shrink-btn" onclick="this.parentElement.parentElement.classList.toggle('active');" style="color: #BB0000; letter-spacing: -1px; font-weight: 300; text-decoration: underline white;" href="{{ post.url }}">
+            {{ post.date | date: "%B %d, %Y"}} - {{ post.title }}
+          </a>
+        </h2>
+        <div class="post-content" style="font-family: Palatino;">
+          {{ post.tldr }}
+         {{ post.blurb_text | trunctatewords: 40, "" }}
         </div>
         <hr>
       </li>
