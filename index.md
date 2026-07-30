@@ -101,32 +101,6 @@ document.getElementById('date-display').textContent = formattedDate;
   {% for post in site.posts %}
     {% if post.tags contains 'song' %}
       <li>
-       <script>
-document.addEventListener("DOMContentLoaded", function () {
-  const toggleBtn = document.getElementById("music-platform-toggle");
-  const iframe = document.getElementById("music-embed");
-const spotifyUrl = "{{ post.spotify_link }}";
-const appleUrl = "{{ post.apple_link }}";
-  let savedPlatform = localStorage.getItem("preferred-music-platform") || "spotify";
-  function updateMusicEmbed(platform) {
-    if (platform === "apple") {
-      iframe.src = appleUrl;
-      toggleBtn.textContent = " Switch to Spotify";
-    } else {
-      iframe.src = spotifyUrl;
-      toggleBtn.textContent = " Switch to Apple Music";
-    }
-  }
-  updateMusicEmbed(savedPlatform);
-  toggleBtn.addEventListener("click", function () {
-    if (savedPlatform === "spotify") {
-      savedPlatform = "apple";
-    } else {
-      savedPlatform = "spotify";
-    }
-  });
-});
- </script>
         <h2>
           <a class="shrink-btn" onclick="this.parentElement.parentElement.classList.toggle('active');" style="color: #BB0000; letter-spacing: -1px; font-weight: 300; text-decoration: underline white;" href="{{ post.url }}">
             {{ post.date | date: "%B %d, %Y"}} - {{ post.title }}
@@ -136,13 +110,13 @@ const appleUrl = "{{ post.apple_link }}";
           {{ post.blurb_text | truncatewords: 40 }}<br>
           TLDR: <u>{{ post.tldr }}</u><br>
           <div>
-            <!-- 2. CHANGED: Use a class, use data attributes to store both links, and remove the raw src -->
+            <!-- Added quotes around liquid variables to prevent broken HTML if links have query parameters -->
             <iframe 
               class="dynamic-music-embed" 
               data-testid="embed-iframe" 
               style="display: block; border-radius:12px; margin: 0 auto" 
-              data-spotify={{ post.spotify_link }}
-              data-apple={{ post.apple_link }}
+              data-spotify="{{ post.spotify_link }}"
+              data-apple="{{ post.apple_link }}"
               width="100%"
               height="250" 
               frameBorder="0" 
@@ -157,4 +131,45 @@ const appleUrl = "{{ post.apple_link }}";
     {% endif %}
   {% endfor %}
 </ul>
+
+<!-- Place the script down here, safely OUTSIDE the loop -->
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const toggleBtn = document.getElementById("global-music-toggle");
+  let savedPlatform = localStorage.getItem("preferred-music-platform") || "spotify";
+
+  function updateAllEmbeds(platform) {
+    const iframes = document.querySelectorAll(".dynamic-music-embed");
+    
+    iframes.forEach(iframe => {
+      // Conditionally save the chosen URL structure into a single variable
+      let targetSrc = (platform === "apple") 
+        ? iframe.getAttribute("data-apple") 
+        : iframe.getAttribute("data-spotify");
+
+      // Fallback in case a post is missing one of the links
+      if (!targetSrc) {
+        targetSrc = iframe.getAttribute("data-spotify") || iframe.getAttribute("data-apple");
+      }
+
+      if (targetSrc) {
+        iframe.src = targetSrc;
+      }
+    });
+
+    // Toggle the button label based on the active state
+    toggleBtn.textContent = (platform === "apple") ? "Switch to Spotify" : "Switch to Apple Music";
+  }
+
+  // Run immediately on page render
+  updateAllEmbeds(savedPlatform);
+
+  // Single click listener manages all page variables instantly
+  toggleBtn.addEventListener("click", function () {
+    savedPlatform = (savedPlatform === "spotify") ? "apple" : "spotify";
+    localStorage.setItem("preferred-music-platform", savedPlatform);
+    updateAllEmbeds(savedPlatform);
+  });
+});
+</script>
 </div>
