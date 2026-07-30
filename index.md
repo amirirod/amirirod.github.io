@@ -118,12 +118,12 @@ document.getElementById('date-display').textContent = formattedDate;
         </h2>
         <div class="post-content" style="font-family: Palatino;">
           {{ post.tldr }}
-         {{ post.blurb_text | trunctatewords: 40 }}
+         {{ post.blurb_text | truncatewords: 40 }}
          <div class="spotify-container;">
 <iframe 
   data-testid="embed-iframe" 
   style="display: block; border-radius:12px; margin: 0 auto" 
-  src= {{ spotify_link }} 
+  src= {{ post.spotify_link }} 
   width="100%"
   height="250" 
   frameBorder="0" 
