@@ -98,8 +98,8 @@ document.addEventListener("DOMContentLoaded", function () {
   const iframe = document.getElementById("music-embed");
 
   // 1. Define your specific embed URLs
-const spotifyUrl = "{{ page.spotify_embed }}";
-const appleUrl = "{{ page.apple_embed }}";
+const spotifyUrl = "{{ page.spotify_link }}";
+const appleUrl = "{{ page.apple_link }}";
 
   // 2. Load the user's saved preference, or default to Spotify
   let savedPlatform = localStorage.getItem("preferred-music-platform") || "spotify";
@@ -108,10 +108,10 @@ const appleUrl = "{{ page.apple_embed }}";
   function updateMusicEmbed(platform) {
     if (platform === "apple") {
       iframe.src = appleUrl;
-      toggleBtn.textContent = "🎵 Switch to Spotify";
+      toggleBtn.textContent = " Switch to Spotify";
     } else {
       iframe.src = spotifyUrl;
-      toggleBtn.textContent = "🎵 Switch to Apple Music";
+      toggleBtn.textContent = " Switch to Apple Music";
     }
   }
 
