@@ -93,9 +93,6 @@ document.getElementById('date-display').textContent = formattedDate;
 </ul>
 -->
 
-<button id="global-music-toggle" style="margin-bottom: 20px; padding: 10px; border-radius: 8px; cursor: pointer;">
-  Switch to Apple Music
-</button>
 
 <ul>
   {% for post in site.posts %}
