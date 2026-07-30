@@ -105,8 +105,8 @@ document.getElementById('date-display').textContent = formattedDate;
 document.addEventListener("DOMContentLoaded", function () {
   const toggleBtn = document.getElementById("music-platform-toggle");
   const iframe = document.getElementById("music-embed");
-const spotifyUrl = "{{ page.spotify_link }}";
-const appleUrl = "{{ page.apple_link }}";
+const spotifyUrl = "{{ post.spotify_link }}";
+const appleUrl = "{{ post.apple_link }}";
   let savedPlatform = localStorage.getItem("preferred-music-platform") || "spotify";
   function updateMusicEmbed(platform) {
     if (platform === "apple") {
