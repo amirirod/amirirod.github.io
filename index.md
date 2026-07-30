@@ -136,10 +136,10 @@ document.getElementById('date-display').textContent = formattedDate;
 
 <script>
 document.addEventListener("DOMContentLoaded", function () {
-  const toggleBtn = document.getElementById("global-music-toggle");
+  // Read whatever preference was set (either on this page or the settings page)
   let savedPlatform = localStorage.getItem("preferred-music-platform") || "spotify";
 
-  function updateAllEmbeds(platform) {
+  function applyEmbedPreference(platform) {
     const iframes = document.querySelectorAll(".dynamic-music-embed");
     
     iframes.forEach(iframe => {
@@ -152,20 +152,14 @@ document.addEventListener("DOMContentLoaded", function () {
       }
 
       if (targetSrc) {
+        targetSrc = targetSrc.replace(/"/g, "");
         iframe.setAttribute("src", targetSrc);
       }
     });
-
-    toggleBtn.textContent = (platform === "apple") ? "Switch to Spotify" : "Switch to Apple Music";
   }
 
-  updateAllEmbeds(savedPlatform);
-
-  toggleBtn.addEventListener("click", function () {
-    savedPlatform = (savedPlatform === "spotify") ? "apple" : "spotify";
-    localStorage.setItem("preferred-music-platform", savedPlatform);
-    updateAllEmbeds(savedPlatform);
-  });
+  // Execute immediately to match the user's saved choice
+  applyEmbedPreference(savedPlatform);
 });
 </script>
 </div>
