@@ -107,19 +107,21 @@ document.getElementById('date-display').textContent = formattedDate;
           </a>
         </h2>
         <div class="post-content" style="font-family: Palatino;">
-          {{ post.blurb_text | truncatewords: 40 }}<br>
-          TLDR: <u>{{ post.tldr }}</u><br>
-          <div>
-            <!-- Added quotes around liquid variables to prevent broken HTML if links have query parameters -->
+          <!-- Enclosing the text string prevents it from merging into the iframe markup -->
+          <p style="margin-bottom: 10px;">
+            {{ post.blurb_text | truncatewords: 40 }}
+          </p>
+          TLDR: <u>{{ post.tldr }}</u><br><br>
+          
+          <div style="display: block; width: 100%;">
             <iframe 
               class="dynamic-music-embed" 
               data-testid="embed-iframe" 
-              style="display: block; border-radius:12px; margin: 0 auto" 
+              style="display: block; border-radius: 12px; margin: 0 auto; border: none;" 
               data-spotify="{{ post.spotify_link }}"
               data-apple="{{ post.apple_link }}"
               width="100%"
               height="250" 
-              frameBorder="0" 
               allowfullscreen="" 
               allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
               loading="lazy">
@@ -132,7 +134,6 @@ document.getElementById('date-display').textContent = formattedDate;
   {% endfor %}
 </ul>
 
-<!-- Place the script down here, safely OUTSIDE the loop -->
 <script>
 document.addEventListener("DOMContentLoaded", function () {
   const toggleBtn = document.getElementById("global-music-toggle");
@@ -142,29 +143,24 @@ document.addEventListener("DOMContentLoaded", function () {
     const iframes = document.querySelectorAll(".dynamic-music-embed");
     
     iframes.forEach(iframe => {
-      // Conditionally save the chosen URL structure into a single variable
       let targetSrc = (platform === "apple") 
         ? iframe.getAttribute("data-apple") 
         : iframe.getAttribute("data-spotify");
 
-      // Fallback in case a post is missing one of the links
       if (!targetSrc) {
         targetSrc = iframe.getAttribute("data-spotify") || iframe.getAttribute("data-apple");
       }
 
       if (targetSrc) {
-        iframe.src = targetSrc;
+        iframe.setAttribute("src", targetSrc);
       }
     });
 
-    // Toggle the button label based on the active state
     toggleBtn.textContent = (platform === "apple") ? "Switch to Spotify" : "Switch to Apple Music";
   }
 
-  // Run immediately on page render
   updateAllEmbeds(savedPlatform);
 
-  // Single click listener manages all page variables instantly
   toggleBtn.addEventListener("click", function () {
     savedPlatform = (savedPlatform === "spotify") ? "apple" : "spotify";
     localStorage.setItem("preferred-music-platform", savedPlatform);
