@@ -63,54 +63,6 @@ document.getElementById('date-display').textContent = formattedDate;
   {% for post in site.posts %}
     {% if post.tags contains 'song' %}
       <li>
-        <h2 ><a class="shrink-btn" onclick="this.parentElement.classList.toggle('active');" style="color: #BB0000; letter-spacing: -1px; font-weight: 300; text-decoration: underline white;" href="{{ post.url }}" >{{ post.date | date: "%B %d, %Y"}} - {{ post.title }}</a>
-        </h2>
-        <div class="post-content" style="font-family: Palatino;">
-  {% assign parts = post.content | split: "Give it a listen:" %}
-  {% assign part = parts | markdownify | remove: '</p>' | remove: '<p>' %}
-  
-  {{ part[0] | strip_html | truncatewords: 40 }} 
-  <a href="{{ post.url }}">Read More</a>
-  
-
-  {{ part[1] | markdownify | remove: '</p>' }}
-        <hr class="custom-divider;" data-darkreader-inline-border-color="grey;" data-darkreader-inline-background-color="#c7b99e">
-      </li>
-    {% endif %}
-  {% endfor %}
-</ul>
-
-
-<ul>
-  {% for post in site.posts %}
-    {% if post.tags contains 'song' %}
-      <li>
-        <h2>
-          <a class="shrink-btn" onclick="this.parentElement.parentElement.classList.toggle('active');" style="color: #BB0000; letter-spacing: -1px; font-weight: 300; text-decoration: underline white;" href="{{ post.url }}">
-            {{ post.date | date: "%B %d, %Y"}} - {{ post.title }}
-          </a>
-        </h2>
-        <div class="post-content" style="font-family: Palatino;">
-
-          {% assign parts = post.content | split: "<p>Give it a listen:</p>" %}
- 
-          {% assign first_part = parts[0] | strip_html | strip %}
-          {{ first_part | truncatewords: 40, "" }} 
-          <span style="color: grey !important ;"> . . . Read More </span>
- 
-          {% assign second_part = parts[1] | remove: '<html>' | remove: '</html>' | remove: '<p>' | remove: '</p>' | strip %}
-          {{ second_part }}
-        </div>
-        <hr>
-      </li>
-    {% endif %}
-  {% endfor %}
-</ul>
--->
-<ul>
-  {% for post in site.posts %}
-    {% if post.tags contains 'song' %}
-      <li>
         <h2>
           <a class="shrink-btn" onclick="this.parentElement.parentElement.classList.toggle('active');" style="color: #BB0000; letter-spacing: -1px; font-weight: 300; text-decoration: underline white;" href="{{ post.url }}">
             {{ post.date | date: "%B %d, %Y"}} - {{ post.title }}
@@ -133,6 +85,85 @@ document.getElementById('date-display').textContent = formattedDate;
   
 </iframe>
 </div>
+        </div>
+        <hr>
+      </li>
+    {% endif %}
+  {% endfor %}
+</ul>
+-->
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const toggleBtn = document.getElementById("music-platform-toggle");
+  const iframe = document.getElementById("music-embed");
+
+  // 1. Define your specific embed URLs
+const spotifyUrl = "{{ page.spotify_embed }}";
+const appleUrl = "{{ page.apple_embed }}";
+
+  // 2. Load the user's saved preference, or default to Spotify
+  let savedPlatform = localStorage.getItem("preferred-music-platform") || "spotify";
+
+  // Function to update the UI based on the active platform
+  function updateMusicEmbed(platform) {
+    if (platform === "apple") {
+      iframe.src = appleUrl;
+      toggleBtn.textContent = "🎵 Switch to Spotify";
+    } else {
+      iframe.src = spotifyUrl;
+      toggleBtn.textContent = "🎵 Switch to Apple Music";
+    }
+  }
+
+  // Initial load
+  updateMusicEmbed(savedPlatform);
+
+  // 3. Listen for clicks to swap the URLs
+  toggleBtn.addEventListener("click", function () {
+    if (savedPlatform === "spotify") {
+      savedPlatform = "apple";
+    } else {
+      savedPlatform = "spotify";
+    }
+
+    // Save choice to localStorage and update iframe
+    localStorage.setItem("preferred-music-platform", savedPlatform);
+    updateMusicEmbed(savedPlatform);
+  });
+});
+ </script>
+<button id="global-music-toggle" style="margin-bottom: 20px; padding: 10px; border-radius: 8px; cursor: pointer;">
+  Switch to Apple Music
+</button>
+
+<ul>
+  {% for post in site.posts %}
+    {% if post.tags contains 'song' %}
+      <li>
+        <h2>
+          <a class="shrink-btn" onclick="this.parentElement.parentElement.classList.toggle('active');" style="color: #BB0000; letter-spacing: -1px; font-weight: 300; text-decoration: underline white;" href="{{ post.url }}">
+            {{ post.date | date: "%B %d, %Y"}} - {{ post.title }}
+          </a>
+        </h2>
+        <div class="post-content" style="font-family: Palatino;">
+          {{ post.blurb_text | truncatewords: 40 }}<br>
+          TLDR: <u>{{ post.tldr }}</u><br>
+          <div>
+            <!-- 2. CHANGED: Use a class, use data attributes to store both links, and remove the raw src -->
+            <iframe 
+              class="dynamic-music-embed" 
+              data-testid="embed-iframe" 
+              style="display: block; border-radius:12px; margin: 0 auto" 
+              data-spotify="{{ post.spotify_link }}"
+              data-apple="{{ post.apple_link }}" 
+              width="100%"
+              height="250" 
+              frameBorder="0" 
+              allowfullscreen="" 
+              allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
+              loading="lazy">
+            </iframe>
+          </div>
         </div>
         <hr>
       </li>
