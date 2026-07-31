@@ -109,7 +109,7 @@ document.getElementById('date-display').textContent = formattedDate;
             {{ post.blurb_text | truncatewords: 40 }}
           </p>
           TLDR: <u>{{ post.tldr }}</u><br><br>
-          <div style="display: flex; width: 100%; height: 250px; background-image: url('/imgs/Back.png'); justify-content: center">
+          <div style="display: flex; width: 100%; height: 250px; background-image: url('/imgs/Back.png'); align-items: center; justify-content: center">
             <iframe 
               class="dynamic-music-embed" 
               data-testid="embed-iframe" 
