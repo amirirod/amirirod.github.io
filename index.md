@@ -117,11 +117,10 @@ document.getElementById('date-display').textContent = formattedDate;
               data-spotify="{{ post.spotify_link }}"
               data-apple="{{ post.apple_link }}"
               width="90%"
-              height="100%" 
+              height="85%" 
               allowfullscreen="" 
               allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
-              loading="lazy">
-            </iframe>
+              loading="lazy"></iframe>
           </div>
         </div>
         <hr>
