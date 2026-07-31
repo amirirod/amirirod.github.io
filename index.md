@@ -110,15 +110,15 @@ document.getElementById('date-display').textContent = formattedDate;
           </p>
           TLDR: <u>{{ post.tldr }}</u><br><br>
           
-          <div style="display: block; width: 100%;">
+          <div style="display: block; width: 100%; height: 250px; background-image: url('/imgs/Back.png')">
             <iframe 
               class="dynamic-music-embed" 
               data-testid="embed-iframe" 
               style="display: block; border-radius: 12px; margin: 0 auto; border: none;" 
               data-spotify="{{ post.spotify_link }}"
               data-apple="{{ post.apple_link }}"
-              width="100%"
-              height="250" 
+              width="90%"
+              height="90%" 
               allowfullscreen="" 
               allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
               loading="lazy">
