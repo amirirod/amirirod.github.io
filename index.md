@@ -109,13 +109,15 @@ document.getElementById('date-display').textContent = formattedDate;
             {{ post.blurb_text | truncatewords: 40 }}
           </p>
           TLDR: <u>{{ post.tldr }}</u><br><br>
-          <div style="display: flex !important; align-items: center !important; justify-content: center !important; width: 100% !important; height: 250px !important; background-image: url('/imgs/Back.png');">
+          <div style="display: flex; align-items: center; justify-content: center; width: 100%; height: 250px; background-image: url('/imgs/Back.png'); box-sizing: border-box;">
     <iframe 
       class="dynamic-music-embed" 
       data-testid="embed-iframe" 
-      style="border-radius: 12px; border: none; width: 90% !important; height: 85% !important; margin: 0px !important;" 
+      style="border-radius: 12px; border: none; min-height: 152px !important; max-height: 210px !important; margin: 0 auto !important;" 
       data-spotify="{{ post.spotify_link }}"
       data-apple="{{ post.apple_link }}"
+      width="90%"
+      height="212px" 
       allowfullscreen="" 
       allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
       loading="lazy"></iframe>
