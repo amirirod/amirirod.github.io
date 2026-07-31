@@ -6,7 +6,7 @@ window_text: "This text loads directly inside the window overlay."
 ---
 <html style="z-index: 6000">
  Some stuff about me:
-  <ul>
+  <ul style="font-family: Palatino; font-size: 0.75rem; font-weight: 300">
  
   <li> My name is ██████ Amiri Rod██████ </li>
   <li> I pretty much exclusively listen to rap (though the definition of rap is expanding into other genres), and maybe (big maybe) a little r&b </li>
