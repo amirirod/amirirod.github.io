@@ -109,8 +109,7 @@ document.getElementById('date-display').textContent = formattedDate;
             {{ post.blurb_text | truncatewords: 40 }}
           </p>
           TLDR: <u>{{ post.tldr }}</u><br><br>
-          
-          <div style="display: block; width: 100%; height: 250px; background-image: url('/imgs/Back.png')">
+          <div style="display: block; width: 100%; height: 250px; background-image: url('/imgs/Back.png'); align-items: center">
             <iframe 
               class="dynamic-music-embed" 
               data-testid="embed-iframe" 
@@ -118,7 +117,7 @@ document.getElementById('date-display').textContent = formattedDate;
               data-spotify="{{ post.spotify_link }}"
               data-apple="{{ post.apple_link }}"
               width="90%"
-              height="90%" 
+              height="100%" 
               allowfullscreen="" 
               allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
               loading="lazy">
