@@ -4,7 +4,8 @@ title: About Me
 window_title: "Surprise Alert!"
 window_text: "This text loads directly inside the window overlay."
 ---
-<html style="z-index: 6000; font-family: Palatino; font-size: 0.75rem; font-weight: 300; background-image: url('/imgs/Back.png'); >
+<html >
+ <div style="z-index: 6000; font-family: Palatino; font-size: 0.75rem; font-weight: 300; background-image: url('/imgs/Back.png'); >
  Some stuff about me:
   <ul>
  
@@ -18,5 +19,6 @@ window_text: "This text loads directly inside the window overlay."
   </ul>
   <div style="width: 100%; height: 200px; display: flex; align-content: center">
 <img src="/imgs/Logo.jpg" style="width: 50%; height: auto; aspect-ratio: 1 / 1; padding: 0 25%;">
+  </div>
   </div>
 </html>
