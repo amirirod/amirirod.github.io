@@ -113,7 +113,7 @@ document.getElementById('date-display').textContent = formattedDate;
     <iframe 
       class="dynamic-music-embed" 
       data-testid="embed-iframe" 
-      style="border-radius: 12px; border: none; min-height: 152px !important; max-height: 250px !important; height: 100% !important" 
+      style="border-radius: 12px; border: none; min-height: 152px !important; max-height: 250px !important; width: 100% !important; height: 100% !important" 
       data-spotify="{{ post.spotify_link }}"
       data-apple="{{ post.apple_link }}"
       allowfullscreen="" 
