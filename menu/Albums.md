@@ -140,7 +140,7 @@ document.getElementById('date-display').textContent = formattedDate;
       <iframe 
         class="dynamic-music-embed" 
         data-testid="embed-iframe" 
-        style="width: 100% !important; height: 100% !important; border: none;" 
+        style="width: 100% !important; height: 110px !important; border: none;" 
         data-spotify="{{ post.spotify_link }}"
         data-apple="{{ post.apple_link }}"
         allowfullscreen="" 
