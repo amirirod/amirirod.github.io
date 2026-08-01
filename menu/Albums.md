@@ -1,8 +1,4 @@
----
-layout: page
-title: Albums of the Month
-tags: menu
----
+
 <!--
 <div class="content-section">
   <h2 class="pinned-sticky">
