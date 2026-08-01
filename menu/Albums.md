@@ -154,13 +154,13 @@ document.getElementById('date-display').textContent = formattedDate;
       </li>
     {% endif %}
   {% endfor %}
-</ul><script>
+</ul>
+<script>
 document.addEventListener("DOMContentLoaded", function () {
-  // Read whatever preference was set (either on this page or the settings page)
   let savedPlatform = localStorage.getItem("preferred-music-platform") || "spotify";
 
   function applyEmbedPreference(platform) {
-    const iframes = document.querySelectorAll(".dynamic-music-embed");          
+    const iframes = document.querySelectorAll(".dynamic-music-embed");
     iframes.forEach(iframe => {
       let targetSrc = (platform === "apple") 
         ? iframe.getAttribute("data-apple") 
@@ -170,13 +170,15 @@ document.addEventListener("DOMContentLoaded", function () {
       }
       if (targetSrc) {
         targetSrc = targetSrc.replace(/"/g, "");
-        iframe.setAttribute("src", targetSrc);     
-        // FORCES THE PLAYER PACKAGES TO STRETCH TO 100% HEIGHT
-        iframe.style.setProperty('height', '100%', 'important');
+        iframe.setAttribute("src", targetSrc);
+        // --- THE FIXED JAVASCRIPT FORCE OVERRIDE ---
+        // Forces Spotify/Apple's engines to drop the compact 80px/152px layout
+        iframe.setAttribute("height", "230"); 
+        iframe.style.setProperty('height', '230px', 'important');
       }
     });
   }
-  // Execute immediately to match the user's saved choice
+
   applyEmbedPreference(savedPlatform);
 });
 </script>
