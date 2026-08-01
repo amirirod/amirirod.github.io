@@ -213,11 +213,12 @@ hr{
 .shrink-btn:active {
   transform: scale(0.95);
 }
-img.lazy {
-  background-image: url('/assets/images/loading.gif');
-  background-repeat: no-repeat;
-  background-position: center;
-  /* Set a min-height so the spinner has room to show */
-  min-height: 50px; 
-  min-width: 50px;
+.iframe-loader {
+  position: relative;
+  display: inline-block;
+  width: 600px;  /* Match your iframe width */
+  height: 400px; /* Match your iframe height */
+  /* Center the loading GIF in the background */
+  background: url('/assets/images/loading.gif') no-repeat center center;
+  background-size: 50px 50px; /* Size of your loader gif */
 }
