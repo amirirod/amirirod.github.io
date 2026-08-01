@@ -137,7 +137,7 @@ document.getElementById('date-display').textContent = formattedDate;
         <source src="/imgs/LoaderTQ-1.mov" type="video/QuickTime" style="background: transparent !important">
     </video>
     <!-- THE FIX: A layout boundary container that sits exactly 10px away from the edge -->
-    <div style="position: absolute; width: 690px; height: 140px border-radius: 12px; overflow: hidden; z-index: 3;">
+    <div style="position: absolute; width: 690px; height: 140px; border-radius: 12px; overflow: hidden; z-index: 3;">
       <iframe 
         class="dynamic-music-embed" 
         data-testid="embed-iframe" 
