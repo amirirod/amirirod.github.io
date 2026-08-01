@@ -128,15 +128,13 @@ document.getElementById('date-display').textContent = formattedDate;
     {{ post.blurb_text | truncatewords: 40 }}
   </p>
   TLDR: <u>{{ post.tldr }}</u><br><br>
-  
-  <!-- Parent box set to 250px tall with padding handling the 10px border gap -->
   <div style="position: relative; display: flex; align-items: center; justify-content: center; width: 100%; height: 250px; background-image: url('/imgs/Back.png'); box-sizing: border-box; padding: 10px;">
     <!-- Loader video stays perfectly centered -->
     <video autoplay muted loop playsinline 
            style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 100px; height: 100px; object-fit: contain; z-index: 1; pointer-events: none;">
         <source src="/imgs/LoaderTQ-1.mov" type="video/QuickTime" style="background: transparent !important">
     </video>
-    <!-- Cleaned up frame element ready for script manipulation -->
+    <!-- Clean iframe element targets 230px through the updated script -->
     <iframe 
       class="dynamic-music-embed" 
       data-testid="embed-iframe" 
