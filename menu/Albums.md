@@ -3,7 +3,6 @@ layout: page
 title: Albums of the Month
 tags: menu
 ---
-Just some music
 <div class="content-section">
   <h2 class="pinned-sticky">
     <p style="text-align: center; font-family: Palatino;">
