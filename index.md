@@ -110,11 +110,15 @@ document.getElementById('date-display').textContent = formattedDate;
             {{ post.blurb_text | truncatewords: 40 }}
           </p>
           TLDR: <u>{{ post.tldr }}</u><br><br>
-          <div class="iframe-loader" style="display: flex; align-items: center; justify-content: center; width: 100%; height: 250px; background-image: url('/imgs/Back.png'); box-sizing: border-box; padding: 10px">
+          <div style="display: flex; align-items: center; justify-content: center; width: 100%; height: 250px; background-image: url('/imgs/Back.png'); box-sizing: border-box; padding: 10px">
+           <video autoplay muted loop playsinline 
+           style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 100px; height: 100px; object-fit: contain; z-index: 1; pointer-events: none;">
+        <source src="/imgs/Loader.mp4" type="video/mp4">
+    </video>
     <iframe 
       class="dynamic-music-embed" 
       data-testid="embed-iframe" 
-      style="border-radius: 12px; margin-top: 20px !important; border: none; min-height: 152px !important; max-height: 250px !important; width: 100% !important; height: 250px !important" 
+      style="border-radius: 12px; margin-top: 20px !important; border: none; min-height: 152px !important; max-height: 250px !important; width: 100% !important; height: 250px !important; z-index: 3" 
       data-spotify="{{ post.spotify_link }}"
       data-apple="{{ post.apple_link }}"
       allowfullscreen="" 
