@@ -1,6 +1,11 @@
 ---
 tags: album
 date: 2026-07-25
+album_title: '"musik is noise" by muney capri'
+blurb_text: "Going 13/13 on a new rage album that not only perfectly embodies the characteristics and style of the recently created subsubgenre but also manages to serve up an interesting and unique take on it, especially as an artist with as little mainstream attention as muney capri, is definitely grounds for album of the month. Not to mention, this is muney capri's 3rd album sized release this year (previous being 727 and 727 (Ken vs. Capri Deluxe)), highlighting his insanse work ethic, the kind that modern mainstream artists can't seem to put in to save their lives. Even as a serious fan and proponent of xperiment, I had no choice to pass up everything else that dropped this month in favor of this dude's peice of literal gold."
+tldr: "Its up to date, new, and ahead of its time all at the same time. Amazing and refreshing work"
+spotify_link: https://open.spotify.com/embed/album/1WwRne6HheDeoydcn9V2pD?utm_source=generator&si=487e0d5ec9684629
+apple_link: https://embed.music.apple.com/us/album/musik-is-noise/6793820706
 ---
 ## "musik is noise" by muney capri
 
