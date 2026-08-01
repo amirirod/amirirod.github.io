@@ -148,7 +148,6 @@ document.getElementById('date-display').textContent = formattedDate;
     </iframe>
   </div>
 </div>
-</script>
         </div>
         <hr>
       </li>
