@@ -59,40 +59,7 @@ document.getElementById('date-display').textContent = formattedDate;
     element.innerText = words.slice(0, limit).join(" ") + "...";
   }
 </script>
-<!--
-<ul>
-  {% for post in site.posts %}
-    {% if post.tags contains 'song' %}
-      <li>
-        <h2>
-          <a class="shrink-btn" onclick="this.parentElement.parentElement.classList.toggle('active');" style="color: #BB0000; letter-spacing: -1px; font-weight: 300; text-decoration: underline white;" href="{{ post.url }}">
-            {{ post.date | date: "%B %d, %Y"}} - {{ post.title }}
-          </a>
-        </h2>
-        <div class="post-content" style="font-family: Palatino;">
-         {{ post.blurb_text | truncatewords: 40 }}<br>
-         TLDR: <u>{{ post.tldr }}</u><br>
-         <div>
-<iframe 
-  data-testid="embed-iframe" 
-  style="display: block; border-radius:12px; margin: 0 auto" 
-  src= {{ post.spotify_link }} 
-  width="100%"
-  height="250" 
-  frameBorder="0" 
-  allowfullscreen="" 
-  allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
-  loading="lazy">
-  
-</iframe>
-</div>
-        </div>
-        <hr>
-      </li>
-    {% endif %}
-  {% endfor %}
-</ul>
--->
+
 
 
 <ul>
