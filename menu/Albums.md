@@ -136,11 +136,11 @@ document.getElementById('date-display').textContent = formattedDate;
         <source src="/imgs/LoaderTQ-1.mov" type="video/QuickTime" style="background: transparent !important">
     </video>
     <!-- THE FIX: A layout boundary container that sits exactly 10px away from the edge -->
-    <div style="position: absolute; top: 10px; bottom: 10px; left: 10px; right: 10px; border-radius: 12px; overflow: hidden; z-index: 3;">
+    <div style="position: relative; top: 10px; bottom: 10px; left: 10px; right: 10px; border-radius: 12px; overflow: hidden; z-index: 3;">
       <iframe 
         class="dynamic-music-embed" 
         data-testid="embed-iframe" 
-        style="width: 100% !important; height: 110px !important; border: none;" 
+        style="border: none;" 
         data-spotify="{{ post.spotify_link }}"
         data-apple="{{ post.apple_link }}"
         allowfullscreen="" 
