@@ -5,6 +5,7 @@ window_text: "This text loads directly inside the window overlay."
 tags: menu
 title: Albums of the Month
 ---
+
 <!--
 <div class="content-section">
   <h2 class="pinned-sticky">
