@@ -87,8 +87,7 @@ title: Albums of the Month
     z-index: 100;
     width: 100%;
     height: 40px;
-    border-block: 1px solid grey;"
-    >
+    border-block: 1px solid grey;">
     </div>
     
 
