@@ -1,4 +1,10 @@
-
+---
+layout: window
+window_title: "About Me"
+window_text: "This text loads directly inside the window overlay."
+tags: menu
+title: Albums of the Month
+---
 <!--
 <div class="content-section">
   <h2 class="pinned-sticky">
@@ -48,13 +54,7 @@
   {% endfor %}
 </ul>
 -->
----
-layout: window
-window_title: "About Me"
-window_text: "This text loads directly inside the window overlay."
-tags: menu
-title: Albums of the Month
----
+
  <div style="font-size: 1.5rem; width: 100%; text-align: center; font-family: Palatino;"><span id="date-display" style=" padding: 10px 0px"></span>:</div>
 
 
