@@ -1,6 +1,11 @@
 ---
 tags: song
 date: 2026-07-26 
+song_title: '"Slide on Who" by Xero'
+blurb_text: "2 million listers since Xero dropped this on his debut album Welcome to 4way, and yet Ive never heard anyone mention how hard it is. Maybe I'm out the loop, but this deserves way more attention."
+tldr: "Not much to say. Songs just good"
+spotify_link: https://open.spotify.com/embed/track/0XUDWaVc2PabUZg344iKBB?utm_source=generator&si=12e83eb296784597
+apple_link: https://embed.music.apple.com/us/album/slide-on-who/1602503220?i=1602503221
 ---
 ## "Slide on Who" by Xero
 
