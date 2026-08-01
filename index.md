@@ -112,7 +112,7 @@ document.getElementById('date-display').textContent = formattedDate;
           TLDR: <u>{{ post.tldr }}</u><br><br>
           <div style="display: flex; align-items: center; justify-content: center; width: 100%; height: 250px; background-image: url('/imgs/Back.png'); box-sizing: border-box; padding: 10px">
            <video autoplay muted loop playsinline 
-           style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 100px; height: 100px; object-fit: contain; z-index: 1; pointer-events: none;">
+           style="position: relative; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 100px; height: 100px; object-fit: contain; z-index: 1; pointer-events: none;">
         <source src="/imgs/Loader.mp4" type="video/mp4">
     </video>
     <iframe 
