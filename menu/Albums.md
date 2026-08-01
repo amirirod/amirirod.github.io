@@ -129,7 +129,7 @@ document.getElementById('date-display').textContent = formattedDate;
   </p>
   TLDR: <u>{{ post.tldr }}</u><br><br> 
   <!-- BACKGROUND WRAPPER CONTAINER (250px tall) -->
-  <div style="position: relative; width: 100%; height: 70px; background-image: url('/imgs/Back.png'); box-sizing: border-box; overflow: hidden;">
+  <div style="position: relative; width: 100%; height: 120px; background-image: url('/imgs/Back.png'); box-sizing: border-box; overflow: hidden;">
     <!-- Loader video stays perfectly centered behind the frame -->
     <video autoplay muted loop playsinline 
            style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 100px; height: 100px; object-fit: contain; z-index: 1; pointer-events: none;">
