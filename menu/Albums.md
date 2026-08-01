@@ -122,39 +122,32 @@ document.getElementById('date-display').textContent = formattedDate;
             {{ post.date | date: "%B %Y"}} - {{ post.title }}
           </a>
         </h2>
-        <script>
-document.addEventListener("DOMContentLoaded", function () {
-  // Read whatever preference was set (either on this page or the settings page)
-  let savedPlatform = localStorage.getItem("preferred-music-platform") || "spotify";
-
-  function applyEmbedPreference(platform) {
-    const iframes = document.querySelectorAll(".dynamic-music-embed");
-    
-    iframes.forEach(iframe => {
-      let targetSrc = (platform === "apple") 
-        ? iframe.getAttribute("data-apple") 
-        : iframe.getAttribute("data-spotify");
-
-      if (!targetSrc) {
-        targetSrc = iframe.getAttribute("data-spotify") || iframe.getAttribute("data-apple");
-      }
-
-      if (targetSrc) {
-        targetSrc = targetSrc.replace(/"/g, "");
-        iframe.setAttribute("src", targetSrc);
-        
-        // --- THE FIX: FORCING FIXED PIXEL DIMENSIONS ---
-        // Spotify and Apple Music engines require real integer heights to render full cards.
-        // 250px container height minus 20px padding leaves exactly 230px of vertical space.
-        iframe.setAttribute("height", "230"); 
-        iframe.style.setProperty('height', '230px', 'important');
-      }
-    });
-  }
-
-  // Execute immediately to match the user's saved choice
-  applyEmbedPreference(savedPlatform);
-});
+       <div class="post-content" style="font-family: Palatino;">
+  <!-- Enclosing the text string prevents it from merging into the iframe markup -->
+  <p style="margin-bottom: 10px;">
+    {{ post.blurb_text | truncatewords: 40 }}
+  </p>
+  TLDR: <u>{{ post.tldr }}</u><br><br>
+  <!-- Outer container set to exactly 250px with a 10px padding ring -->
+  <div style="position: relative; display: flex; align-items: center; justify-content: center; width: 100%; height: 250px; background-image: url('/imgs/Back.png'); box-sizing: border-box; padding: 10px;">
+    <!-- Loader video stays perfectly centered behind the content -->
+    <video autoplay muted loop playsinline 
+           style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 100px; height: 100px; object-fit: contain; z-index: 1; pointer-events: none;">
+        <source src="/imgs/LoaderTQ-1.mov" type="video/QuickTime" style="background: transparent !important">
+    </video>
+    <!-- Cleared native attributes so the JavaScript script can cleanly overwrite them -->
+    <iframe 
+      class="dynamic-music-embed" 
+      data-testid="embed-iframe" 
+      style="border-radius: 12px; border: none; width: 100% !important; z-index: 3;" 
+      data-spotify="{{ post.spotify_link }}"
+      data-apple="{{ post.apple_link }}"
+      allowfullscreen="" 
+      allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
+      loading="lazy">
+    </iframe>
+  </div>
+</div>
 </script>
         </div>
         <hr>
