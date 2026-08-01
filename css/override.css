@@ -213,4 +213,11 @@ hr{
 .shrink-btn:active {
   transform: scale(0.95);
 }
-
+img.lazy {
+  background-image: url('/assets/images/loading.gif');
+  background-repeat: no-repeat;
+  background-position: center;
+  /* Set a min-height so the spinner has room to show */
+  min-height: 50px; 
+  min-width: 50px;
+}
