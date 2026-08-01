@@ -123,25 +123,29 @@ document.getElementById('date-display').textContent = formattedDate;
           </a>
         </h2>
         <div class="post-content" style="font-family: Palatino;">
-          <!-- Enclosing the text string prevents it from merging into the iframe markup -->
-          <p style="margin-bottom: 10px;">
-            {{ post.blurb_text | truncatewords: 40 }}
-          </p>
-          TLDR: <u>{{ post.tldr }}</u><br><br>
-          <div style="display: flex; align-items: center; justify-content: center; width: 100%; height: 250px; background-image: url('/imgs/Back.png'); box-sizing: border-box; padding: 10px">
-           <video autoplay muted loop playsinline 
+  <!-- Enclosing the text string prevents it from merging into the iframe markup -->
+  <p style="margin-bottom: 10px;">
+    {{ post.blurb_text | truncatewords: 40 }}
+  </p>
+  TLDR: <u>{{ post.tldr }}</u><br><br>
+  <!-- Added position: relative here -->
+  <div style="position: relative; display: flex; align-items: center; justify-content: center; width: 100%; height: 250px; background-image: url('/imgs/Back.png'); box-sizing: border-box; padding: 10px;">
+    <video autoplay muted loop playsinline 
            style="position: absolute; width: 100px; height: 100px; object-fit: contain; z-index: 1; pointer-events: none;">
         <source src="/imgs/LoaderTQ-1.mov" type="video/QuickTime" style="background: transparent !important">
     </video>
+    <!-- Cleaned up margin, min-height, and max-height constraints -->
     <iframe 
       class="dynamic-music-embed" 
       data-testid="embed-iframe" 
-      style="border-radius: 12px; margin-top: 20px !important; border: none; min-height: 152px !important; max-height: 250px !important; width: 100% !important; height: 250px !important; z-index: 3; object-fit: cover !important" 
+      style="border-radius: 12px; border: none; width: 100% !important; height: 100% !important; z-index: 3; object-fit: cover !important;" 
       data-spotify="{{ post.spotify_link }}"
       data-apple="{{ post.apple_link }}"
       allowfullscreen="" 
       allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
-      loading="lazy"></iframe>
+      loading="lazy">
+    </iframe>
+  </div>
 </div>
         </div>
         <hr>
