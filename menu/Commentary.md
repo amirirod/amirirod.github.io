@@ -15,19 +15,26 @@ window_title: "About Me"
        <span id="date-display" style="padding: 10px 0px"></span> 
       </div>
       {% assign today = site.time | date: "%Y-%m-%d" %}
+{% assign found_today_post = false %}
 
 {% for post in site.posts %}
   {% if post.tags contains 'commentary' %}
     {% assign post_date = post.date | date: "%Y-%m-%d" %}
     {% if post_date == today %}
+      {% assign found_today_post = true %}
       <div class="post-content" style="text-align:center; font-size: 2.5rem; font-family: Palatino; margin-bottom: 0px">
         {{ post.title }}
-        {% else %}
-        Nothing to say today
       </div>
     {% endif %}
+    
   {% endif %}
 {% endfor %}
+
+{% if found_today_post == false %}
+  <div class="post-content" style="text-align:center; font-size: 2.5rem; font-family: Palatino; margin-bottom: 0px">
+    Nothing to say today
+  </div>
+{% endif %}
     </p>
     <div style="
     background-image: url('imgs/Untitled15.png');
