@@ -149,7 +149,7 @@ tags: menu
     <iframe 
       class="dynamic-music-embed" 
       data-testid="embed-iframe" 
-      style="border-radius: 12px; margin-top: 20px !important; border: none; min-height: 152px !important; max-height: 250px !important; width: 100% !important; height: 250px !important; z-index: 3" 
+      style="border-radius: 12px; margin-top: 20px !important; border: none; min-height: 152px !important; max-height: 250px !important; width: 100% !important; height: 180px !important; z-index: 3" 
       data-spotify="{{ post.spotify_link }}"
       data-apple="{{ post.apple_link }}"
       allowfullscreen="" 
