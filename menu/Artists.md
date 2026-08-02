@@ -79,7 +79,7 @@ tags: menu
       {% assign thisweek = site.time | date: "%Y-%V" %}
 
 {% for post in site.posts %}
-  {% if post.tags contains 'song' %}
+  {% if post.tags contains 'artist' %}
     {% assign post_date = post.date | date: "%Y-%V" %}
     {% if post_date == thisweek %}
       <div class="post-content" style="text-align:center; font-size: 2.5rem; font-family: Palatino; margin-bottom: 0px">
