@@ -132,7 +132,7 @@ tags: menu
       <li>
         <h2>
           <a class="shrink-btn" onclick="this.parentElement.parentElement.classList.toggle('active');" style="color: #BB0000; letter-spacing: -1px; font-weight: 300; text-decoration: underline white;" href="{{ post.url }}">
-            {{ post.date | date: "%V, %Y"}} - {{ post.title }}
+            Week {{ post.date | date: "%V, %Y"}} - {{ post.title }}
           </a>
         </h2>
         <div class="post-content" style="font-family: Palatino;">
