@@ -80,7 +80,7 @@ tags: menu
       {% assign thisweek = site.time | date: "%Y-%V" %}
 
 {% for post in site.posts %}
-  {% if post.tags contains 'artist' %}
+  {% if post.tags contains 'Artists' %}
     {% assign post_date = post.date | date: "%Y-%V" %}
     {% if post_date == thisweek %}
       <div class="post-content" style="text-align:center; font-size: 2.5rem; font-family: Palatino; margin-bottom: 0px">
@@ -128,7 +128,7 @@ tags: menu
 
 <ul>
   {% for post in site.posts %}
-    {% if post.tags contains 'artist' %}
+    {% if post.tags contains 'Artists' %}
       <li>
         <h2>
           <a class="shrink-btn" onclick="this.parentElement.parentElement.classList.toggle('active');" style="color: #BB0000; letter-spacing: -1px; font-weight: 300; text-decoration: underline white;" href="{{ post.url }}">
