@@ -5,7 +5,6 @@ window_text: "This text loads directly inside the window overlay."
 ---
  <div style="font-size: 1.5rem; width: 100%; text-align: center; font-family: Palatino;"><span id="date-display" style=" padding: 10px 0px"></span>:</div>
 
-
 <div>
 <div class="content-section" style="background: black; z-index:1">
   <div style="position: sticky; top: 90px; background: black; z-index: 5">
