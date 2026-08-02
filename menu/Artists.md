@@ -3,7 +3,7 @@ layout: page
 title: Artists of the Week
 tags: menu
 ---
-Just some music
+<!--
 <div class="content-section">
   <h2 class="pinned-sticky">
     <p style="text-align: center; font-family: Palatino;">
@@ -63,4 +63,5 @@ Just some music
     {% endif %}
   {% endfor %}
 </ul>
+-->
 
