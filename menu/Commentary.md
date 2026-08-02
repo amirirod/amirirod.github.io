@@ -1,6 +1,8 @@
 ---
+layout: window
 title: Commentary
 tags: menu
+window_title: "About Me"
 ---
  <div style="font-size: 1.5rem; width: 100%; text-align: center; font-family: Palatino;"><span id="date-display" style=" padding: 10px 0px"></span>:</div>
 
