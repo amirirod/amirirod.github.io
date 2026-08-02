@@ -150,7 +150,6 @@ document.getElementById('date-display').textContent = formattedDate;
       </iframe>
     </div>
   </div>
-</div>
         </div>
         <hr>
       </li>
