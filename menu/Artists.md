@@ -1,6 +1,7 @@
 ---
 layout: window
 title: Artists of the Week
+window_title: "About Me"
 tags: menu
 ---
 <!--
@@ -75,12 +76,12 @@ tags: menu
       <div style="text-align: center; font-family: Palatino;">
        <span id="date-display" style="padding: 10px 0px"></span> 
       </div>
-      {% assign today = site.time | date: "%Y-%m-%d" %}
+      {% assign thisweek = site.time | date: "%Y-%V" %}
 
 {% for post in site.posts %}
   {% if post.tags contains 'song' %}
-    {% assign post_date = post.date | date: "%Y-%m-%d" %}
-    {% if post_date == today %}
+    {% assign post_date = post.date | date: "%Y-%V" %}
+    {% if post_date == thisweek %}
       <div class="post-content" style="text-align:center; font-size: 2.5rem; font-family: Palatino; margin-bottom: 0px">
         {{ post.title }}
       </div>
@@ -105,31 +106,32 @@ tags: menu
   </div>
   
 
- <script>
-        const today = new Date();
-const options = { year: 'numeric', month: 'long', day: 'numeric' };
-const formattedDate = today.toLocaleDateString(undefined, options); 
-document.getElementById('date-display').textContent = formattedDate;
-    </script>
-   <script>
-  const limit = 10; // Change this to your preferred word count
-  const element = document.getElementById("truncated-text");
-  const words = element.innerText.split(" "); // Split text into words by spaces
-
-  if (words.length > limit) {
-    element.innerText = words.slice(0, limit).join(" ") + "...";
+<script>
+  // Fetches the current ISO week number and year for the headline
+  const today = new Date();
+  
+  // Calculate the current ISO week number (Matches Liquid's %V)
+  const target = new Date(today.valueOf());
+  const dayNr = (today.getDay() + 6) % 7;
+  target.setDate(target.getDate() - dayNr + 3);
+  const firstThursday = target.valueOf();
+  target.setMonth(0, 1);
+  if (target.getDay() !== 4) {
+    target.setMonth(0, 1 + ((4 - target.getDay()) + 7) % 7);
   }
+  const weekNumber = 1 + Math.ceil((firstThursday - target) / 604800000);
+  
+  document.getElementById('date-display').textContent = `Week ${weekNumber}, ${today.getFullYear()}`;
 </script>
-
 
 
 <ul>
   {% for post in site.posts %}
-    {% if post.tags contains 'song' %}
+    {% if post.tags contains 'artist' %}
       <li>
         <h2>
           <a class="shrink-btn" onclick="this.parentElement.parentElement.classList.toggle('active');" style="color: #BB0000; letter-spacing: -1px; font-weight: 300; text-decoration: underline white;" href="{{ post.url }}">
-            {{ post.date | date: "%B %d, %Y"}} - {{ post.title }}
+            {{ post.date | date: "%V, %Y"}} - {{ post.title }}
           </a>
         </h2>
         <div class="post-content" style="font-family: Palatino;">
