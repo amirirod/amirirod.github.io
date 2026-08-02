@@ -2,6 +2,7 @@
 layout: window
 title: Artists of the Week
 window_title: "About Me"
+window_text: "This text loads directly inside the window overlay."
 tags: menu
 ---
 <!--
