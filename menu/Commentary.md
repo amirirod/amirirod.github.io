@@ -80,7 +80,7 @@ document.getElementById('date-display').textContent = formattedDate;
             {{ post.date | date: "%B %d, %Y"}} - {{ post.title }}
           </a>
         </h2>
-        <div class="post-content" style="font-family: Palatino; background-image: url('/imgs/Untitled15')">
+        <div class="post-content" style="font-family: Palatino; background-image: url('/imgs/Untitled15.png')">
           <!-- Enclosing the text string prevents it from merging into the iframe markup -->
           <p style="margin-bottom: 10px;">
             {{ post.blurb_text | truncatewords: 40 }}
