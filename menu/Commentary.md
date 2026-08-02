@@ -79,7 +79,6 @@ document.getElementById('date-display').textContent = formattedDate;
             {{ post.blurb_text | truncatewords: 40 }}
           </p>
           TLDR: <u>{{ post.tldr }}</u><br><br>
-</div>
         </div>
         <hr>
       </li>
