@@ -17,7 +17,7 @@ window_title: "About Me"
       {% assign today = site.time | date: "%Y-%m-%d" %}
 
 {% for post in site.posts %}
-  {% if post.tags contains 'Commentary' %}
+  {% if post.tags contains 'commentary' %}
     {% assign post_date = post.date | date: "%Y-%m-%d" %}
     {% if post_date == today %}
       <div class="post-content" style="text-align:center; font-size: 2.5rem; font-family: Palatino; margin-bottom: 0px">
@@ -66,7 +66,7 @@ document.getElementById('date-display').textContent = formattedDate;
 
 <ul>
   {% for post in site.posts %}
-    {% if post.tags contains 'Commentary' %}
+    {% if post.tags contains 'commentary' %}
       <li>
         <h2>
           <a class="shrink-btn" onclick="this.parentElement.parentElement.classList.toggle('active');" style="color: #BB0000; letter-spacing: -1px; font-weight: 300; text-decoration: underline white;" href="{{ post.url }}">
