@@ -132,9 +132,9 @@ document.getElementById('date-display').textContent = formattedDate;
   <!-- BACKGROUND WRAPPER CONTAINER (250px tall) -->
   <div style="position: relative; width: 100%; height: 190px; background-image: url('/imgs/Back.png'); box-sizing: border-box; padding: 10px; overflow: hidden">
     <!-- Loader video stays perfectly centered behind the frame -->
-    <video autoplay muted loop playsinline 
+    <video id="vid" autoplay muted loop playsinline 
            style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 100px; height: 100px; object-fit: contain; z-index: 1; pointer-events: none;">
-        <source src="/imgs/LoaderTQ-1.mov" type="video/QuickTime" style="background: transparent !important">
+        <source id="source" src="/imgs/LoaderTQ-1.mov" type="video/QuickTime" style="background: transparent !important">
     </video>
     <!-- THE FIX: A layout boundary container that sits exactly 10px away from the edge -->
     <div style="position: absolute; width: 690px; height: 160px; border-radius: 12px; overflow: hidden; z-index: 3;">
@@ -180,4 +180,13 @@ document.addEventListener("DOMContentLoaded", function () {
   applyEmbedPreference(savedPlatform);
 });
 </script>
+<script>
+  const video = document.getElementById('vid');
+  const source = document.getElementById('source');
+  
+  // Check if screen width is mobile size (768px or less)
+  if (window.innerWidth <= 768) {
+    source.src = '/imgs/LoaderTQ-1.webm';
+    video.load(); // Reload video with the new source
+  }
 </div>
