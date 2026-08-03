@@ -1,5 +1,5 @@
 ---
-tags: song
+tags: songs
 date: 2026-07-30
 song_title: We Need Abortions by Quez2RR (ft. Enphamus)
 apple_link: "https://embed.music.apple.com/us/album/we-need-abortions/1731447759?i=1731447760"
