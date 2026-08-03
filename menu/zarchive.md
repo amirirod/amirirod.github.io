@@ -52,7 +52,6 @@ tags: menu
     <button onclick="toggleTagList('{{ tag[0] | slugify }}')">
       {{ tag[0] }}
     </button>
-    <hr>
   </h3>
   
   
@@ -64,6 +63,7 @@ tags: menu
       </li>
     {% endfor %}
   </ul>
+  <hr>
 {% endfor %}
 </div>
 <script>
