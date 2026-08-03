@@ -37,15 +37,7 @@ tags: menu
   display: block;
   }
 </style>
-<div class="dropdown">
-  <button class="dropbtn">Hover Me</button>
-  <div class="dropdown-content">
-    <a class="post_navi-item nav_next" href="{{ 'albums.html' | absolute_url }}" title="Albums">Albums</a>
-    <a href="#">Link 2</a>
-    <a href="#">Link 3</a>
-  </div>
-</div>
-<div>
+
 {% for tag in site.tags %}
   <!-- Use the tag name to create a unique ID for JavaScript to target -->
   <h3>
