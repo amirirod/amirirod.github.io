@@ -1,6 +1,6 @@
 ---
 layout: window
-title: <span style="font-family: Palatino"> Blog Archive </span>
+title: <span style="font-weight: 300> Blog Archive </span>
 tags: menu
 window_title: "About Me"
 ---
