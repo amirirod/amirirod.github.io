@@ -51,9 +51,10 @@ tags: menu
   <h3>
     <button onclick="toggleTagList('{{ tag[0] | slugify }}')">
       {{ tag[0] }}
-      <hr>
     </button>
+    <hr>
   </h3>
+  
   
   <!-- The list starts hidden by default using display:none -->
   <ul id="{{ tag[0] | slugify }}" style="display: none;">
