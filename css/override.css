@@ -220,3 +220,7 @@ hr{
   background: url('/assets/images/loading.gif') no-repeat center center;
   background-size: 50px 50px; /* Size of your loader gif */
 }
+
+@media (max-width: 768px) {
+  src: "/imgs/LoaderTQ-1.webm"
+}
