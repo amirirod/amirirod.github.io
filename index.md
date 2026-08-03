@@ -77,9 +77,9 @@ document.getElementById('date-display').textContent = formattedDate;
           </p>
           TLDR: <u>{{ post.tldr }}</u><br><br>
           <div style="display: flex; align-items: center; justify-content: center; width: 100%; height: 250px; background-image: url('/imgs/Back.png'); box-sizing: border-box; padding: 10px">
-           <video autoplay muted loop playsinline 
+           <video id="vid" autoplay muted loop playsinline 
            style="position: absolute; width: 100px; height: 100px; object-fit: contain; z-index: 1; pointer-events: none;">
-        <source src="/imgs/LoaderTQ-1.mov" type="video/QuickTime" style="background: transparent !important">
+        <source id="source" src="/imgs/LoaderTQ-1.mov" type="video/QuickTime" style="background: transparent !important">
     </video>
     <iframe 
       class="dynamic-music-embed" 
@@ -125,5 +125,15 @@ document.addEventListener("DOMContentLoaded", function () {
   // Execute immediately to match the user's saved choice
   applyEmbedPreference(savedPlatform);
 });
+</script>
+<script>
+  const video = document.getElementById('vid');
+  const source = document.getElementById('source');
+  
+  // Check if screen width is mobile size (768px or less)
+  if (window.innerWidth <= 768) {
+    source.src = '/imgs/LoaderTQ-1.webm';
+    video.load(); // Reload video with the new source
+  }
 </script>
 </div>
