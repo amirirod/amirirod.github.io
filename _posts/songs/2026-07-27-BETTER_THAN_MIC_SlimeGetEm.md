@@ -1,5 +1,5 @@
 ---
-tags: song
+tags: songs
 date: 2026-07-27 
 song_title: '"BETTER THAN MIC" by SlimeGetem'
 blurb_text: "Im honestly not sure how to describe this song. The best I can do is calling it a sort of futuristic take on DMV crank or free car using elements of new rage (which is, for those uninformed, a word I made up to describe the newly evolved state of rage music as opposed to its origins), and even that feels innacurate. Slimes unique bah adlibs, along with his insanse flow and equally (if not more) insane production (spoilers: there's a beat switch), elevate this from a set or blend of genres to a genuinely unique masterpeice. Music like this genuinely makes me excited for the future of rap."
