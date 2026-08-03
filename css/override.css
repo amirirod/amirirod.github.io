@@ -148,7 +148,7 @@ hr{
 /* 4. ANIMATION STATES WHEN ACTIVE */
 .dropdown.active .dropdown-content {
   opacity: 1 !important;
-  transform: translateY(0) !important;
+  transform: translateY(0) translateX(-100) !important;
  
   
   /* Set this to a height larger than your menu content will ever be */
