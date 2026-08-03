@@ -1,7 +1,7 @@
 ---
 tags: songs
 date: 2026-07-29
-song_title: Everywhere I Go by Tay K
+title: Everywhere I Go by Tay K
 apple_link: "https://embed.music.apple.com/us/album/everywhere-i-go/6768794260?i=6768794262"
 spotify_link: "https://open.spotify.com/embed/track/34m26K64fX2OtUVov3z1Ej?utm_source=generator&si=b611f6ebe5f34a73"
 blurb_text: |
