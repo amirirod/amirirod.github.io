@@ -1,7 +1,8 @@
 ---
-layout: page
-title: Blog Archive
+layout: window
+title: <span style="font-family: Palatino"> Blog Archive </span>
 tags: menu
+window_title: "About Me"
 ---
 <html>
 <style>
