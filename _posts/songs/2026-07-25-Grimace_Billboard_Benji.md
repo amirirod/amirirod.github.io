@@ -1,5 +1,5 @@
 ---
-tags: song
+tags: songs
 date: 2026-07-25
 song_title: '"Grimace" by Billboard Benji'
 blurb_text: "Its simple, its catchy, its gritty, its hard"
