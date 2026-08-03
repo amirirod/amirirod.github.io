@@ -1,5 +1,5 @@
 ---
-tags: song
+tags: songs
 date: 2026-07-26 
 song_title: '"Slide on Who" by Xero'
 blurb_text: "2 million listers since Xero dropped this on his debut album Welcome to 4way, and yet Ive never heard anyone mention how hard it is. Maybe I'm out the loop, but this deserves way more attention."
