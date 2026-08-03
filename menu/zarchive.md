@@ -45,12 +45,13 @@ tags: menu
     <a href="#">Link 3</a>
   </div>
 </div>
-<div style="justify-content: center">
+<div>
 {% for tag in site.tags %}
   <!-- Use the tag name to create a unique ID for JavaScript to target -->
   <h3>
     <button onclick="toggleTagList('{{ tag[0] | slugify }}')">
       {{ tag[0] }}
+      <hr>
     </button>
   </h3>
   
