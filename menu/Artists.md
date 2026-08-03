@@ -200,5 +200,6 @@ document.addEventListener("DOMContentLoaded", function () {
     source.src = '/imgs/LoaderTQ-1.webm';
     video.load(); // Reload video with the new source
   }
+    </script>
 </div>
 
