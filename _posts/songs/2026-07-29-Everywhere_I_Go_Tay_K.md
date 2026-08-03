@@ -1,5 +1,5 @@
 ---
-tags: song
+tags: songs
 date: 2026-07-29
 song_title: Everywhere I Go by Tay K
 apple_link: "https://embed.music.apple.com/us/album/everywhere-i-go/6768794260?i=6768794262"
