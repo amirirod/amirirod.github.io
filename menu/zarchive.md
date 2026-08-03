@@ -45,6 +45,7 @@ tags: menu
     <a href="#">Link 3</a>
   </div>
 </div>
+<div style="align-items: center">
 {% for tag in site.tags %}
   <!-- Use the tag name to create a unique ID for JavaScript to target -->
   <h3>
@@ -62,7 +63,7 @@ tags: menu
     {% endfor %}
   </ul>
 {% endfor %}
-
+</div>
 <script>
 function toggleTagList(tagId) {
   var x = document.getElementById(tagId);
