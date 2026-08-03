@@ -48,6 +48,7 @@ tags: menu
   
   
   <!-- The list starts hidden by default using display:none -->
+ <!--
   <ul id="{{ tag[0] | slugify }}" style="display: none; font-size: 0.9rem; font-weight: 300; font-family: Palatino">
     {% for post in tag[1] %}
       <li>
@@ -55,6 +56,21 @@ tags: menu
       </li>
     {% endfor %}
   </ul>
+  -->
+  <ul id="{{ tag[0] | slugify }}" style="display: none; font-size: 0.9rem; font-weight: 300; font-family: Palatino; list-style-type: none; padding-left: 0;">
+  {% assign current_month = "" %}
+  
+  {% for post in tag[1] %}
+    {% assign post_month = post.date | date: "%B %Y" %}
+    {% if post_month != current_month %}
+      {% assign current_month = post_month %}
+      <li style="font-weight: bold; margin-top: 10px; margin-bottom: 5px;">{{ current_month }}</li>
+    {% endif %}
+    <li style="padding-left: 15px;">
+      <a href="{{ post.url }}">{{ post.date | date: "%B %d, %Y"}} - {{ post.title }}</a>
+    </li>
+  {% endfor %}
+</ul>
   <hr>
 {% endfor %}
 <script>
