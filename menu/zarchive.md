@@ -49,7 +49,7 @@ tags: menu
 {% for tag in site.tags %}
   <!-- Use the tag name to create a unique ID for JavaScript to target -->
   <h3>
-    <button style="width: 100%" onclick="toggleTagList('{{ tag[0] | slugify }}')">
+    <button style="width: 100%; font-size: 1.2rem; font-weight: 300; font-family: Palatino" onclick="toggleTagList('{{ tag[0] | slugify }}')">
       {{ tag[0] }}
     </button>
   </h3>
