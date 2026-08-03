@@ -48,7 +48,7 @@ tags: menu
   
   
   <!-- The list starts hidden by default using display:none -->
-  <ul id="{{ tag[0] | slugify }}" style="display: none;">
+  <ul id="{{ tag[0] | slugify }}" style="display: none; font-size: 0.9rem; font-weight: 300; font-family: Palatino">
     {% for post in tag[1] %}
       <li>
         <a href="{{ post.url }}">{{ post.date | date: "%B %d, %Y"}} - {{ post.title }}</a>
@@ -57,7 +57,6 @@ tags: menu
   </ul>
   <hr>
 {% endfor %}
-</div>
 <script>
 function toggleTagList(tagId) {
   var x = document.getElementById(tagId);
