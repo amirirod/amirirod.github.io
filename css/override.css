@@ -136,11 +136,7 @@ hr{
 }
 
 .dropdown-content a {
-  background-color: black;
-  background-image: url('/imgs/Back.png') !important;
-  background-repeat: repeat-x !important;
-  background-position: left center !important;
-  background-size: 25% 100% !important;
+  background: url('/imgs/Back.png') repeat-x left center / 25% 100% black !important;
   display: block;
   padding: 12px 16px;
 }
