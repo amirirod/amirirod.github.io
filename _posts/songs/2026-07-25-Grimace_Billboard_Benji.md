@@ -1,7 +1,7 @@
 ---
 tags: songs
 date: 2026-07-25
-song_title: '"Grimace" by Billboard Benji'
+title: '"Grimace" by Billboard Benji'
 blurb_text: "Its simple, its catchy, its gritty, its hard"
 tldr: "listen to song because good"
 spotify_link: https://open.spotify.com/embed/track/4KOlRlB81TAmDXHQZiVTbY?utm_source=generator&si=f79b647587164543
