@@ -11,62 +11,7 @@
     }
   }
 </style>
-<!--
-<header class="responsive-header" data-darkreader-ignore style="position: relative;
-  position: sticky;
-  top: 0px;
-  z-index: 4000;
-  width: 100%;
-  height: 90px;
-  background-color: black;
-  border-top: 5px solid #ED6E69 !important;
-  border-bottom: 1px solid grey;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  box-sizing: border-box;">
-  
-  {%- assign default_paths = site.pages | map: "path" -%}
-  {%- assign page_paths = site.minima.nav_pages | default: default_paths -%}
-  {%- assign page_titles = site.pages | map: 'title' | compact %}
-   
-  Left Side Group: Logo, Sub-text, and Title 
-  <div style="display: flex; align-items: center; gap: 15px; height: 100%;">
-    <!-- Logo Image 
-    <div style="display: flex; align-items: center; height: 100%;">
-      <button class="shrink-btn" onclick="openWindow();" style="background:none; border:none; padding:0; cursor:pointer; z-index: 6000">
-        <img src="{{ '/imgs/Logo.jpg' | relative_url }}" style="height: 84px; width: auto; aspect-ratio: 1/1; object-fit: contain;" alt="Logo">
-      </button>
-    </div>
-    
-    Branding Text Details 
-    <div style="color: white; font-size: 1rem; font-weight: 300; letter-spacing: -1px; display: flex; flex-direction: column; justify-content: center; line-height: 1.2;">
-      <span style="font-weight: bold;">AmiriRod</span>
-      <a rel="author" href="{{ '/' | relative_url }}" style="color: #ED6E69; text-decoration: none; cursor: pointer">{{ site.title | escape }}</a>
-    </div>
-  </div> 
 
-    <div style="color: white; font-size: 1rem; font-weight: 300; letter-spacing: -1px; display: flex; flex-direction: column; justify-content: center; line-height: 1.2;">
-  <span style="font-weight: bold;">AmiriRod</span>
-  
-  {%- assign home_url = '/' | relative_url -%}
-  {%- if page.url == '/' or page.url == '/index.html' -%}
-    Active Homepage Link 
-    <a rel="author" href="{{ home_url }}" aria-current="page" style="color: #ED6E69; text-decoration: none; cursor: pointer; font-weight: bold;">{{ site.title | escape }}</a>
-  {%- else -%}
-    Inactive Homepage Link 
-    <a rel="author" href="{{ home_url }}" style="color: #ED6E69; text-decoration: none; cursor: pointer">{{ site.title | escape }}</a>
-  {%- endif -%}
-</div>
-   Right Side Group: Navigation Menu 
-  <div style="cursor: pointer; display: flex; justify-content: center; align-items: center; height: 74px; width: 74px;">
-    {%- unless page_titles == empty %}
-      <nav>
-        {% include nav-items.html paths = page_paths %}
-      </nav>
-    {%- endunless %}
-  </div>
--->
 <header class="responsive-header" data-darkreader-ignore style="position: relative;
   position: sticky;
   top: 0px;
