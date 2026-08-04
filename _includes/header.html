@@ -30,7 +30,7 @@
   {%- assign page_paths = site.minima.nav_pages | default: default_paths -%}
   {%- assign page_titles = site.pages | map: 'title' | compact %}
    
-  <!-- Left Side Group: Logo, Sub-text, and Title 
+  Left Side Group: Logo, Sub-text, and Title 
   <div style="display: flex; align-items: center; gap: 15px; height: 100%;">
     <!-- Logo Image 
     <div style="display: flex; align-items: center; height: 100%;">
@@ -39,7 +39,7 @@
       </button>
     </div>
     
-    <!-- Branding Text Details 
+    Branding Text Details 
     <div style="color: white; font-size: 1rem; font-weight: 300; letter-spacing: -1px; display: flex; flex-direction: column; justify-content: center; line-height: 1.2;">
       <span style="font-weight: bold;">AmiriRod</span>
       <a rel="author" href="{{ '/' | relative_url }}" style="color: #ED6E69; text-decoration: none; cursor: pointer">{{ site.title | escape }}</a>
@@ -51,14 +51,14 @@
   
   {%- assign home_url = '/' | relative_url -%}
   {%- if page.url == '/' or page.url == '/index.html' -%}
-    <!-- Active Homepage Link 
+    Active Homepage Link 
     <a rel="author" href="{{ home_url }}" aria-current="page" style="color: #ED6E69; text-decoration: none; cursor: pointer; font-weight: bold;">{{ site.title | escape }}</a>
   {%- else -%}
-    <!-- Inactive Homepage Link 
+    Inactive Homepage Link 
     <a rel="author" href="{{ home_url }}" style="color: #ED6E69; text-decoration: none; cursor: pointer">{{ site.title | escape }}</a>
   {%- endif -%}
 </div>
-  <!-- Right Side Group: Navigation Menu 
+   Right Side Group: Navigation Menu 
   <div style="cursor: pointer; display: flex; justify-content: center; align-items: center; height: 74px; width: 74px;">
     {%- unless page_titles == empty %}
       <nav>
