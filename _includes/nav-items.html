@@ -53,7 +53,7 @@
         {%- if page.url == hyperpage.url -%}
           <a class="nav-item" href="{{ relative_hyper_url }}" aria-current="page">{{ hyperpage.title | escape }}</a>
         {%- else -%}
-          <a class="nav-item" href="{{ relative_hyper_url }}">{{ hyperpage.title | escape }}</a>
+          <a class="nav-item" href="{{ relative_hyper_url }}" style="font-family: Palatino; font-weight: 300; color: #F4B8AD; ">{{ hyperpage.title | escape }}</a>
         {%- endif -%}
 
       {%- endif -%}
