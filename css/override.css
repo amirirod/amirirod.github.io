@@ -221,5 +221,6 @@ hr{
   background-size: 50px 50px; /* Size of your loader gif */
 }
 .dropdown-content .nav-item[aria-current="page"] {
-  font-weight: bold;
+  font-weight: 450;
+  text-decoration: underline
 }
