@@ -121,6 +121,10 @@ hr{
 .dropdown-content {
   /* 1. KEEPS YOUR LAYOUT PERFECTLY FORMED BUT SHRUNK TO ZERO */
   display: block; 
+  font-family: Palatino;
+  font-weight: 300;
+  letter-spacing: -1;
+  color: #F4B8AD;
   position: absolute;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   z-index: 1;
