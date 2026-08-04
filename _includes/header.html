@@ -44,7 +44,7 @@
       <span style="font-weight: bold;">AmiriRod</span>
       {%- assign home_url = '/' | relative_url -%}
       {%- if page.url == '/' or page.url == '/index.html' -%}
-        <a rel="author" href="{{ home_url }}" aria-current="page" style="color: #ED6E69; text-decoration: none; cursor: pointer; font-weight: bold;">{{ site.title | escape }}</a>
+        <a rel="author" href="{{ home_url }}" aria-current="page" style="color: #BB0000; text-decoration: underline white; font-weight: 450; cursor: pointer; font-weight: bold;">{{ site.title | escape }}</a>
       {%- else -%}
         <a rel="author" href="{{ home_url }}" style="color: #ED6E69; text-decoration: none; cursor: pointer">{{ site.title | escape }}</a>
       {%- endif -%}
