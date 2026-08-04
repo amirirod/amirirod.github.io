@@ -42,7 +42,7 @@
   </button>
   
   <!-- ENHANCED: Converted wrapper to a <nav> element with labeling for screen readers -->
-  <nav class="dropdown-content" style="translate: -50% 0px; font-size: 1.7rem" aria-labelledby="dropdownButton">
+  <nav class="dropdown-content" style="translate: -50% 0px; font-size: 1rem" aria-labelledby="dropdownButton">
   {%- for path in include.paths -%}
     {%- assign hyperpage = site.pages | where: "path", path | first -%}
     {%- if hyperpage.title %}
