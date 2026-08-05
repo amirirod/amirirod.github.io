@@ -4,7 +4,11 @@ window_title: "About Me"
 window_text: "This text loads directly inside the window overlay."
 ---
  <div style="font-size: 1.5rem; width: 100%; text-align: center; font-family: Palatino;"><span id="date-display" style=" padding: 10px 0px"></span>:</div>
-
+{% assign diff_seconds = 'now' | date: '%s' | minus: post.date | date: '%s' %}
+{% assign diff_days = diff_seconds | divided_by: 3600 | divided_by: 24 %}
+{% if diff_days <= 7 %}
+  <span class="new-badge">New!</span>
+{% endif %}
 <div>
 <div class="content-section" style="background: black; z-index:1">
   <div style="position: sticky; top: 90px; background: black; z-index: 5">
