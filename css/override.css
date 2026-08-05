@@ -228,6 +228,7 @@ hr{
   font-weight: 450;
   text-decoration: underline;
 }
+/*
 .new-badge {
   background-color: #ff4757;
   color: white;
@@ -235,4 +236,17 @@ hr{
   font-size: 11px;
   border-radius: 4px;
   margin-left: 5px;
+}
+*/
+.new-badge {
+  font-weight: bold;
+  margin-left: 5px;
+}
+
+.nav-item.active-page .new-badge {
+  color: #BB0000;
+}
+
+.nav-item:not(.active-page) .new-badge {
+  color: #F4B8AD;
 }
