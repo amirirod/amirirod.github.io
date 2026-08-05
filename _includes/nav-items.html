@@ -80,16 +80,19 @@
     {%- if hyperpage.title %}
       {%- if hyperpage.tags contains "menu" -%}
         
-     
+        {%- comment -%} 1. SAFE LOGIC TO CHECK FOR NEW TAG POSTS {%- endcomment -%}
         {%- assign has_new_post = false -%}
+        {%- assign current_time = 'now' | date: '%s' | plus: 0 -%}
         
         {%- for tag in hyperpage.tags -%}
-          {%- if tag != "menu" -%} 
+          {%- if tag != "menu" -%}
             {%- assign tag_posts = site.tags[tag] -%}
             
             {%- for post in tag_posts -%}
-              {%- assign current_time = 'now' | date: '%s' | plus: 0 -%}
-              {%- assign post_time = post.date | date: '%s' | plus: 0 -%}
+              {%- comment -%} Capture timestamp cleanly as a string first to prevent parsing bugs {%- endcomment -%}
+              {%- capture post_seconds -%}{{ post.date | date: '%s' }}{%- endcapture -%}
+              {%- assign post_time = post_seconds | plus: 0 -%}
+              
               {%- assign diff_seconds = current_time | minus: post_time -%}
               {%- assign diff_days = diff_seconds | divided_by: 3600 | divided_by: 24 -%}
               
@@ -100,10 +103,10 @@
             {%- endfor -%}
             
           {%- endif -%}
-          {%- if has_new_post -%}{%- break -%}{%- endif -%} 
+          {%- if has_new_post -%}{%- break -%}{%- endif -%}
         {%- endfor -%}
 
-
+        {%- comment -%} 2. RENDER THE LINKS WITH THE BADGE {%- endcomment -%}
         {%- assign relative_hyper_url = hyperpage.url | relative_url -%}
         {%- if page.url == hyperpage.url -%}
           <a class="nav-item" href="{{ relative_hyper_url }}" style="font-family: Palatino; font-weight: 400 !important; text-decoration: underline white; text-spacing: -1px; color: #BB0000;" aria-current="page">
@@ -122,3 +125,4 @@
   {%- endfor %}
   </nav>
 </div>
+
