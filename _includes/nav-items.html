@@ -83,7 +83,7 @@
         {%- comment -%} 1. LOGIC TO CHECK FOR NEW POSTS IN THIS PAGE'S CATEGORY {%- endcomment -%}
         {%- assign has_new_post = false -%}
         {%- if hyperpage.tags -%}
-          {%- assign category_posts = site.tsgs[hyperpage.tags] -%}
+          {%- assign category_posts = site.tags[hyperpage.tags] -%}
           {%- for post in category_posts -%}
             {%- assign current_time = 'now' | date: '%s' | plus: 0 -%}
             {%- assign post_time = post.date | date: '%s' | plus: 0 -%}
