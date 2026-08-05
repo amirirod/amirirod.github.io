@@ -80,25 +80,31 @@
     {%- if hyperpage.title %}
       {%- if hyperpage.tags contains "menu" -%}
         
-        {%- comment -%} 1. SAFE LOGIC TO CHECK FOR NEW TAG POSTS {%- endcomment -%}
+        {%- comment -%} 1. ROBUST TAG MATCHING LOGIC {%- endcomment -%}
         {%- assign has_new_post = false -%}
         {%- assign current_time = 'now' | date: '%s' | plus: 0 -%}
         
-        {%- for tag in hyperpage.tags -%}
-          {%- if tag != "menu" -%}
-            {%- assign tag_posts = site.tags[tag] -%}
+        {%- for page_tag in hyperpage.tags -%}
+          {%- assign clean_page_tag = page_tag | downcase | strip -%}
+          {%- if clean_page_tag != "menu" and clean_page_tag != "" -%}
             
-            {%- for post in tag_posts -%}
-              {%- comment -%} Capture timestamp cleanly as a string first to prevent parsing bugs {%- endcomment -%}
-              {%- capture post_seconds -%}{{ post.date | date: '%s' }}{%- endcapture -%}
-              {%- assign post_time = post_seconds | plus: 0 -%}
+            {%- comment -%} Scan all posts to find tag and date alignment {%- endcomment -%}
+            {%- for post in site.posts -%}
+              {%- comment -%} Convert post tags to a downcased string array check {%- endcomment -%}
+              {%- assign post_tags_string = post.tags | join: ',' | downcase -%}
+              {%- assign post_tags_array = post_tags_string | split: ',' -%}
               
-              {%- assign diff_seconds = current_time | minus: post_time -%}
-              {%- assign diff_days = diff_seconds | divided_by: 3600 | divided_by: 24 -%}
-              
-              {%- if diff_days <= 7 and diff_days >= 0 -%}
-                {%- assign has_new_post = true -%}
-                {%- break -%}
+              {%- if post_tags_array contains clean_page_tag -%}
+                {%- capture post_seconds -%}{{ post.date | date: '%s' }}{%- endcapture -%}
+                {%- assign post_time = post_seconds | plus: 0 -%}
+                
+                {%- assign diff_seconds = current_time | minus: post_time -%}
+                {%- assign diff_days = diff_seconds | divided_by: 3600 | divided_by: 24 -%}
+                
+                {%- if diff_days <= 7 and diff_days >= 0 -%}
+                  {%- assign has_new_post = true -%}
+                  {%- break -%}
+                {%- endif -%}
               {%- endif -%}
             {%- endfor -%}
             
@@ -125,4 +131,3 @@
   {%- endfor %}
   </nav>
 </div>
-
