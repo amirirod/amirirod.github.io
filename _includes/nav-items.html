@@ -80,11 +80,11 @@
     {%- if hyperpage.title %}
       {%- if hyperpage.tags contains "menu" -%}
         
-        {%- comment -%} 1. LOGIC TO CHECK FOR NEW POSTS IN THIS PAGE'S SPECIFIC TOPIC TAG {%- endcomment -%}
+     
         {%- assign has_new_post = false -%}
         
         {%- for tag in hyperpage.tags -%}
-          {%- if tag != "menu" -%} {%- comment -%} Skip the menu structural tag {%- endcomment -%}
+          {%- if tag != "menu" -%} 
             {%- assign tag_posts = site.tags[tag] -%}
             
             {%- for post in tag_posts -%}
@@ -100,10 +100,10 @@
             {%- endfor -%}
             
           {%- endif -%}
-          {%- if has_new_post -%}{%- break -%}{%- endif -%} {%- comment -%} Exit outer tag loop if found {%- endcomment -%}
+          {%- if has_new_post -%}{%- break -%}{%- endif -%} 
         {%- endfor -%}
 
-        {%- comment -%} 2. RENDER THE LINKS WITH THE BADGE {%- endcomment -%}
+
         {%- assign relative_hyper_url = hyperpage.url | relative_url -%}
         {%- if page.url == hyperpage.url -%}
           <a class="nav-item" href="{{ relative_hyper_url }}" style="font-family: Palatino; font-weight: 400 !important; text-decoration: underline white; text-spacing: -1px; color: #BB0000;" aria-current="page">
