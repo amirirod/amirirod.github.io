@@ -67,8 +67,8 @@ window_title: "About Me"
       {% assign current_month = post_month %}
       <li style="font-weight: bold; margin-top: 10px; margin-bottom: 5px;">{{ current_month }}</li>
     {% endif %}
-    <li style="padding-left: 15px; color: #F4B8AD">
-      <a href="{{ post.url }}">{{ post.date | date: "%B %d, %Y"}} - {{ post.title }}</a>
+    <li style="padding-left: 15px;>
+      <a href="{{ post.url }}" style="color: #F4B8AD">{{ post.date | date: "%B %d, %Y"}} - {{ post.title }}</a>
     </li>
   {% endfor %}
 </ul>
