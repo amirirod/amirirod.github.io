@@ -97,7 +97,7 @@
                 {%- capture post_seconds -%}{{ post.date | date: '%s' }}{%- endcapture -%}
                 {%- assign post_time = post_seconds | plus: 0 -%}
                 
-                {%- assign diff_seconds = current_time | minus: post_time -%}
+                {%- assign diff_seconds = current_time | minus: post.date -%}
                 {%- comment -%} FIXED: Divide by 86400 (seconds in a day) in one single step {%- endcomment -%}
                 {%- assign diff_days = diff_seconds | divided_by: 86400 -%}
                 
