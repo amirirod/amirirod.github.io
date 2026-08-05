@@ -29,8 +29,9 @@
   </div>
 </div>
 -->
+<!--
 <div class="dropdown">
-  <!-- ENHANCED: Added required aria-haspopup and dynamic aria-expanded control -->
+
   <button 
     class="dropdown-trigger shrink-btn" 
     id="dropdownButton"
@@ -41,7 +42,7 @@
     <img src="/imgs/Menu3.png" style="width: 74px; height: 74px" alt="Menu">
   </button>
   
-  <!-- ENHANCED: Converted wrapper to a <nav> element with labeling for screen readers -->
+
   <nav class="dropdown-content" style="translate: -50% 0px; font-size: 1rem" aria-labelledby="dropdownButton">
   {%- for path in include.paths -%}
     {%- assign hyperpage = site.pages | where: "path", path | first -%}
@@ -54,6 +55,60 @@
           <a class="nav-item" href="{{ relative_hyper_url }}" style="font-family: Palatino; font-weight: 400 !important; text-decoration: underline white; text-spacing: -1px; color: #BB0000;" "aria-current="page">{{ hyperpage.title | escape }}</a>
         {%- else -%}
           <a class="nav-item" href="{{ relative_hyper_url }}" style="font-family: Palatino; font-weight: 300; text-spacing: -1px; color: #F4B8AD !important; ">{{ hyperpage.title | escape }}</a>
+        {%- endif -%}
+
+      {%- endif -%}
+    {%- endif -%}
+  {%- endfor %}
+  </nav>
+</div>
+-->
+<div class="dropdown">
+  <button 
+    class="dropdown-trigger shrink-btn" 
+    id="dropdownButton"
+    aria-haspopup="true" 
+    aria-expanded="false"
+    onclick="const isOpen = this.parentElement.classList.toggle('active'); this.setAttribute('aria-expanded', isOpen);"
+  >
+    <img src="/imgs/Menu3.png" style="width: 74px; height: 74px" alt="Menu">
+  </button>
+  
+  <nav class="dropdown-content" style="translate: -50% 0px; font-size: 1rem" aria-labelledby="dropdownButton">
+  {%- for path in include.paths -%}
+    {%- assign hyperpage = site.pages | where: "path", path | first -%}
+    {%- if hyperpage.title %}
+      {%- if hyperpage.tags contains "menu" -%}
+        
+        {%- comment -%} 1. LOGIC TO CHECK FOR NEW POSTS IN THIS PAGE'S CATEGORY {%- endcomment -%}
+        {%- assign has_new_post = false -%}
+        {%- if hyperpage.category -%}
+          {%- assign category_posts = site.categories[hyperpage.category] -%}
+          {%- for post in category_posts -%}
+            {%- assign current_time = 'now' | date: '%s' | plus: 0 -%}
+            {%- assign post_time = post.date | date: '%s' | plus: 0 -%}
+            {%- assign diff_seconds = current_time | minus: post_time -%}
+            {%- assign diff_days = diff_seconds | divided_by: 3600 | divided_by: 24 -%}
+            
+            {%- if diff_days <= 7 and diff_days >= 0 -%}
+              {%- assign has_new_post = true -%}
+              {%- break -%}
+            {%- endif -%}
+          {%- endfor -%}
+        {%- endif -%}
+
+        {%- comment -%} 2. RENDER THE LINKS WITH THE BADGE {%- endcomment -%}
+        {%- assign relative_hyper_url = hyperpage.url | relative_url -%}
+        {%- if page.url == hyperpage.url -%}
+          <a class="nav-item" href="{{ relative_hyper_url }}" style="font-family: Palatino; font-weight: 400 !important; text-decoration: underline white; text-spacing: -1px; color: #BB0000;" aria-current="page">
+            {{ hyperpage.title | escape }}
+            {%- if has_new_post -%}<span class="new-badge" style="color: #BB0000; font-weight: bold; margin-left: 5px;">New!</span>{%- endif -%}
+          </a>
+        {%- else -%}
+          <a class="nav-item" href="{{ relative_hyper_url }}" style="font-family: Palatino; font-weight: 300; text-spacing: -1px; color: #F4B8AD !important; ">
+            {{ hyperpage.title | escape }}
+            {%- if has_new_post -%}<span class="new-badge" style="color: #F4B8AD; font-weight: bold; margin-left: 5px;">New!</span>{%- endif -%}
+          </a>
         {%- endif -%}
 
       {%- endif -%}
