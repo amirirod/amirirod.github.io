@@ -80,22 +80,28 @@
     {%- if hyperpage.title %}
       {%- if hyperpage.tags contains "menu" -%}
         
-        {%- comment -%} 1. LOGIC TO CHECK FOR NEW POSTS IN THIS PAGE'S CATEGORY {%- endcomment -%}
+        {%- comment -%} 1. LOGIC TO CHECK FOR NEW POSTS IN THIS PAGE'S SPECIFIC TOPIC TAG {%- endcomment -%}
         {%- assign has_new_post = false -%}
-        {%- if hyperpage.tags -%}
-          {%- assign category_posts = site.tags[hyperpage.tags] -%}
-          {%- for post in category_posts -%}
-            {%- assign current_time = 'now' | date: '%s' | plus: 0 -%}
-            {%- assign post_time = post.date | date: '%s' | plus: 0 -%}
-            {%- assign diff_seconds = current_time | minus: post_time -%}
-            {%- assign diff_days = diff_seconds | divided_by: 3600 | divided_by: 24 -%}
+        
+        {%- for tag in hyperpage.tags -%}
+          {%- if tag != "menu" -%} {%- comment -%} Skip the menu structural tag {%- endcomment -%}
+            {%- assign tag_posts = site.tags[tag] -%}
             
-            {%- if diff_days <= 7 and diff_days >= 0 -%}
-              {%- assign has_new_post = true -%}
-              {%- break -%}
-            {%- endif -%}
-          {%- endfor -%}
-        {%- endif -%}
+            {%- for post in tag_posts -%}
+              {%- assign current_time = 'now' | date: '%s' | plus: 0 -%}
+              {%- assign post_time = post.date | date: '%s' | plus: 0 -%}
+              {%- assign diff_seconds = current_time | minus: post_time -%}
+              {%- assign diff_days = diff_seconds | divided_by: 3600 | divided_by: 24 -%}
+              
+              {%- if diff_days <= 7 and diff_days >= 0 -%}
+                {%- assign has_new_post = true -%}
+                {%- break -%}
+              {%- endif -%}
+            {%- endfor -%}
+            
+          {%- endif -%}
+          {%- if has_new_post -%}{%- break -%}{%- endif -%} {%- comment -%} Exit outer tag loop if found {%- endcomment -%}
+        {%- endfor -%}
 
         {%- comment -%} 2. RENDER THE LINKS WITH THE BADGE {%- endcomment -%}
         {%- assign relative_hyper_url = hyperpage.url | relative_url -%}
