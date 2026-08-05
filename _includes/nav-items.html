@@ -63,74 +63,34 @@
   </nav>
 </div>
 -->
-{%- comment -%}
-  STEP 1: PRE-CALCULATE TAGS WITH RECENT POSTS (RUNS ONCE)
-  We extract and save any tags that have posts written in the last 7 days.
-{%- endcomment -%}
-{%- assign recent_tags = "" -%}
-{%- assign current_time = "now" | date: "%s" | plus: 0 -%}
-{%- assign seven_days_in_seconds = 604800 -%}
-
-{%- for post in site.posts -%}
-  {%- assign post_time = post.date | date: "%s" | plus: 0 -%}
-  {%- assign age_seconds = current_time | minus: post_time -%}
-  
-  {%- if age_seconds >= 0 and age_seconds <= seven_days_in_seconds -%}
-    {%- for tag in post.tags -%}
-      {%- assign clean_tag = tag | downcase | strip -%}
-      {%- assign recent_tags = recent_tags | append: "," | append: clean_tag -%}
-    {%- endfor -%}
-  {%- else -%}
-    {%- break -%} {%- comment -%} site.posts is sorted newest first; we can stop early! {%- endcomment -%}
-  {%- endif -%}
-{%- endfor -%}
-{%- assign recent_tags_array = recent_tags | split: "," | uniq -%}
-
-{%- comment -%}
-  STEP 2: RENDER CLEAN HTML COMPONENT
-{%- endcomment -%}
 <div class="dropdown">
-  <button 
-    class="dropdown-trigger shrink-btn" 
+
+  <button
+    class="dropdown-trigger shrink-btn"
     id="dropdownButton"
-    aria-haspopup="true" 
+    aria-haspopup="true"
     aria-expanded="false"
-    onclick="const open = this.parentElement.classList.toggle('active'); this.setAttribute('aria-expanded', open);"
-  >
-    <img src="/imgs/Menu3.png" class="dropdown-icon" alt="Menu">
+    onclick="const isOpen = this.parentElement.classList.toggle('active'); this.setAttribute('aria-expanded', isOpen);"
+    >
+
+    <img src="/imgs/Menu3.png" style="width: 74px; height: 74px" alt="Menu">
   </button>
-  
-  <nav class="dropdown-content" aria-labelledby="dropdownButton">
-  {%- for raw_path in include.paths -%}
-    {%- assign clean_path = raw_path | strip -%}
-    {%- assign hyperpage = site.pages | where: "path", clean_path | first -%}
-    
-    {%- if hyperpage.title and hyperpage.tags contains "menu" -%}
-      {%- assign has_new_post = false -%}
-      
-      {%- comment -%} Instantly check pre-calculated tags without nested post loops {%- endcomment -%}
-      {%- for page_tag in hyperpage.tags -%}
-        {%- assign clean_page_tag = page_tag | downcase | strip -%}
-        {%- if clean_page_tag != "menu" and clean_page_tag != "" -%}
-          {%- if recent_tags_array contains clean_page_tag -%}
-            {%- assign has_new_post = true -%}
-            {%- break -%}
-          {%- endif -%}
-        {%- endif -%}-
-      {%- endfor -%}
 
-      {%- assign relative_hyper_url = hyperpage.url | relative_url -%}
-      {%- assign is_current_page = false -%}
-      {%- if page.url == hyperpage.url -%}{%- assign is_current_page = true -%}{%- endif -%}
-
-      <a class="nav-item {% if is_current_page %}active-page{% endif %}" 
-         href="{{ relative_hyper_url }}" 
-         {% if is_current_page %}aria-current="page"{% endif %}>
-        {{ hyperpage.title | escape }}
-        {%- if has_new_post -%}
-          <span class="new-badge">New!</span>
+  <nav class="dropdown-content" style="translate: -50% 0px; font-size: 1rem" aria-labelledby="dropdownButton">
+  {%- for path in include.paths -%}
+    {%- assign hyperpage = site.pages | where: "path", path | first -%}
+    {%- if hyperpage.title %}
+      {%- if hyperpage.tags contains "menu" -%}
+        
+        {%- comment -%} Check if the current rendering page matches the loop item {%- endcomment -%}
+        {%- assign relative_hyper_url = hyperpage.url | relative_url -%}
+        {%- if page.url == hyperpage.url -%}
+          <a class="nav-item" href="{{ relative_hyper_url }}" style="font-family: Palatino; font-weight: 400 !important; text-decoration: underline white; text-spacing: -1px; color: #BB0000;" "aria-current="page">{{ hyperpage.title | escape }}</a>
+        {%- else -%}
+          <a class="nav-item" href="{{ relative_hyper_url }}" style="font-family: Palatino; font-weight: 300; text-spacing: -1px; color: #F4B8AD !important; ">{{ hyperpage.title | escape }}</a>
         {%- endif -%}
-      </a>
+
+      {%- endif -%}
     {%- endif -%}
   {%- endfor %}
   </nav>
