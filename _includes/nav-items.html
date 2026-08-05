@@ -75,12 +75,13 @@
   </button>
   
   <nav class="dropdown-content" style="translate: -50% 0px; font-size: 1rem" aria-labelledby="dropdownButton">
-  {%- for path in include.paths -%}
-    {%- assign hyperpage = site.pages | where: "path", path | first -%}
-    {%- if hyperpage.title %}
-      {%- if hyperpage.tags contains "menu" -%}
+  {%- for raw_path in include.paths -%}
+    {%- comment -%} Strip any accidential spaces from the paths list {%- endcomment -%}
+    {%- assign clean_path = raw_path | strip -%}
+    {%- assign hyperpage = site.pages | where: "path", clean_path | first -%}
+    
+    {%- if hyperpage.title and hyperpage.tags contains "menu" -%}
         
-        {%- comment -%} 1. ROBUST TAG MATCHING LOGIC {%- endcomment -%}
         {%- assign has_new_post = false -%}
         {%- assign current_time = 'now' | date: '%s' | plus: 0 -%}
         
@@ -88,9 +89,7 @@
           {%- assign clean_page_tag = page_tag | downcase | strip -%}
           {%- if clean_page_tag != "menu" and clean_page_tag != "" -%}
             
-            {%- comment -%} Scan all posts to find tag and date alignment {%- endcomment -%}
             {%- for post in site.posts -%}
-              {%- comment -%} Convert post tags to a downcased string array check {%- endcomment -%}
               {%- assign post_tags_string = post.tags | join: ',' | downcase -%}
               {%- assign post_tags_array = post_tags_string | split: ',' -%}
               
@@ -99,11 +98,12 @@
                 {%- assign post_time = post_seconds | plus: 0 -%}
                 
                 {%- assign diff_seconds = current_time | minus: post_time -%}
-                {%- assign diff_days = diff_seconds | divided_by: 3600 | divided_by: 24 -%}
+                {%- comment -%} FIXED: Divide by 86400 (seconds in a day) in one single step {%- endcomment -%}
+                {%- assign diff_days = diff_seconds | divided_by: 86400 -%}
                 
                 {%- if diff_days <= 7 and diff_days >= 0 -%}
                   {%- assign has_new_post = true -%}
-                  {%- break -%}
+                  {%- break -%}-
                 {%- endif -%}
               {%- endif -%}
             {%- endfor -%}
@@ -112,7 +112,6 @@
           {%- if has_new_post -%}{%- break -%}{%- endif -%}
         {%- endfor -%}
 
-        {%- comment -%} 2. RENDER THE LINKS WITH THE BADGE {%- endcomment -%}
         {%- assign relative_hyper_url = hyperpage.url | relative_url -%}
         {%- if page.url == hyperpage.url -%}
           <a class="nav-item" href="{{ relative_hyper_url }}" style="font-family: Palatino; font-weight: 400 !important; text-decoration: underline white; text-spacing: -1px; color: #BB0000;" aria-current="page">
@@ -126,7 +125,6 @@
           </a>
         {%- endif -%}
 
-      {%- endif -%}
     {%- endif -%}
   {%- endfor %}
   </nav>
