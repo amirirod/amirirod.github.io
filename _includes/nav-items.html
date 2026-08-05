@@ -87,7 +87,7 @@
         
         {%- for post in site.posts -%}
           {%- comment -%} Match the post to the current iteration's hyperpage URL {%- endcomment -%}
-          {%- if post.url == hyperpage.url or post.path contains hyperpage.path -%}
+          {%- if post.cat == hyperpage.title -%}
             {%- assign post_time = post.date | date: '%s' | plus: 0 -%}
             {%- assign diff_seconds = current_time | minus: post_time -%}
             {%- assign diff_days = diff_seconds | divided_by: 3600 | divided_by: 24 -%}
