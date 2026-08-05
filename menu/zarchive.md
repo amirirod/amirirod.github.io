@@ -58,7 +58,7 @@ window_title: "About Me"
     {% endfor %}
   </ul>
   -->
-  <ul id="{{ tag[0] | slugify }}" style="display: none; font-size: 0.9rem; font-weight: 300; font-family: Palatino; list-style-type: none; padding-left: 0;">
+  <ul id="{{ tag[0] | slugify }}" style="display: none; font-size: 0.9rem; font-weight: 300; font-family: Palatino; list-style-type: none; padding-left: 0; color: #BB0000; letter-spacing: -1px">
   {% assign current_month = "" %}
   
   {% for post in tag[1] %}
