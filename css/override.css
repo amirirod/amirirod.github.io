@@ -224,6 +224,7 @@ hr{
   background: url('/assets/images/loading.gif') no-repeat center center;
   background-size: 50px 50px; /* Size of your loader gif */
 }
+
 .dropdown-content .nav-item[aria-current="page"] {
   font-weight: 450;
   text-decoration: underline;
@@ -233,7 +234,6 @@ hr{
   background-color: #ff4757;
   color: white;
   padding: 2px 6px;
-  font-size: 11px;
   border-radius: 4px;
   margin-left: 5px;
 }
@@ -253,6 +253,6 @@ hr{
 .circle {
   width: 5px;
   height: 10px;
-  background-color: #FFFFFF !important;
+  background-color: white !important;
   border-radius: 50%;
 }
