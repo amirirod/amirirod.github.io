@@ -251,8 +251,8 @@ hr{
   color: #F4B8AD;
 }
 .circle {
-  width: 10px;
+  width: 5px;
   height: 10px;
-  background-color: #FF0011 !important;
+  background-color: #FFFFFF !important;
   border-radius: 50%;
 }
