@@ -250,3 +250,9 @@ hr{
 .nav-item:not(.active-page) .new-badge {
   color: #F4B8AD;
 }
+.circle {
+  width: 10px;
+  height: 10px;
+  background-color: #FFFFFF !important;
+  border-radius: 50%;
+}
