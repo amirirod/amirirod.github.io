@@ -121,12 +121,12 @@
 {%- if page.url == hyperpage.url -%}
   <a class="nav-item" href="{{ relative_hyper_url }}" data-slug="{{ unique_id }}" style="font-family: Palatino; font-weight: 400 !important; text-decoration: underline white; text-spacing: -1px; color: #BB0000;" aria-current="page">
     {{ hyperpage.title | escape }}
-    {% if has_new_post %}<span class="new-badge">New!</span>{% endif %}
+    {% if has_new_post %}<span class="circle"></span>{% endif %}
   </a>
 {%- else -%}
   <a class="nav-item" href="{{ relative_hyper_url }}" data-slug="{{ unique_id }}" style="font-family: Palatino; font-weight: 300; text-spacing: -1px; color: #F4B8AD !important; ">
     {{ hyperpage.title | escape }}
-    {% if has_new_post %}<span class="new-badge">New!</span>{% endif %}
+    {% if has_new_post %}<span class="circle">New!</span>{% endif %}
   </a>
 {%- endif -%}
               
