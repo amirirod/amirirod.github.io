@@ -98,7 +98,7 @@
             {%- endif -%}
           {%- endif -%}
         {%- endfor -%}
-
+<!--
         {%- comment -%} 2. RENDER THE LINKS WITH THE NEW BADGE IF APPLICABLE {%- endcomment -%}
         {%- assign relative_hyper_url = hyperpage.url | relative_url -%}
         {%- if page.url == hyperpage.url -%}
@@ -112,9 +112,47 @@
             {% if has_new_post %}<span class="new-badge">New!</span>{% endif %}
           </a>
         {%- endif -%}
+-->
+              {%- comment -%} 2. RENDER THE LINKS WITH THE NEW BADGE IF APPLICABLE {%- endcomment -%}
+{%- assign relative_hyper_url = hyperpage.url | relative_url -%}
+{%- assign unique_id = hyperpage.page_id | default: hyperpage.title | slugify -%}
 
+{%- if page.url == hyperpage.url -%}
+  <a class="nav-item" href="{{ relative_hyper_url }}" data-slug="{{ unique_id }}" style="font-family: Palatino; font-weight: 400 !important; text-decoration: underline white; text-spacing: -1px; color: #BB0000;" aria-current="page">
+    {{ hyperpage.title | escape }}
+    {% if has_new_post %}<span class="new-badge">New!</span>{% endif %}
+  </a>
+{%- else -%}
+  <a class="nav-item" href="{{ relative_hyper_url }}" data-slug="{{ unique_id }}" style="font-family: Palatino; font-weight: 300; text-spacing: -1px; color: #F4B8AD !important; ">
+    {{ hyperpage.title | escape }}
+    {% if has_new_post %}<span class="new-badge">New!</span>{% endif %}
+  </a>
+{%- endif -%}
       {%- endif -%}
     {%- endif -%}
   {%- endfor %}
   </nav>
 </div>
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  const navItems = document.querySelectorAll('.nav-item');
+
+  navItems.forEach(item => {
+    const slug = item.getAttribute('data-slug');
+    const badge = item.querySelector('.new-badge');
+    
+    if (!slug || !badge) return;
+
+    // Check if user already clicked this specific badge
+    if (localStorage.getItem('hide_badge_' + slug) === 'true') {
+      badge.style.display = 'none';
+    }
+
+    // Listen for the click event
+    item.addEventListener('click', function() {
+      localStorage.setItem('hide_badge_' + slug, 'true');
+      badge.style.display = 'none';
+    });
+  });
+});
+</script>
