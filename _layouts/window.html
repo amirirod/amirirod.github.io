@@ -18,6 +18,7 @@ layout: default
     </div>
   </div>
 </div>
+<!--
 <script>
   function openWindow() {
     document.getElementById("customWindow").style.display = "block";
@@ -26,4 +27,23 @@ layout: default
     document.getElementById("customWindow").style.display = "none";
   }
 </script>
+-->
+<script>
+  function openWindow() {
+    const windowEl = document.getElementById("customWindow");
+    
+    // If the window is currently hidden or not explicitly set, open it
+    if (windowEl.style.display === "none" || windowEl.style.display === "") {
+      windowEl.style.display = "block";
+    } else {
+      windowEl.style.display = "none";
+    }
+  }
 
+  // Optional: Keep your original close function if your inside-popup buttons still use it
+  function closeWindow() {
+    document.getElementById("customWindow").style.display = "none";
+    const overlayEl = document.getElementById("overlay");
+    if (overlayEl) overlayEl.style.display = "none";
+  }
+</script>
