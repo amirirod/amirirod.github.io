@@ -17,8 +17,10 @@ window_text: "This text loads directly inside the window overlay."
   <li> For the Album of the Month, the album must have been dropped that month. I don't really feel like waiting until the end of the month to decide, so at any given point the Album of the Month may be established. Unless something inconceivably important drops unexpectedly, I'm not gonna change it. </li>
   <li> I use a lot of commas, and parentheses (to avoid using too many commas), and run on sentences. If it's hard for you to read, read harder. Get some practice in. I got a 5 on my AP Lang exam, and I'm not saying that that's a real qualification for expertise in writing, but it's probably more than you have, so do with that info as you will. </li>
   </ul>
+  <!--
   <div style="width: 100%; height: 200px; display: flex; align-content: center">
 <img src="/imgs/Logo.jpg" style="width: 50%; height: auto; aspect-ratio: 1 / 1; padding: 0 25%;">
   </div>
+  -->
   </div>
 </html>
