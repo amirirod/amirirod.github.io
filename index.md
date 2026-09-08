@@ -67,8 +67,8 @@ document.getElementById('date-display').textContent = formattedDate;
   {% for post in site.posts %}
     {% if post.tags contains 'songs' %}
       <li>
-        <h2>
-          <a class="shrink-btn" 
+        <h2 class="shrink-btn">
+          <a 
            style="color: #BB0000; letter-spacing: -1px; font-weight: 300; text-decoration: underline white;" href="{{ post.url }}">
             {{ post.date | date: "%B %d, %Y"}} - {{ post.title }}
           </a>
