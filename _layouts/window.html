@@ -1,7 +1,7 @@
 ---
 layout: default
 ---
-<!--
+
 <div class="main-page-content">
   {{ content }}
 </div>
@@ -19,45 +19,7 @@ layout: default
     </div>
   </div>
 </div>
--->
-<div class="main-page-content">
-  {{ content }}
-</div>
 
-<div id="customWindow" class="window-overlay">
-  <div class="window-content" style="z-index: 5000">
-    <!-- The close button remains fixed at the top of the window -->
-    <span class="close-btn" onclick="closeWindow()">&times;</span>
-    <h2>{{ page.window_title }}</h2>
-    
-    <!-- Added a dedicated scrollable body wrapper -->
-    <div class="window-body">
-      {%- assign about_page = site.pages | where: "path", "about.md" | first -%}
-      {%- if about_page -%}
-        {{ about_page.content | markdownify }}
-      {%- endif -%}
-    </div>
-  </div>
-</div>
-
-<style>
-  /* Base structural layout for your modal window container */
-  .window-content {
-    display: flex;
-    flex-direction: column;
-    max-height: 80vh; /* Prevents the popup from overflowing the screen height */
-    position: relative;
-    box-sizing: border-box;
-    /* Include your existing padding, width, and background styles here */
-  }
-
-  /* This is the key addition that makes the Jekyll content scrollable */
-  .window-body {
-    overflow-y: auto; /* Adds the vertical scrollbar when content is too long */
-    padding-right: 10px; /* Optional: adds breathing room for the scrollbar */
-    flex-grow: 1; /* Ensures it occupies the remaining available space */
-  }
-</style>
 <!--
 <script>
   function openWindow() {
