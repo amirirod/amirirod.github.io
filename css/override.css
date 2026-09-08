@@ -46,7 +46,7 @@ hr{
 .window-overlay {
   display: none; 
   position: fixed;
-  top: 10%; left: 0;
+  top: 0; left: 0;
   width: 100%; height: 100%;
   background-color: rgba(0,0,0,0.5);
   z-index: 1000;
@@ -62,7 +62,7 @@ hr{
 */
 .window-content {
   background: white;
-  margin: 5vh auto;    /* Reduced top margin so it sits comfortably on small screens */
+  margin: 10vh auto;    /* Reduced top margin so it sits comfortably on small screens */
   padding: 20px;
   width: 50%;
   position: relative;
