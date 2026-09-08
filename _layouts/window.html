@@ -9,7 +9,7 @@ layout: default
 
 <div id="customWindow" class="window-overlay">
   <div class="window-content" style="z-index: 5000">
-    <h2 style="text-align: center; border: 1px solid #DD756E !important">{{ page.window_title }}</h2>
+    <h2 style="text-align: center; border: 1px solid #DD756E !important font-family: Palatino; font-weight: 300; text-spacing: -1px">{{ page.window_title }}</h2>
     <div>
       {%- assign about_page = site.pages | where: "path", "about.md" | first -%}
       {%- if about_page -%}
