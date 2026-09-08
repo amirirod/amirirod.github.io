@@ -62,21 +62,15 @@ hr{
 */
 .window-content {
   background: white;
+  margin: 5vh auto;    /* Reduced top margin so it sits comfortably on small screens */
   padding: 20px;
   width: 50%;
   position: relative;
-  
-  /* 1. Center the modal perfectly on the screen instead of using margins */
-  margin: 0;
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
 
-  /* 2. Limit the size and force the scrollbar */
-  max-height: 75vh;   /* Restricts height to 75% of the screen */
-  overflow-y: auto;   /* Automatically adds a vertical scrollbar when needed */
-  box-sizing: border-box; /* Ensures padding is included in the height calculations */
+  /* The crucial constraint properties */
+  max-height: 80vh !important;  /* Forces a vertical limit relative to the viewport height */
+  overflow-y: auto !important;  /* Tells the box to scroll when content exceeds max-height */
+  box-sizing: border-box; 
 }
 .close-btn {
   position: absolute;
