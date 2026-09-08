@@ -119,7 +119,7 @@
 {%- assign unique_id = hyperpage.page_id | default: hyperpage.title | slugify -%}
 
 {%- if page.url == hyperpage.url -%}
-  <a class="nav-item" href="{{ relative_hyper_url }}" data-slug="{{ unique_id }}" style="font-family: Palatino; font-weight: 400 !important; text-decoration: underline white; text-spacing: -1px; color: #BB0000;" aria-current="page">
+  <a class="nav-item" href="{{ relative_hyper_url }}" data-slug="{{ unique_id }}" style="font-family: Palatino; font-weight: 500 !important; text-decoration: underline white; text-spacing: -1px; color: #BB0000;" aria-current="page">
     {{ hyperpage.title | escape }}
     {% if has_new_post %}<span class="circle"> </span>{% endif %}
   </a>
