@@ -9,7 +9,6 @@ layout: default
 
 <div id="customWindow" class="window-overlay">
   <div class="window-content" style="z-index: 5000">
-    <span class="close-btn" onclick="closeWindow()">&times;</span>
     <h2>{{ page.window_title }}</h2>
     <div>
       {%- assign about_page = site.pages | where: "path", "about.md" | first -%}
