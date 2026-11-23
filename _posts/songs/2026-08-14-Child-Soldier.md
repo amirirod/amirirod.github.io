@@ -2,7 +2,7 @@
 layout: post
 cat: 
 tags: songs
-title: "'Child-Soldier' by untiljapan"
+title: "'Child Soldier' by untiljapan"
 spotify_link: https://open.spotify.com/embed/track/4V1A2p3d93C7mKEcZFcJDX?utm_source=generator&si=4fc278ddbee54ff3
 apple_link: https://embed.music.apple.com/us/song/child-soldier/1846745283
 date: 2026-08-14
