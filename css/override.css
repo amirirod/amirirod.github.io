@@ -272,7 +272,7 @@ hr{
   border-radius: 50%;
 }
     .toggle-btn.active {
-      border-color: #ffffff;
+      border-color: #DD756E !important;
     }
 html {
   scrollbar-width: thin; /* Options: auto, thin, none */
