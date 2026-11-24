@@ -5,7 +5,7 @@ window_title: "Surprise Alert!"
 window_text: "This text loads directly inside the window overlay."
 ---
 <html>
-<div style="z-index: 6000; font-family: Palatino; font-size: 1.2rem; font-weight: 300; text-spacing: -1px; background-image: url('/imgs/Back.png') border: 2px dotted;">
+<div style="z-index: 6000; font-family: Palatino; font-size: 1.2rem; font-weight: 300; text-spacing: -1px; background-image: url('/imgs/Back.png') border: 2px dotted #DD756E !important;">
  Some stuff about me:
   <ul>
  
