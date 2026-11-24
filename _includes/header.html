@@ -37,7 +37,17 @@
         <button id="myButton" class="toggle-btn shrink-btn" aria-pressed="false"  onclick="openWindow();" onclick="closeWindow();" style="background:none; border:none; padding:0; cursor:pointer; z-index: 6000; ">
         <img src="{{ '/imgs/Logo.jpg' | relative_url }}" style="height: 84px; width: auto; aspect-ratio: 1/1; object-fit: contain;" alt="Logo">
       </button>
-    
+      <script>
+    const button = document.getElementById('myButton');
+
+    button.addEventListener('click', () => {
+      // Toggles the 'active' class on and off
+      const isHighlighted = button.classList.toggle('active');
+      
+      // Updates accessibility attribute for screen readers
+      button.setAttribute('aria-pressed', isHighlighted);
+    });
+  </script>
     </div>
     
     <!-- Branding Text Details -->
