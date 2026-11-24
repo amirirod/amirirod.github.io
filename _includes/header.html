@@ -34,10 +34,12 @@
   <div style="display: flex; align-items: center; gap: 15px; height: 100%;">
     <!-- Logo Image -->
     <div id="mybutton" class="toggle-btn" aria-pressed="false" style="display: flex; align-items: center; height: 100%;">
-        <button id="myButton" class="toggle-btn shrink-btn" aria-pressed="false"  onclick="openWindow();" onclick="closeWindow();" style="background:none; border:none; padding:0; cursor:pointer; z-index: 6000; ">
+        <button class="shrink-btn" aria-pressed="false"  onclick="openWindow();" onclick="closeWindow();" style="background:none; border:none; padding:0; cursor:pointer; z-index: 6000; ">
         <img src="{{ '/imgs/Logo.jpg' | relative_url }}" style="height: 84px; width: auto; aspect-ratio: 1/1; object-fit: contain;" alt="Logo">
       </button>
-      <script>
+
+    </div>
+          <script>
     const button = document.getElementById('myButton');
 
     button.addEventListener('click', () => {
@@ -48,8 +50,6 @@
       button.setAttribute('aria-pressed', isHighlighted);
     });
   </script>
-    </div>
-    
     <!-- Branding Text Details -->
     <div style="color: white; font-size: 1rem; font-weight: 300; letter-spacing: -1px; display: flex; flex-direction: column; justify-content: center; line-height: 1.2;">
       <span style="font-weight: bold;}">AmiriRod</span>
