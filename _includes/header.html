@@ -34,11 +34,20 @@
   <div style="display: flex; align-items: center; gap: 15px; height: 100%;">
     <!-- Logo Image -->
     <div style="display: flex; align-items: center; height: 100%;">
-      <button class="shrink-btn" onclick="openWindow();" onclick="closeWindow();" style="background:none; border:none; padding:0; cursor:pointer; z-index: 6000; box-shadow: 
+        {%- assign home_url = '/' | relative_url -%}
+      {%- if page.url == '/' or page.url == '/index.html' -%}
+       <button class="shrink-btn" onclick="openWindow();" onclick="closeWindow();" style="background:none; border:none; padding:0; cursor:pointer; z-index: 6000; box-shadow: 
       0 0 30px #DD756E !important;
   ">
         <img src="{{ '/imgs/Logo.jpg' | relative_url }}" style="height: 84px; width: auto; aspect-ratio: 1/1; object-fit: contain;" alt="Logo">
       </button>
+      {%- else -%}
+        <button class="shrink-btn" onclick="openWindow();" onclick="closeWindow();" style="background:none; border:none; padding:0; cursor:pointer; z-index: 6000;
+  ">
+        <img src="{{ '/imgs/Logo.jpg' | relative_url }}" style="height: 84px; width: auto; aspect-ratio: 1/1; object-fit: contain;" alt="Logo">
+      </button>
+      {%- endif -%}
+    
     </div>
     
     <!-- Branding Text Details -->
