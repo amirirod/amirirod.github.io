@@ -271,6 +271,9 @@ hr{
   background-color: white !important;
   border-radius: 50%;
 }
+.toggle-btn {
+
+}
 .toggle-btn.active {
       border-color: #DD756E !important;
   box-shadow: 0 0 30px #DD756E !important
