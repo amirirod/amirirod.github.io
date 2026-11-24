@@ -5,10 +5,9 @@ window_title: "Surprise Alert!"
 window_text: "This text loads directly inside the window overlay."
 ---
 <html>
-<div style="z-index: 6000; font-family: Palatino; font-size: 1.2rem; font-weight: 300; text-spacing: -1px; background-image: url('/imgs/Back.png') border: 2px dotted #DD756E !important;">
+<div style="z-index: 6000; border: 2px dotted #DD756E !important; font-family: Palatino; font-size: 1.2rem; font-weight: 300; text-spacing: -1px; background-image: url('/imgs/Back.png')">
  Some stuff about me:
   <ul>
- 
   <li> My name is ██████ Amiri Rod██████ </li>
   <li> I pretty much exclusively listen to rap (though the definition of rap is expanding into other genres), and maybe (big maybe) a little r&b </li>
   <li> Of the rap I listen to, I usually only listen to music I'm in the target demographic for (young black man) (which means no, it's pretty unlikely you'll see your favorite new-gen female musician (or as I call the upcoming and honestly pretty interesting genre, bad-bitch rap) on here regardless of how much clout or influence they got) </li>
