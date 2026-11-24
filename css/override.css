@@ -289,11 +289,11 @@ hr{
 
 /* 3. Draggable handle */
 ::-webkit-scrollbar-thumb {
-  background: #FFFFFF !important ;
+  background: white !important ;
   border-radius: 4px;
 }
 
 /* 4. Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: #FFFFFF !important ;
+  background: white !important ;
 }
