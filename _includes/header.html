@@ -41,7 +41,13 @@
     
     <!-- Branding Text Details -->
     <div style="color: white; font-size: 1rem; font-weight: 300; letter-spacing: -1px; display: flex; flex-direction: column; justify-content: center; line-height: 1.2;">
-      <span style="font-weight: bold;">AmiriRod</span>
+      <span style="font-weight: bold; text-shadow: 
+      0 0 5px #fff,
+      0 0 10px #fff,
+      0 0 20px #0ff,
+      0 0 40px #0ff,
+      0 0 80px #0ff;
+  }">AmiriRod</span>
       {%- assign home_url = '/' | relative_url -%}
       {%- if page.url == '/' or page.url == '/index.html' -%}
         <a rel="author" href="{{ home_url }}" class="shrink-btn" aria-current="page" style="color: #BB0000; text-decoration: underline white; font-weight: 500; cursor: pointer; font-weight: bold;">{{ site.title | escape }}</a>
