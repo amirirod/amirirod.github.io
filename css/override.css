@@ -273,6 +273,7 @@ hr{
 }
 .toggle-btn.active {
       border-color: #DD756E !important;
+  box-shadow: 0 0 30px #DD756E !important
 }
 html {
   scrollbar-width: thin; /* Options: auto, thin, none */
