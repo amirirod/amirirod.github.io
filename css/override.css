@@ -275,7 +275,7 @@ hr{
 
 }
 .toggle-btn.active {
-      border-color: 2px solid #DD756E !important;
+      border: 2px solid #DD756E !important;
 }
 ::-webkit-scrollbar {
   width: 6px;
