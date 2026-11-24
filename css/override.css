@@ -275,7 +275,7 @@ hr{
 
 }
 .toggle-btn.active {
-      box-shadow: 0 0 5px #DD756E;
+      box-shadow: 0 0 1px #DD756E;
 }
 html {
   scrollbar-color: #DD756E #f1f1f1;
