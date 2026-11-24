@@ -279,7 +279,7 @@ hr{
   box-shadow: 0 0 30px #DD756E !important
 }
 ::-webkit-scrollbar {
-  width: 12px;
+  width: 6px;
 }
 
 /* 2. Background track */
@@ -291,7 +291,7 @@ hr{
 /* 3. Draggable handle */
 ::-webkit-scrollbar-thumb {
   background: #DD756E ;
-  border-radius: 6px;
+  border-radius: 4px;
 }
 
 /* 4. Handle on hover */
