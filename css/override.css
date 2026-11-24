@@ -275,20 +275,20 @@ hr{
 
 }
 .toggle-btn.active {
-      box-shadow: 0 0 5px #DD756E !important;
+      box-shadow: 0 0 5px #DD756E;
 }
 html {
   scrollbar-color: #DD756E #f1f1f1;
+  scrollbar-
 }
 /*
 ::-webkit-scrollbar {
   width: 6px;
 }
 
-/* 2. Background track 
+*/ 2. Background track 
 ::-webkit-scrollbar-track {
-  background: #f1f1f1;
-  border-radius: 6px;
+  background-image: 
 }
 
 /* 3. Draggable handle 
