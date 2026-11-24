@@ -280,23 +280,25 @@ hr{
 html {
   scrollbar-color: #DD756E #f1f1f1;
 }
+/*
 ::-webkit-scrollbar {
   width: 6px;
 }
 
-/* 2. Background track */
+/* 2. Background track 
 ::-webkit-scrollbar-track {
   background: #f1f1f1;
   border-radius: 6px;
 }
 
-/* 3. Draggable handle */
+/* 3. Draggable handle 
 ::-webkit-scrollbar-thumb {
   background: #DD756E !important ;
   border-radius: 4px;
 }
 
-/* 4. Handle on hover */
+/* 4. Handle on hover 
 ::-webkit-scrollbar-thumb:hover {
   background: #DD756E !important ;
 }
+*/
