@@ -47,15 +47,4 @@ layout: default
     const overlayEl = document.getElementById("overlay");
     if (overlayEl) overlayEl.style.display = "none";
   }
-  function pressed() {
-    const button = document.getElementById('myButton');
-
-    button.addEventListener('click', () => {
-      // Toggles the 'active' class on and off
-      const isHighlighted = button.classList.toggle('active');
-      
-      // Updates accessibility attribute for screen readers
-      button.setAttribute('aria-pressed', isHighlighted);
-    }
-                            }
 </script>
