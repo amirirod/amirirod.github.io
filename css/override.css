@@ -288,7 +288,7 @@ html {
 
 */ 2. Background track 
 ::-webkit-scrollbar-track {
-  background-image: 
+    background-image: url('imgs/Untitled15.png');
 }
 
 /* 3. Draggable handle 
