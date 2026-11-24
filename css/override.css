@@ -287,11 +287,11 @@ hr{
 
 /* 3. Draggable handle */
 ::-webkit-scrollbar-thumb {
-  background: #DD756E !important;
+  background: #DD756E ;
   border-radius: 6px;
 }
 
 /* 4. Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: #DD756E !important;
+  background: #DD756E ;
 }
