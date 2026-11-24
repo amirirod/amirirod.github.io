@@ -275,7 +275,23 @@ hr{
       border-color: #DD756E !important;
   box-shadow: 0 0 30px #DD756E !important
 }
-html {
-  scrollbar-width: thin; /* Options: auto, thin, none */
-  scrollbar-color: #DD756E #FFFFFF !important; /* First color: thumb, Second color: track */
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+/* 2. Background track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 6px;
+}
+
+/* 3. Draggable handle */
+::-webkit-scrollbar-thumb {
+  background: #DD756E !important;
+  border-radius: 6px;
+}
+
+/* 4. Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #DD756E !important;
 }
