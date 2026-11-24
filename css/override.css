@@ -271,6 +271,9 @@ hr{
   background-color: white !important;
   border-radius: 50%;
 }
+    .toggle-btn.active {
+      border-color: #ffffff;
+    }
 html {
   scrollbar-width: thin; /* Options: auto, thin, none */
   scrollbar-color: #DD756E #f1f1f1; /* First color: thumb, Second color: track */
