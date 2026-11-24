@@ -279,7 +279,7 @@ hr{
 }
 html {
   scrollbar-color: #DD756E #f1f1f1;
-  scrollbar-
+  scrollbar-width: thin;
 }
 /*
 ::-webkit-scrollbar {
@@ -291,7 +291,7 @@ html {
     background-image: url('imgs/Untitled15.png');
 }
 
-/* 3. Draggable handle 
+/*
 ::-webkit-scrollbar-thumb {
   background: #DD756E !important ;
   border-radius: 4px;
