@@ -288,8 +288,7 @@ html {
 
 */ 
 ::-webkit-scrollbar-track {
-    background-image: url('imgs/Untitled15.png');
-  background: #FFFFFF !important;
+  background: #00FF00 !important;
 }
 
 /*
