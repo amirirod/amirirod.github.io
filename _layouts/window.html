@@ -11,12 +11,20 @@ layout: default
   <div class="window-content" style="z-index: 5000" style="border: 1px solid grey">
     <h2 style="text-align: center; border: 1px solid #DD756E !important; font-family: Palatino; font-weight: 300; text-spacing: -1px">{{ page.window_title }}</h2>
     <div>
-{%- assign target_about = "about.md" -%}
+{%- assign target_about = "/abouts/aboutsong.md" -%}
       
 {%- if page.url contains "/menu/Albums.html" -%}
-  {%- assign target_about = "aboutalbums.md" -%}
+  {%- assign target_about = "/abouts/aboutalbums.md" -%}
 {%- elsif page.url contains "/menu/Artists.html" -%}
-  {%- assign target_about = "aboutartists.md" -%}
+  {%- assign target_about = "abouts/aboutartists.md" -%}
+{%- elsif page.url contains "/menu/Commentary.html" -%}
+  {%- assign target_about = "abouts/aboutcommentary.md" -%}
+{%- elsif page.url contains "/menu/zarchive.html" -%}
+  {%- assign target_about = "abouts/aboutzarchive.md" -%}
+{%- elsif page.url contains "/menu/zettings.html" -%}
+  {%- assign target_about = "abouts/aboutzettings.md" -%}
+{%- elsif page.url contains "/menu/aboutAmiri.html" -%}
+  {%- assign target_about = "abouts/aboutAmiri.md" -%}
 {%- endif -%}
 
 {%- assign about_page = site.pages | where: "path", target_about | first -%}
