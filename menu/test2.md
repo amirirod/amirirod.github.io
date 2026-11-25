@@ -105,7 +105,7 @@ title: test
               {% assign unique_post_marks = post_marks | uniq %}
               <li class="post-entry" data-marks="{{ unique_post_marks | join: ',' }}">
                 <article class="post-item">
-                  <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+                  <a style="color: #DD756E;" href="{{ post.url | relative_url }}">{{ post.title }}</a>
                 </article>
               </li>
             {% endfor %}
