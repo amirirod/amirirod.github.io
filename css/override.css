@@ -175,7 +175,6 @@ hr{
 }
 
 .dropdown-content a {
-  background: url('/imgs/Back.png') repeat-x left center / 25% 100% black !important;
  background: 
     linear-gradient(to right, transparent 50%, black 100%),
     url('/imgs/Back.png') repeat-x left center / 25% 100% black !important;
