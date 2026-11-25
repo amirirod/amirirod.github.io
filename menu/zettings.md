@@ -1,7 +1,8 @@
 ---
-layout: page
+layout: window
 title: Settings
 tags: menu
+window_title: "Settings"
 ---
 <h2>Site Preferences</h2>
 <p>Choose your preferred default music streaming platform:</p>
