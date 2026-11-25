@@ -6,6 +6,7 @@ blurb_text: "Going 13/13 on a new rage album that not only perfectly embodies th
 tldr: "Its up to date, new, and ahead of its time all at the same time. Amazing and refreshing work"
 spotify_link: https://open.spotify.com/embed/album/1WwRne6HheDeoydcn9V2pD?utm_source=generator&si=487e0d5ec9684629
 apple_link: https://embed.music.apple.com/us/album/musik-is-noise/6793820706
+mark: [Rage, ATL, Underground]
 ---
 ## "musik is noise" by muney capri
 
