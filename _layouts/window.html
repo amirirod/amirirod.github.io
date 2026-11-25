@@ -24,7 +24,7 @@ layout: default
 {%- elsif page.url contains "/menu/zettings.html" -%}
   {%- assign target_about = "abouts/aboutzettings.md" -%}
 {%- elsif page.url contains "/menu/aboutAmiri.html" -%}
-  {%- assign target_about = "abouts/aboutAmiri.md" -%}
+  {%- assign target_about = "abouts/aboutaboutAmiri.md" -%}
 {%- endif -%}
 
 {%- assign about_page = site.pages | where: "path", target_about | first -%}
