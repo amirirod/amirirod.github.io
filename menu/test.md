@@ -62,21 +62,24 @@ title: test
   {% for tag in site.tags %}
     {% assign tag_name = tag[0] %}
     {% assign tag_posts = tag[1] %}
-    <section class="tag-group" id="{{ tag_name | slugify }}">
-      <h2>{{ tag_name }}</h2>
-      {% for post in tag_posts %}
-        {% assign post_marks = "" | split: "" %}
-        {% for mark in post.mark %}
-          {% assign slug = mark | slugify %}
-          {% assign post_marks = post_marks | push: slug %}
+    {% comment %} Only render the tag section if it actually has posts {% endcomment %}
+    {% if tag_posts.size > 0 %}
+      <section class="tag-group" data-tag="{{ tag_name | slugify }}">
+        <h2>{{ tag_name }}</h2>
+        {% for post in tag_posts %}
+          {% assign post_marks = "" | split: "" %}
+          {% for mark in post.mark %}
+            {% assign slug = mark | slugify %}
+            {% assign post_marks = post_marks | push: slug %}
+          {% endfor %}
+          <article class="post-item" data-marks="{{ post_marks | join: ',' }}">
+            <ul>
+              <li><a href="{{ post.url | relative_url }}">{{ post.title }}</a></li>
+            </ul>
+          </article>
         {% endfor %}
-        <article class="post-item" data-marks="{{ post_marks | join: ',' }}">
-          <ul>
-            <li><a href="{{ post.url | relative_url }}">{{ post.title }}</a></li>
-          </ul>
-        </article>
-      {% endfor %}
-    </section>
+      </section>
+    {% endif %}
   {% endfor %}
 </div>
 
