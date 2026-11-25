@@ -11,10 +11,18 @@ layout: default
   <div class="window-content" style="z-index: 5000" style="border: 1px solid grey">
     <h2 style="text-align: center; border: 1px solid #DD756E !important; font-family: Palatino; font-weight: 300; text-spacing: -1px">{{ page.window_title }}</h2>
     <div>
-      {%- assign about_page = site.pages | where: "path", "about.md" | first -%}
-      {%- if about_page -%}
-        {{ about_page.content | markdownify }}
-      {%- endif -%}
+{%- assign target_about = "about.md" -%}
+
+{%- if page.url contains "/menu/Albums.html"}
+  {%- assign target_about = "aboutalbums.md" -%}
+{%- elsif page.url contains "/menu/Artists.html"}
+  {%- assign target_about = "aboutartists.md" -%}
+{%- endif -%}
+
+{%- assign about_page = site.pages | where: "path", target_about | first -%}
+{%- if about_page -%}
+  {{ about_page.content | markdownify }}
+{%- endif -%}
     </div>
   </div>
 </div>
