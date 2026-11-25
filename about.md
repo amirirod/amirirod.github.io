@@ -1,6 +1,6 @@
 ---
 layout: window
-title: Song Of The Day
+title: "Song Of The Day"
 window_title: "Surprise Alert!"
 window_text: "This text loads directly inside the window overlay."
 ---
