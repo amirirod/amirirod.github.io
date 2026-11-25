@@ -37,6 +37,7 @@ layout: window
       loading="lazy"></iframe>
 </div>
     {% endunless %}
+    {{ page.mark }}
 <script>
 document.addEventListener("DOMContentLoaded", function () {
   let savedPlatform = localStorage.getItem("preferred-music-platform") || "spotify";
