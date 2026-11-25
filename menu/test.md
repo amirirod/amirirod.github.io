@@ -40,8 +40,10 @@ title: test
     <article class="post-item" data-marks="{{ post_marks | join: ',' }}">
       {% for tag in site.tags %}
       <ul>{{ tag[0] }}</ul>
+      {% for post in tag[1] %}
       <ul><a href="{{ post.url | relative_url }}">{{ post.title }}</a></ul>
-      {% endear %}
+      {% endfor %}
+      {% endfor %}
     </article>
   {% endfor %}
 </div>
