@@ -38,7 +38,10 @@ title: test
       {% assign post_marks = post_marks | push: slug %}
     {% endfor %}
     <article class="post-item" data-marks="{{ post_marks | join: ',' }}">
+      {% for tag in site.tags %}
+      <ul>{{ tag[0] }}</ul>
       <ul><a href="{{ post.url | relative_url }}">{{ post.title }}</a></ul>
+      {% endear %}
     </article>
   {% endfor %}
 </div>
