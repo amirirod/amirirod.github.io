@@ -37,7 +37,10 @@ layout: window
       loading="lazy"></iframe>
 </div>
     {% endunless %}
-    {{ page.mark }}
+    {%- for mark in page.mark -%}
+    {%- assign marks = page.mark -%}
+    {{ marks }},
+    {%- endfor -%}
 <script>
 document.addEventListener("DOMContentLoaded", function () {
   let savedPlatform = localStorage.getItem("preferred-music-platform") || "spotify";
