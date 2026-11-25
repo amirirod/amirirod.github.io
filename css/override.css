@@ -79,7 +79,7 @@ hr{
   position: relative;
 
   /* The crucial constraint properties */
-  max-height: 80vh !important;  /* Forces a vertical limit relative to the viewport height */
+  max-height: 100vh !important;  /* Forces a vertical limit relative to the viewport height */
   overflow-y: auto !important;  /* Tells the box to scroll when content exceeds max-height */
   box-sizing: border-box; 
 }
@@ -92,7 +92,7 @@ hr{
   position: relative;
 
   /* The crucial constraint properties */
-  max-height: 80vh !important;  /* Forces a vertical limit relative to the viewport height */
+  max-height: 100vh !important;  /* Forces a vertical limit relative to the viewport height */
   overflow-y: auto !important;  /* Tells the box to scroll when content exceeds max-height */
   box-sizing: border-box; 
 }
