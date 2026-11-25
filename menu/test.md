@@ -2,7 +2,23 @@
 tags: menu
 title: test
 ---
+<html>
+<style>
+.mark-toggle {
+  padding: 6px 12px;
+  margin: 4px;
+  border: 1px solid #ccc;
+  background: #f9f9f9;
+  cursor: pointer;
+  border-radius: 4px;
+}
 
+.mark-toggle.active {
+  background: rgb(221, 117, 110) !important;
+  color: white;
+  border-color: #0056b3;
+}
+</style>
 <!-- 1. Gather unique marks using Liquid -->
 {% assign all_marks = "" | split: "" %}
 {% for post in site.posts %}
@@ -107,19 +123,4 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 });
 </script>
-<style>
-.mark-toggle {
-  padding: 6px 12px;
-  margin: 4px;
-  border: 1px solid #ccc;
-  background: #f9f9f9;
-  cursor: pointer;
-  border-radius: 4px;
-}
-
-.mark-toggle.active {
-  background: rgb(221, 117, 110) !important;
-  color: white;
-  border-color: #0056b3;
-}
-</style>
+</html>
