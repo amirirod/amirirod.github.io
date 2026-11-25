@@ -16,7 +16,6 @@ title: test
       border-radius: 4px;
     }
     #mark-buttons .mark-toggle.active {
-      background-color: #DD756E !important;
       color: #ffffff !important;
       border-color: #DD756E !important;
     }
@@ -30,6 +29,9 @@ title: test
     .post-item {
       margin: 0.25rem 0;
     }
+    .doors {
+      background-color: #DD756E !important
+      }
   </style>
 </head>
 <body>
@@ -132,10 +134,10 @@ title: test
 
           if (selectedMarks.has(slug)) {
             selectedMarks.delete(slug);
-            button.classList.remove("active");
+            button.classList.remove("doors");
           } else {
             selectedMarks.set(slug, label);
-            button.classList.add("active");
+            button.classList.add("doors");
           }
 
           updateSelectedList();
