@@ -188,7 +188,7 @@ hr{
 }
 
 .dropdown-content a:hover {
-  background-image: url('/imgs/Back1.png') repeat-x left center / 25% 100% black !important;
+    background: black url('/images/Back1.png') left center / 25% 100% repeat-x !important;
 }
 
 /* 4. ANIMATION STATES WHEN ACTIVE */
