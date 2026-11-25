@@ -76,7 +76,7 @@ document.getElementById('date-display').textContent = formattedDate;
     {% if post.tags contains 'commentary' %}
       <li>
         <h2>
-          <a class="shrink-btn" onclick="this.parentElement.parentElement.classList.toggle('active');" style="color: #BB0000; letter-spacing: -1px; font-weight: 300; text-decoration: underline white;" href="{{ post.url }}">
+          <a class="shrink-btn" ontouchstart="" onclick="this.parentElement.parentElement.classList.toggle('active');" style="color: #BB0000; letter-spacing: -1px; font-weight: 300; text-decoration: underline white;" href="{{ post.url }}">
             {{ post.date | date: "%B %d, %Y"}} - {{ post.title }}
           </a>
         </h2>
