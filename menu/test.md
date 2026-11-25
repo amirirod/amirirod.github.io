@@ -19,9 +19,6 @@ title: test
   border-color: #0056b3;
 }
 
-  html[data-darkreader-scheme="dark"] .preserve-color {
-    background-color: #DD756E !important;
-  }
 </style>
 <!-- 1. Gather unique marks using Liquid -->
 {% assign all_marks = "" | split: "" %}
