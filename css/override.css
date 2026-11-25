@@ -234,6 +234,9 @@ hr{
   cursor: pointer;
   /* Smoothly transition back to normal scale */
   transition: transform 0.1s ease; 
+  user-select: none; /* Prevents accidental text highlighting on tap */
+      -webkit-tap-highlight-color: transparent; /* Removes default mobile gray/blue tap box */
+      touch-action: manipulation; /* Eliminates the 300ms mobile click delay */
 }
 
 /* Triggers exactly when the button is clicked */
