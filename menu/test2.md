@@ -52,7 +52,7 @@ title: test
   <!-- 2. Render the selectable toggle buttons -->
   <div id="mark-buttons">
     {% for mark in unique_marks %}
-      <button type="button" class="mark-toggle preserve-color" data-mark="{{ mark | slugify }}">
+      <button type="button" class="mark-toggle" data-mark="{{ mark | slugify }}">
         {{ mark }}
       </button>
     {% endfor %}
