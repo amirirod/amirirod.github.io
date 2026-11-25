@@ -72,7 +72,6 @@ title: test
       {% assign tag_name = tag[0] %}
       {% assign tag_posts = tag[1] %}
       {% assign marked_posts = "" | split: "" %}
-
       {% for post in tag_posts %}
         {% if post.mark %}
           {% assign raw_marks = post.mark | join: "," | split: "," %}
@@ -87,7 +86,6 @@ title: test
           {% endif %}
         {% endif %}
       {% endfor %}
-
       {% if marked_posts.size > 0 %}
         <section class="tag-group" data-tag="{{ tag_name | slugify }}">
           <h2>{{ tag_name }}</h2>
@@ -103,7 +101,6 @@ title: test
                 {% endif %}
               {% endfor %}
               {% assign unique_post_marks = post_marks | uniq %}
-
               <li class="post-entry" data-marks="{{ unique_post_marks | join: ',' }}">
                 <article class="post-item">
                   <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
