@@ -118,7 +118,7 @@ document.addEventListener("DOMContentLoaded", () => {
 }
 
 .mark-toggle.active {
-  background: #DD756E;
+  background: #DD756E !important;
   color: white;
   border-color: #0056b3;
 }
