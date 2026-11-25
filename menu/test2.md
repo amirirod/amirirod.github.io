@@ -30,7 +30,7 @@ title: test
       margin: 0.25rem 0;
     }
     .doors {
-      background-color: rgb(221, 117, 110, 1) !important
+      background-color: #8f2922 !important
       }
   </style>
 </head>
