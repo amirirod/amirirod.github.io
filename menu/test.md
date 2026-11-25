@@ -38,12 +38,7 @@ title: test
       {% assign post_marks = post_marks | push: slug %}
     {% endfor %}
     <article class="post-item" data-marks="{{ post_marks | join: ',' }}">
-      {% for tag in site.tags %}
-      <ul>{{ tag[0] }}</ul>
-      {% for post in tag[1] %}
       <ul><a href="{{ post.url | relative_url }}">{{ post.title }}</a></ul>
-      {% endfor %}
-      {% endfor %}
     </article>
   {% endfor %}
 </div>
@@ -123,7 +118,7 @@ document.addEventListener("DOMContentLoaded", () => {
 }
 
 .mark-toggle.active {
-  background: #DD756E !important;
+  background: rgb(221, 117, 110) !important;
   color: white;
   border-color: #0056b3;
 }
