@@ -11,10 +11,10 @@ layout: default
   <div class="window-content" style="z-index: 5000" style="border: 1px solid grey">
     <h2 style="text-align: center; border: 1px solid #DD756E !important; font-family: Palatino; font-weight: 300; text-spacing: -1px">{{ page.window_title }}</h2>
     <div>
-{%- assign target_about = "/abouts/aboutsong.md" -%}
+{%- assign target_about = "abouts/aboutsong.md" -%}
       
 {%- if page.url contains "/menu/Albums.html" -%}
-  {%- assign target_about = "/abouts/aboutalbums.md" -%}
+  {%- assign target_about = "abouts/aboutalbums.md" -%}
 {%- elsif page.url contains "/menu/Artists.html" -%}
   {%- assign target_about = "abouts/aboutartists.md" -%}
 {%- elsif page.url contains "/menu/Commentary.html" -%}
