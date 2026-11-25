@@ -14,7 +14,7 @@ title: test
 }
 
 .mark-toggle.active {
-  background: rgb(221, 117, 110) !important;
+  background-color: rgb(221, 117, 110) !important;
   color: white;
   border-color: #0056b3;
 }
@@ -46,7 +46,7 @@ title: test
   </ul>
 </div>
 
-<!-- 4. Render all posts with their marks attached as data attributes -->
+<!-- 4. Render all posts with their marks attached as data attributes 
 <div id="posts-list">
   {% for post in site.posts %}
     {% assign post_marks = "" | split: "" %}
@@ -64,6 +64,40 @@ title: test
     {% endfor %}
   {% endfor %}
 </div> 
+-->
+<div id="posts-list">
+  {% for tag in site.tags %}
+    {% assign tag_name = tag[0] %}
+    {% assign tag_posts = tag[1] %}
+    {% assign has_selected_posts = false %}
+    {% comment %} Check if this tag contains any posts with a 'mark' {% endcomment %}
+    {% for post in tag_posts %}
+      {% if post.mark and post.mark.size > 0 %}
+        {% assign has_selected_posts = true %}
+        {% break %}
+      {% endif %}
+    {% endfor %}
+    {% comment %} Only render the tag and its posts if a match was found {% endcomment %}
+    {% if has_selected_posts %}
+      <h2>{{ tag_name }}</h2>
+      <ul>
+        {% for post in tag_posts %}
+          {% if post.mark and post.mark.size > 0 %}
+            {% assign post_marks = "" | split: "" %}
+            {% for mark in post.mark %}
+              {% assign slug = mark | slugify %}
+              {% assign post_marks = post_marks | push: slug %}
+            {% endfor %}
+            <li class="post-item" data-marks="{{ post_marks | join: ',' }}">
+              <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+            </li>
+          {% endif %}
+        {% endfor %}
+      </ul>
+    {% endif %}
+  {% endfor %}
+</div>
+
 
 <script>
 document.addEventListener("DOMContentLoaded", () => {
