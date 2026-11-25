@@ -42,7 +42,7 @@ hr{
   font-size: 2.5em;
   opacity: 0.3;
 }
-
+@media (max-width: 400px) {
 .window-overlay {
   display: none; 
   position: fixed;
@@ -51,6 +51,7 @@ hr{
   background-color: rgba(0,0,0,0.5);
   z-index: 1000;
   translateY: -25%;
+}
 }
 /*
 .window-content {
