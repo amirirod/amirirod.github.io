@@ -38,7 +38,7 @@ title: test
       {% assign post_marks = post_marks | push: slug %}
     {% endfor %}
     <article class="post-item" data-marks="{{ post_marks | join: ',' }}">
-      <ul><a href="{{ post.url | relative_url }}">{{ post.title }}</a></ul>
+      <ul><a href="{{ post.url | relative_url }}">{{ post.title }} ({{ post.tags }}</a></ul>
     </article>
   {% endfor %}
 </div>
