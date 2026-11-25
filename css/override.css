@@ -88,7 +88,7 @@ hr{
   background: white;
   margin: 10vh auto;    /* Reduced top margin so it sits comfortably on small screens */
   padding: 20px;
-  width: 50%;
+  width: 75%;
   position: relative;
 
   /* The crucial constraint properties */
