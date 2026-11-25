@@ -38,8 +38,7 @@ layout: window
 </div>
     {% endunless %}
     {%- for mark in page.mark -%}
-    {%- assign marks = page.mark -%}
-    {{ marks }},
+    {{ mark }},
     {%- endfor -%}
 <script>
 document.addEventListener("DOMContentLoaded", function () {
