@@ -15,22 +15,18 @@ title: test
       cursor: pointer;
       border-radius: 4px;
     }
-
     #mark-buttons .mark-toggle.active {
       background-color: #DD756E !important;
       color: #ffffff !important;
       border-color: #DD756E !important;
     }
-
     .tag-group {
       margin-top: 1.25rem;
     }
-
     .tag-group ul {
       list-style: disc;
       padding-left: 1.5rem;
     }
-
     .post-item {
       margin: 0.25rem 0;
     }
