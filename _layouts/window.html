@@ -21,6 +21,7 @@ layout: default
 
 {%- assign about_page = site.pages | where: "path", target_about | first -%}
 {%- if about_page -%}
+      {{page.url}
   {{ about_page.content | markdownify }}
 {%- endif -%}
     </div>
