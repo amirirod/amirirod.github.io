@@ -51,7 +51,7 @@ hr{
   z-index: 1000;
   translateY: -25%;
 }
-@media (max-width: 400px) {
+@media (max-width: 500px) {
 .window-overlay {
   display: none; 
   position: fixed;
@@ -83,7 +83,7 @@ hr{
   overflow-y: auto !important;  /* Tells the box to scroll when content exceeds max-height */
   box-sizing: border-box; 
 }
-@media (max-width: 768px) {
+@media (max-width: 500px) {
 .window-content {
   background: white;
   margin: 10vh auto;    /* Reduced top margin so it sits comfortably on small screens */
