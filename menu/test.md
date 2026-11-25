@@ -69,31 +69,33 @@ title: test
   {% for tag in site.tags %}
     {% assign tag_name = tag[0] %}
     {% assign tag_posts = tag[1] %}
-    {% assign has_selected_posts = false %}
-    {% comment %} Check if this tag contains any posts with a 'mark' {% endcomment %}
+    {%- comment -%} Create an empty array to hold posts that match your "selected" criteria {%- endcomment -%}
+    {% assign selected_posts = "" | split: "" %}
     {% for post in tag_posts %}
+      {%- comment -%} Check if the post is "selected" (e.g., has marks or a specific front-matter variable) {%- endcomment -%}
       {% if post.mark and post.mark.size > 0 %}
-        {% assign has_selected_posts = true %}
-        {% break %}
+        {% assign selected_posts = selected_posts | push: post %}
       {% endif %}
     {% endfor %}
-    {% comment %} Only render the tag and its posts if a match was found {% endcomment %}
-    {% if has_selected_posts %}
-      <h2>{{ tag_name }}</h2>
-      <ul>
-        {% for post in tag_posts %}
-          {% if post.mark and post.mark.size > 0 %}
+    {%- comment -%} Only render the tag section if there is at least 1 selected post {%- endcomment -%}
+    {% if selected_posts.size > 0 %}
+      <section class="tag-group">
+        <h2>{{ tag_name }}</h2>
+        <ul>
+          {% for post in selected_posts %}
             {% assign post_marks = "" | split: "" %}
             {% for mark in post.mark %}
               {% assign slug = mark | slugify %}
               {% assign post_marks = post_marks | push: slug %}
             {% endfor %}
-            <li class="post-item" data-marks="{{ post_marks | join: ',' }}">
-              <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+            <li>
+              <article class="post-item" data-marks="{{ post_marks | join: ',' }}">
+                <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+              </article>
             </li>
-          {% endif %}
-        {% endfor %}
-      </ul>
+          {% endfor %}
+        </ul>
+      </section>
     {% endif %}
   {% endfor %}
 </div>
