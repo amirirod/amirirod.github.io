@@ -37,12 +37,12 @@ layout: window
       loading="lazy"></iframe>
 </div>
     <hr>
-    <div style="color: grey !important; font-style: italic; font-weight: 100;">
+    <span style="color: grey !important; font-style: italic; font-weight: 100;">
     {% endunless %}
     {%- for mark in page.mark -%}
     #{{ mark }}{% unless forloop.last %},  {% endunless %}
     {%- endfor -%}
-    </div>
+    </span>
 <script>
 document.addEventListener("DOMContentLoaded", function () {
   let savedPlatform = localStorage.getItem("preferred-music-platform") || "spotify";
