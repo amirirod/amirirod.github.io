@@ -9,7 +9,7 @@ title: test
     .mark-toggle {
       padding: 6px 12px;
       margin: 4px;
-      background: #808C93 !important;
+      background: #black !important;
       color: #222;
       cursor: pointer;
     }
@@ -28,8 +28,8 @@ title: test
       margin: 0.25rem 0;
     }
     .doors {
-      background: url('/imgs/White.png') !important;
-      text-color: #000000 !important;
+      background: #808C93 !important;
+      text-color: #000001 !important;
       }
   </style>
 </head>
