@@ -30,7 +30,7 @@ title: test
       margin: 0.25rem 0;
     }
     .doors {
-      background-color: white !important;
+      background: url(imgs/White.png) !important;
       text-color: #000000 !important;
       }
   </style>
