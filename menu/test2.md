@@ -10,7 +10,7 @@ title: test
       padding: 6px 12px;
       margin: 4px;
       border: 1px solid #ccc;
-      background: #DD756E !important;
+      background: black !important;
       color: #222;
       cursor: pointer;
       border-radius: 4px;
@@ -30,8 +30,8 @@ title: test
       margin: 0.25rem 0;
     }
     .doors {
-      background-color: grey !important;
-      text-color: #000000;
+      background-color: white !important;
+      text-color: #000000 !important;
       }
   </style>
 </head>
