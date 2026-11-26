@@ -9,11 +9,9 @@ title: test
     .mark-toggle {
       padding: 6px 12px;
       margin: 4px;
-      border: 1px solid #ccc;
-      background: black !important;
+      background: #808C93 !important;
       color: #222;
       cursor: pointer;
-      border-radius: 4px;
     }
     #mark-buttons .mark-toggle.active {
       color: #ffffff !important;
