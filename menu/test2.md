@@ -66,7 +66,7 @@ title: test
       <li class="empty-msg">None selected</li>
     </ul>
   </div>
-
+<hr>
   <!-- 4. Render posts grouped by tag, hiding tag sections with no matching posts -->
   <div id="posts-list">
     {% for tag in site.tags %}
