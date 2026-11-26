@@ -30,7 +30,8 @@ title: test
       margin: 0.25rem 0;
     }
     .doors {
-      background-color: #DD756E !important
+      background-color: #FFFFFF !important;
+      text-color: #000000;
       }
   </style>
 </head>
