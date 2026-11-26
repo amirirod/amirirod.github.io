@@ -36,10 +36,12 @@ layout: window
       allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
       loading="lazy"></iframe>
 </div>
+    <div style="color: grey; font-style: italic;">
     {% endunless %}
     {%- for mark in page.mark -%}
     #{{ mark }}{% unless forloop.last %},  {% endunless %}
     {%- endfor -%}
+    </div>
 <script>
 document.addEventListener("DOMContentLoaded", function () {
   let savedPlatform = localStorage.getItem("preferred-music-platform") || "spotify";
