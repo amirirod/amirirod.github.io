@@ -90,7 +90,7 @@ tags: menu
 {% endfor %}
     </p>
     <div style="
-    background-image: url('imgs/Untitled15.png');
+    background-image: url('/imgs/Untitled15.png');
     background-repeat: repeat;
     background-size: 5%;
     position: relative;
