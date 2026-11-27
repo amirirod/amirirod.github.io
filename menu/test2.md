@@ -163,14 +163,14 @@ tags: menu
         selectedList.innerHTML = "";
 
         if (selectedMarks.size === 0) {
-          selectedList.innerHTML = '<span class="empty-msg">None selected</span>';
+          selectedList.innerHTML = '<li class="empty-msg">None selected</li>';
           return;
         }
 
         selectedMarks.forEach((label) => {
-          const span = document.createElement("span");
-          span.textContent = label;
-          selectedList.appendChild(span);
+          const li = document.createElement("li");
+          li.textContent = label;
+          selectedList.appendChild(li);
         });
       }
 
