@@ -66,9 +66,9 @@ tags: menu
         <!-- 3. Display the list of currently selected marks -->
   <div>
     <strong>Selected Marks:</strong>
-    <span id="selected-marks-list">
-      <span class="empty-msg">None selected</span>
-    </span>
+    <ul id="selected-marks-list">
+      <li class="empty-msg">None selected</li>
+    </ul>
   </div>
     </p>
     <div style="
