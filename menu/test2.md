@@ -52,8 +52,7 @@ tags: menu
 <div class="content-section" style="background: black; z-index:1">
   <div style="position: sticky; top: 90px; background: black; z-index: 5">
     <p style="text-align: center; font-family: Palatino;">
-      <hr>
-      <div style="text-align: center; font-family: Palatino;">
+    <div style="text-align: center; font-family: Palatino;">
          <!-- 2. Render the selectable toggle buttons -->
   <div id="mark-buttons">
     {% for mark in unique_marks %}
@@ -63,6 +62,14 @@ tags: menu
     {% endfor %}
   </div>
       </div>
+      <hr>
+        <!-- 3. Display the list of currently selected marks -->
+  <div>
+    <strong>Selected Marks:</strong>
+    <ul id="selected-marks-list">
+      <li class="empty-msg">None selected</li>
+    </ul>
+  </div>
     </p>
     <div style="
     background-image: url('imgs/Untitled15.png');
@@ -75,14 +82,6 @@ tags: menu
     border-block: 1px solid grey;"
     >
     </div>
-
-  <!-- 3. Display the list of currently selected marks -->
-  <div>
-    <strong>Selected Marks:</strong>
-    <ul id="selected-marks-list">
-      <li class="empty-msg">None selected</li>
-    </ul>
-  </div>
     <div style="
     background-image: url('/imgs/Untitled15.png');
     background-repeat: repeat;
