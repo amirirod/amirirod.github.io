@@ -1,6 +1,7 @@
 ---
 tags: menu
 title: search
+layout: window
 ---
 <html lang="en">
 <head>
