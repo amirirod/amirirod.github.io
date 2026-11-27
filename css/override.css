@@ -3,6 +3,9 @@ hr{
   margin-bottom: 20px;
   background-color: gray;
 }
+.post-content {
+    margin-bottom:1px
+}
 /* Post navigation links */
 .post_navi {
   display: flex;
