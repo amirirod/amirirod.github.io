@@ -67,10 +67,7 @@ title: test
     </ul>
   </div>
 <hr>
-<div style="
-background-image: url('imgs/Untitled15.png');
-    background-repeat: repeat;
-    background-size: 5%;">
+<div style="background-image: url('imgs/Untitled15.png'); background-repeat: repeat; background-size: 5%;">
 </div>
 <hr>
   <!-- 4. Render posts grouped by tag, hiding tag sections with no matching posts -->
