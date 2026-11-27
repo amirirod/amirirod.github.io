@@ -163,7 +163,7 @@ tags: menu
         selectedList.innerHTML = "";
 
         if (selectedMarks.size === 0) {
-          selectedList.innerHTML = '<li class="empty-msg">None selected</li>';
+          selectedList.innerHTML = '<span class="empty-msg">None selected</span>';
           return;
         }
 
