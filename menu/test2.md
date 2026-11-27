@@ -67,7 +67,7 @@ tags: menu
   <div>
     <strong>Selected Marks:</strong>
     <span id="selected-marks-list">
-      <li class="empty-msg">None selected</li>
+      <span class="empty-msg">None selected</span>
     </span>
   </div>
     </p>
