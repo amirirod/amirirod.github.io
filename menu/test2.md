@@ -76,6 +76,7 @@ title: test
     height: 40px;
     border-block: 1px solid grey;"
     >
+    </div>
   <!-- 4. Render posts grouped by tag, hiding tag sections with no matching posts -->
   <div id="posts-list">
     {% for tag in site.tags %}
