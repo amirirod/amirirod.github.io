@@ -48,8 +48,13 @@ tags: menu
     {% endif %}
   {% endfor %}
   {% assign unique_marks = all_marks | uniq | sort %}
-
-  <!-- 2. Render the selectable toggle buttons -->
+<div>
+<div class="content-section" style="background: black; z-index:1">
+  <div style="position: sticky; top: 90px; background: black; z-index: 5">
+    <p style="text-align: center; font-family: Palatino;">
+      <hr>
+      <div style="text-align: center; font-family: Palatino;">
+         <!-- 2. Render the selectable toggle buttons -->
   <div id="mark-buttons">
     {% for mark in unique_marks %}
       <button type="button" class="mark-toggle" data-mark="{{ mark | slugify }}">
@@ -57,6 +62,19 @@ tags: menu
       </button>
     {% endfor %}
   </div>
+      </div>
+    </p>
+    <div style="
+    background-image: url('imgs/Untitled15.png');
+    background-repeat: repeat;
+    background-size: 5%;
+    position: relative;
+    z-index: 100;
+    width: 100%;
+    height: 40px;
+    border-block: 1px solid grey;"
+    >
+    </div>
 
   <!-- 3. Display the list of currently selected marks -->
   <div>
