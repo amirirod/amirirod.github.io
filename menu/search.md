@@ -1,5 +1,6 @@
 ---
 tags: menu
+title: search
 ---
 <html lang="en">
 <head>
