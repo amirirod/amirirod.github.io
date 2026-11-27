@@ -72,17 +72,6 @@ tags: menu
   </div>
     </p>
     <div style="
-    background-image: url('imgs/Untitled15.png');
-    background-repeat: repeat;
-    background-size: 5%;
-    position: relative;
-    z-index: 100;
-    width: 100%;
-    height: 40px;
-    border-block: 1px solid grey;"
-    >
-    </div>
-    <div style="
     background-image: url('/imgs/Untitled15.png');
     background-repeat: repeat;
     background-size: 5%;
