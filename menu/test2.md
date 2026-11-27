@@ -66,10 +66,16 @@ title: test
       <li class="empty-msg">None selected</li>
     </ul>
   </div>
-<hr>
-<div style="background-image: url('imgs/Untitled15.png'); background-repeat: repeat; background-size: 5%;">
-</div>
-<hr>
+    <div style="
+    background-image: url('imgs/Untitled15.png');
+    background-repeat: repeat;
+    background-size: 5%;
+    position: relative;
+    z-index: 100;
+    width: 100%;
+    height: 40px;
+    border-block: 1px solid grey;"
+    >
   <!-- 4. Render posts grouped by tag, hiding tag sections with no matching posts -->
   <div id="posts-list">
     {% for tag in site.tags %}
