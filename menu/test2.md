@@ -1,6 +1,5 @@
 ---
 tags: menu
-title: test
 ---
 <html lang="en">
 <head>
