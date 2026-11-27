@@ -168,9 +168,9 @@ tags: menu
         }
 
         selectedMarks.forEach((label) => {
-          const li = document.createElement("li");
-          li.textContent = label;
-          selectedList.appendChild(li);
+          const span = document.createElement("span");
+          span.textContent = label;
+          selectedList.appendChild(span);
         });
       }
 
