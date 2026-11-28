@@ -2,7 +2,7 @@
 layout: window
 title: Blog Archive
 tags: menu
-window_title: "Archive"
+window_title: "Search"
 ---
 <html>
 <style>
