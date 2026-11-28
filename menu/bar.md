@@ -20,7 +20,7 @@ title: bar
     display: grid;
     grid-auto-flow: column;
     grid-template-rows: repeat(3, 1fr); /* Wraps 3 times (3 rows) */
-    grid-auto-columns: 100%;            /* Each column takes 100% width (1 page) */
+    grid-template-columns: repeat(3, 1fr);            /* Each column takes 100% width (1 page) */
     overflow-x: auto;
     scroll-snap-type: x mandatory;
     scroll-behavior: smooth;
