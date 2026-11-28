@@ -8,8 +8,9 @@ layout: window
   <style>
     .scroll-grid {
   display: grid;
+  grid-template-rows: (2, 40px)
+  grid-template-columns: (2, 1fr)
   grid-auto-flow: row;           /* Forces items into horizontal columns instead of wrapping to new rows */
-  grid-auto-rows: 40px;         /* Sets the fixed width of each column (can also use %, rem, or minmax) */
   overflow-x: auto;                 /* Enables horizontal scrolling */
   overscroll-behavior-inline: contain; /* Prevents page swipe navigation on touch devices */
   scroll-snap-type: x mandatory;    /* Optional: snaps cards neatly into place when scrolling */
