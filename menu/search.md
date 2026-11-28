@@ -186,7 +186,7 @@ layout: window
           span.textContent = label;
           selectedList.appendChild(span);
         });
-
+      }
       function filterPosts() {
         const activeSlugs = Array.from(selectedMarks.keys());
         let totalVisiblePosts = 0;
