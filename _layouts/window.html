@@ -46,25 +46,41 @@ layout: default
 </script>
 -->
 <script>
+  let scrollPosition = 0;
+
+  function lockScroll() {
+    scrollPosition = window.pageYOffset || document.documentElement.scrollTop;
+    document.body.style.position = "fixed";
+    document.body.style.top = `-${scrollPosition}px`;
+    document.body.style.left = "0";
+    document.body.style.right = "0";
+    document.body.style.overflow = "hidden";
+  }
+
+  function unlockScroll() {
+    document.body.style.position = "";
+    document.body.style.top = "";
+    document.body.style.left = "";
+    document.body.style.right = "";
+    document.body.style.overflow = "";
+    window.scrollTo(0, scrollPosition);
+  }
+
   function openWindow() {
     const windowEl = document.getElementById("customWindow");
-    const isClosed = windowEl.style.display === "none" || windowEl.style.display === "";
+    const isClosed = getComputedStyle(windowEl).display === "none";
 
     if (isClosed) {
       windowEl.style.display = "block";
-      document.body.style.overflow = "hidden";
-      document.documentElement.style.overflow = "hidden";
+      lockScroll();
     } else {
-      windowEl.style.display = "none";
-      document.body.style.overflow = "";
-      document.documentElement.style.overflow = "";
+      closeWindow();
     }
   }
 
   function closeWindow() {
     document.getElementById("customWindow").style.display = "none";
-    document.body.style.overflow = "";
-    document.documentElement.style.overflow = "";
+    unlockScroll();
 
     const overlayEl = document.getElementById("overlay");
     if (overlayEl) overlayEl.style.display = "none";
