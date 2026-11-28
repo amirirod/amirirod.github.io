@@ -8,4 +8,5 @@ apple_link: https://embed.music.apple.com/us/song/controlla/1873123267
 date: 2026-08-07
 blurb_text: "There are alot of underrated guys out there, but not many are as underrated as rexv2. CONTROLLA is like if I took morphine, liquid grooviness, sautéd beat perfection, pristine vocal mixing and threw it in a cooler and froze it into the perfect popsicle. I have no criticisms. "
 tldr: "This song so good it make me hungry"
+mark: [Rage, Beautiful, ATL]
 ---
