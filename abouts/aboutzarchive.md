@@ -63,8 +63,8 @@ window_text: "This text loads directly inside the window overlay."
     {% endif %}
   {% endfor %}
   {% assign unique_marks = all_marks | uniq | sort %}
-<div  style="position: sticky !important; top: 0px; background: black; z-index: 5">
-<div class="content-section">
+<div>
+<div class="content-section"  style="position: sticky !important; top: 0px; background: black; z-index: 5">
   <div >
     <p style="text-align: center; font-family: Palatino;">
     <div style="text-align: center; font-family: Palatino;">
