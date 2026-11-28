@@ -68,7 +68,7 @@ layout: window
       <hr>
         <!-- 3. Display the list of currently selected marks -->
   <div>
-    <strong>Selected Marks:</strong>
+    <strong>Showing:</strong>
     <ul id="selected-marks-list">
       <li class="empty-msg">None selected</li>
     </ul>
