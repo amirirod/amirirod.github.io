@@ -57,9 +57,9 @@ layout: window
     <p style="text-align: center; font-family: Palatino;">
     <div style="text-align: center; font-family: Palatino;">
          <!-- 2. Render the selectable toggle buttons -->
-  <div id="mark-buttons" display: grid;
+  <div id="mark-buttons" style="display: grid;
     grid-template-columns: repeat(10, 1fr);
-    grid-template-rows: repeat(3, 30px);>
+    grid-template-rows: repeat(3, 30px);">
     {% for mark in unique_marks %}
       <button type="button" class="mark-toggle" data-mark="{{ mark | slugify }}">
         {{ mark }}
