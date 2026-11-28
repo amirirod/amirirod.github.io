@@ -58,7 +58,7 @@ layout: window
     <div style="text-align: center; font-family: Palatino;">
          <!-- 2. Render the selectable toggle buttons -->
   <div id="mark-buttons" style="display: grid;
-    grid-template-columns: repeat(10, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(2, 40px);
   overflow-x: auto; /* Enables horizontal scrolling when content overflows */
   padding-bottom: 8px; /* Prevents scrollbar from overlapping content */">
