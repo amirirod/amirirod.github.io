@@ -9,7 +9,7 @@ window_text: "This text loads directly inside the window overlay."
   <style>
 .scroll-grid {
   display: grid;
-  grid-template-rows: repeat(3, 30px);   /* Creates 2 fixed-height rows */
+  grid-template-rows: repeat(3, 35px);   /* Creates 2 fixed-height rows */
   grid-auto-flow: column;                /* Fills columns top-to-bottom, adding new columns horizontally */
   grid-auto-columns: max-content;              /* Sets width for each generated column (adjust as needed) */    
   gap: 10px; /* Optional: spacing between grid items */
