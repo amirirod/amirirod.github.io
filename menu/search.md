@@ -175,11 +175,11 @@ layout: window
 selectedMarks.forEach((label, index) => {
   if (index > 0) {
     const separator = document.createElement("span");
-    separator.textContent = " and ";
+    separator.textContent = "\u00A0and\u00A0"; // Forces spaces to render
     selectedList.appendChild(separator);
   }
 
-  const gorp = document.createElement("gorp-");
+  const gorp = document.createElement("gorp-"); // Valid custom tag name
   gorp.textContent = label;
   selectedList.appendChild(gorp);
 });
