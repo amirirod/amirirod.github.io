@@ -173,9 +173,9 @@ layout: window
         }
 
         selectedMarks.forEach((label) => {
-          const span = document.createElement("span");
-          span.textContent = label;
-          selectedList.appendChild(span);
+          const gorp = document.createElement("gorp-norp");
+          gorp.textContent = label;
+          selectedList.appendChild(gorp-norp);
         });
       }
 
