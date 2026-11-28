@@ -6,15 +6,16 @@ layout: window
 <head>
   <meta charset="UTF-8" />
   <style>
-    .scroll-grid {
+.scroll-grid {
   display: grid;
-  grid-template-rows: (2, 40px)
-  grid-template-columns: (2, 1fr)
-  grid-auto-flow: row;           /* Forces items into horizontal columns instead of wrapping to new rows */
-  overflow-x: auto;                 /* Enables horizontal scrolling */
-  overscroll-behavior-inline: contain; /* Prevents page swipe navigation on touch devices */
-  scroll-snap-type: x mandatory;    /* Optional: snaps cards neatly into place when scrolling */
-  padding-bottom: 12px;             /* Prevents scrollbar from overlapping card shadows */
+  grid-template-rows: repeat(2, 40px);   /* Creates 2 fixed-height rows */
+  grid-auto-flow: column;                /* Fills columns top-to-bottom, adding new columns horizontally */
+  grid-auto-columns: 200px;              /* Sets width for each generated column (adjust as needed) */
+  gap: 12px;                             /* Optional: spacing between grid items */
+  overflow-x: auto;                      /* Enables horizontal scrolling */
+  overscroll-behavior-inline: contain;   /* Prevents page swipe navigation on touch devices */
+  scroll-snap-type: x mandatory;         /* Snaps cards neatly into place when scrolling */
+  padding-bottom: 12px;                  /* Prevents scrollbar from overlapping card shadows */
 }
     .mark-toggle {
       padding: 6px 12px;
@@ -69,7 +70,7 @@ layout: window
          <!-- 2. Render the selectable toggle buttons -->
   <div id="mark-buttons" class="scroll-grid">
     {% for mark in unique_marks %}
-      <button type="button" class="mark-toggle" data-mark="{{ mark | slugify }}">
+      <button type="button" class="mark-toggle" style="scroll-snap-align: start" data-mark="{{ mark | slugify }}">
         {{ mark }}
       </button>
     {% endfor %}
