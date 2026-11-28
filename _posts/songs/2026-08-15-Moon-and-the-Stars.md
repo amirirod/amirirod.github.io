@@ -8,4 +8,5 @@ apple_link: https://embed.music.apple.com/us/song/moon-and-the-stars/6767448442
 date: 2026-08-15
 blurb_text: "[Update Later]{Pure joy}"
 tldr: "[Update Later]{yippee}"
+mark: [Rage, Chill, Beautiful, Happy]
 ---
