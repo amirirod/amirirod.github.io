@@ -363,3 +363,6 @@ gap: 20px;
 display: inline;
 margin-right: 10px;
 }
+   .no-scroll {
+            overflow: hidden;
+        }
