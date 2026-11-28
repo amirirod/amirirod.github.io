@@ -67,7 +67,7 @@ layout: window
       </div>
       <hr>
         <!-- 3. Display the list of currently selected marks -->
-  <div style="border: 2px dotted #DD756E !important; border-radius: 10px; text-align: justify; text-align-last: center;">
+  <div style="border: 2px dotted #DD756E !important; border-radius: 10px; text-align: justify; text-align-last: center; background-image: url('/imgs/Back.png');">
     <strong>Showing:</strong>
     <div id="selected-marks-list">
       <span class="empty-msg">None selected</span>
@@ -174,7 +174,7 @@ layout: window
 
      selectedMarks.forEach((label, index) => {
   if (index > 0) {
-    selectedList.append(" ");
+    selectedList.append("and");
   }
   const gorp = document.createElement("gorp-");
   gorp.textContent = label;
