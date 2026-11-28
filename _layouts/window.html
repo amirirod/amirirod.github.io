@@ -49,17 +49,22 @@ layout: default
   function openWindow() {
     const windowEl = document.getElementById("customWindow");
     
-    // If the window is currently hidden or not explicitly set, open it
     if (windowEl.style.display === "none" || windowEl.style.display === "") {
       windowEl.style.display = "block";
+      // Lock background scrolling
+      document.body.style.overflow = "hidden";
     } else {
       windowEl.style.display = "none";
+      // Restore background scrolling
+      document.body.style.overflow = "";
     }
   }
 
-  // Optional: Keep your original close function if your inside-popup buttons still use it
   function closeWindow() {
     document.getElementById("customWindow").style.display = "none";
+    // Restore background scrolling
+    document.body.style.overflow = "";
+    
     const overlayEl = document.getElementById("overlay");
     if (overlayEl) overlayEl.style.display = "none";
   }
