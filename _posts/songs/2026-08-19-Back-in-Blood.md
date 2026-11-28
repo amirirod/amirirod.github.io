@@ -8,5 +8,5 @@ apple_link: https://embed.music.apple.com/us/song/back-in-blood-feat-lil-durk/15
 date: 2026-08-19
 blurb_text: "[Update Later]{Stupid to go from this to that}"
 tldr: "[Update Later]"
-mark: [Classic, Hard, Jailed]
+mark: [Classic, Hard, Jailed, Mainstream]
 ---
