@@ -337,5 +337,6 @@ html {
 */
 gorp- {
 gap: 20px;
-display: inline
+display: inline;
+margin: 10px;
 }
