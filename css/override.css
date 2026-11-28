@@ -364,6 +364,8 @@ gap: 20px;
 display: inline;
 margin-right: 10px;
 }
-   .no-scroll {
-            overflow: hidden;
-        }
+body.no-scroll {
+  position: fixed;
+  width: 100%;
+  overflow-y: scroll; /* Prevents horizontal layout shift when scrollbar disappears */
+}
