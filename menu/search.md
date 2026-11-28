@@ -36,7 +36,6 @@ layout: window
   <header class="post-header">
     <h1 class="post-title"></h1>
   </header>
-<body>
 
   <!-- 1. Gather unique marks using Liquid -->
   {% assign all_marks = "" | split: "" %}
@@ -214,5 +213,3 @@ layout: window
       }
     });
   </script>
-</body>
-</html>
