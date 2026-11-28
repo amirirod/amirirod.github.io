@@ -8,9 +8,9 @@ layout: window
   <style>
 .scroll-grid {
   display: grid;
-  grid-template-rows: repeat(2, 40px);   /* Creates 2 fixed-height rows */
+  grid-template-rows: repeat(3, 35px);   /* Creates 2 fixed-height rows */
   grid-auto-flow: column;                /* Fills columns top-to-bottom, adding new columns horizontally */
-  grid-auto-columns: 200px;              /* Sets width for each generated column (adjust as needed) */
+  grid-auto-columns: max-content;              /* Sets width for each generated column (adjust as needed) */
   gap: 12px;                             /* Optional: spacing between grid items */
   overflow-x: auto;                      /* Enables horizontal scrolling */
   overscroll-behavior-inline: contain;   /* Prevents page swipe navigation on touch devices */
