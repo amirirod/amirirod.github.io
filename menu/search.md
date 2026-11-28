@@ -69,9 +69,9 @@ layout: window
         <!-- 3. Display the list of currently selected marks -->
   <div>
     <strong>Showing:</strong>
-    <ul id="selected-marks-list">
-      <li class="empty-msg">None selected</li>
-    </ul>
+    <div id="selected-marks-list">
+      <span class="empty-msg">None selected</span>
+    </div>
   </div>
     </p>
     <div style="
@@ -173,9 +173,9 @@ layout: window
         }
 
         selectedMarks.forEach((label) => {
-          const li = document.createElement("li");
-          li.textContent = label;
-          selectedList.appendChild(li);
+          const span = document.createElement("span");
+          span.textContent = label;
+          selectedList.appendChild(span);
         });
       }
 
