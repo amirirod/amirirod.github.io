@@ -172,18 +172,20 @@ layout: window
           return;
         }
 
-selectedMarks.forEach((label, index) => {
-  if (index > 0) {
-    const separator = document.createElement("span");
-    separator.textContent = " and "; // Added spaces around "and"
-    selectedList.appendChild(separator);
-  }
+        // Convert the Map values to an array to get a proper numeric index
+        const labels = Array.from(selectedMarks.values());
 
-  const span = document.createElement("span");
-  span.textContent = label;
-  selectedList.appendChild(span);
-});
-      }
+        labels.forEach((label, index) => {
+          if (index > 0) {
+            const separator = document.createElement("span");
+            separator.textContent = " and ";
+            selectedList.appendChild(separator);
+          }
+
+          const span = document.createElement("span");
+          span.textContent = label;
+          selectedList.appendChild(span);
+        });
 
       function filterPosts() {
         const activeSlugs = Array.from(selectedMarks.keys());
