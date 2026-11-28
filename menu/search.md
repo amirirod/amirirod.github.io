@@ -172,10 +172,13 @@ layout: window
           return;
         }
 
-     selectedMarks.forEach((label, index) => {
+selectedMarks.forEach((label, index) => {
   if (index > 0) {
-    selectedList.append("and");
+    const separator = document.createElement("span");
+    separator.textContent = " and ";
+    selectedList.appendChild(separator);
   }
+
   const gorp = document.createElement("gorp-");
   gorp.textContent = label;
   selectedList.appendChild(gorp);
