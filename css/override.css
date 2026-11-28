@@ -45,6 +45,7 @@ hr {
   font-size: 2.5em;
   opacity: 0.3;
 }
+/*
 .window-overlay {
   display: none; 
   position: fixed;
@@ -54,6 +55,17 @@ hr {
   z-index: 1000;
   translateY: -25%;
 }
+*/
+.window-overlay {
+  display: none; /* Change to 'flex' via JS when opening */
+  position: fixed;
+  inset: 0; /* Shorthand for top: 0; right: 0; bottom: 0; left: 0; */
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+  overflow-y: auto; /* Enables scrolling when content exceeds viewport height */
+  padding: 2rem 1rem; /* Prevents content from touching screen edges */
+}
+/*
 @media (max-width: 500px) {
 .window-overlay {
   display: none; 
@@ -63,6 +75,17 @@ hr {
   background-color: rgba(0,0,0,0.5);
   z-index: 1000;
   translateY: -25%;
+}
+*/
+  @media (max-width: 500px) {
+  .window-overlay {
+  display: none; /* Change to 'flex' via JS when opening */
+  position: fixed;
+  inset: 0; /* Shorthand for top: 0; right: 0; bottom: 0; left: 0; */
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+  overflow-y: auto; /* Enables scrolling when content exceeds viewport height */
+  padding: 2rem 1rem; /* Prevents content from touching screen edges */
 }
 }
 /*
