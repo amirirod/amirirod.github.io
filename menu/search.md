@@ -6,6 +6,15 @@ layout: window
 <head>
   <meta charset="UTF-8" />
   <style>
+    .scroll-grid {
+  display: grid;
+  grid-auto-flow: row;           /* Forces items into horizontal columns instead of wrapping to new rows */
+  grid-auto-rows: 40px;         /* Sets the fixed width of each column (can also use %, rem, or minmax) */
+  overflow-x: auto;                 /* Enables horizontal scrolling */
+  overscroll-behavior-inline: contain; /* Prevents page swipe navigation on touch devices */
+  scroll-snap-type: x mandatory;    /* Optional: snaps cards neatly into place when scrolling */
+  padding-bottom: 12px;             /* Prevents scrollbar from overlapping card shadows */
+}
     .mark-toggle {
       padding: 6px 12px;
       margin: 4px;
@@ -57,11 +66,7 @@ layout: window
     <p style="text-align: center; font-family: Palatino;">
     <div style="text-align: center; font-family: Palatino;">
          <!-- 2. Render the selectable toggle buttons -->
-  <div id="mark-buttons" style="display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(2, 40px);
-  overflow-x: auto; /* Enables horizontal scrolling when content overflows */
-  padding-bottom: 8px; /* Prevents scrollbar from overlapping content */">
+  <div id="mark-buttons">
     {% for mark in unique_marks %}
       <button type="button" class="mark-toggle" data-mark="{{ mark | slugify }}">
         {{ mark }}
