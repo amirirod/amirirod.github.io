@@ -175,7 +175,7 @@ layout: window
         selectedMarks.forEach((label) => {
           const gorp = document.createElement("gorp-");
           gorp.textContent = label;
-          selectedList.appendChild(gorp-);
+          selectedList.appendChild(gorp);
         });
       }
 
