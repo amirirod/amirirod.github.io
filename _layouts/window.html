@@ -48,24 +48,24 @@ layout: default
 <script>
   function openWindow() {
     const windowEl = document.getElementById("customWindow");
-    const background = document.getlementById("background");
-    
-    if (windowEl.style.display === "none" || windowEl.style.display === "") {
+    const isClosed = windowEl.style.display === "none" || windowEl.style.display === "";
+
+    if (isClosed) {
       windowEl.style.display = "block";
-      // Lock background scrolling
-      background.body.style.overflow = "hidden";
+      document.body.style.overflow = "hidden";
+      document.documentElement.style.overflow = "hidden";
     } else {
       windowEl.style.display = "none";
-      // Restore background scrolling
-      background.body.style.overflow = "";
+      document.body.style.overflow = "";
+      document.documentElement.style.overflow = "";
     }
   }
 
   function closeWindow() {
     document.getElementById("customWindow").style.display = "none";
-    // Restore background scrolling
     document.body.style.overflow = "";
-    
+    document.documentElement.style.overflow = "";
+
     const overlayEl = document.getElementById("overlay");
     if (overlayEl) overlayEl.style.display = "none";
   }
