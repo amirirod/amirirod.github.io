@@ -100,7 +100,7 @@ window_text: "This text loads directly inside the window overlay."
   </div>
 </div>
   <!-- 4. Render posts grouped by tag, hiding tag sections with no matching posts -->
-  <div id="posts-list">
+  <div id="posts-list" >
     {% for tag in site.tags %}
       {% assign tag_name = tag[0] %}
       {% assign tag_posts = tag[1] %}
@@ -136,7 +136,7 @@ window_text: "This text loads directly inside the window overlay."
               {% assign unique_post_marks = post_marks | uniq %}
               <li class="post-entry" data-marks="{{ unique_post_marks | join: ',' }}">
                 <article class="post-item">
-                  <a style="color: #DD756E;" href="{{ post.url | relative_url }}">{{ post.title }}</a>
+                  <a style="color: #BB0000; letter-spacing: -1px; font-weight: 300; text-decoration: underline white;" href="{{ post.url | relative_url }}">{{ post.title }}</a>
                 </article>
               </li>
             {% endfor %}
