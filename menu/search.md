@@ -63,8 +63,8 @@ layout: window
   {% endfor %}
   {% assign unique_marks = all_marks | uniq | sort %}
 <div>
-<div class="content-section" style="background: black; z-index:1">
-  <div style="position: sticky !important; top: 90px; background: black; z-index: 5">
+<div class="content-section" style="position: sticky !important; top: 90px; background: black; z-index: 5">
+  <div >
     <p style="text-align: center; font-family: Palatino;">
     <div style="text-align: center; font-family: Palatino;">
          <!-- 2. Render the selectable toggle buttons -->
