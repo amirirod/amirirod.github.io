@@ -178,7 +178,7 @@ layout: window
         labels.forEach((label, index) => {
           if (index > 0) {
             const separator = document.createElement("span");
-            separator.textContent = " and ";
+            separator.textContent = " ";
             selectedList.appendChild(separator);
           }
 
