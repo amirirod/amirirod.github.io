@@ -179,9 +179,9 @@ selectedMarks.forEach((label, index) => {
     selectedList.appendChild(separator);
   }
 
-  const gorp = document.createElement("gorp-");
-  gorp.textContent = label;
-  selectedList.appendChild(gorp);
+  const span = document.createElement("span");
+  span.textContent = label;
+  selectedList.appendChild(span);
 });
       }
 
