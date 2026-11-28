@@ -66,7 +66,7 @@ layout: window
     <p style="text-align: center; font-family: Palatino;">
     <div style="text-align: center; font-family: Palatino;">
          <!-- 2. Render the selectable toggle buttons -->
-  <div id="mark-buttons">
+  <div id="mark-buttons" class="scroll-grid">
     {% for mark in unique_marks %}
       <button type="button" class="mark-toggle" data-mark="{{ mark | slugify }}">
         {{ mark }}
