@@ -9,43 +9,34 @@ title: bar
   .carousel-wrapper {
     display: flex;
     align-items: center;
-    gap: 12px;
+    gap: 16px;
     max-width: 600px;
     margin: 40px auto;
     font-family: sans-serif;
   }
 
-  /* Grid that flows by column, wrapping after 3 rows */
-  .grid-pages {
+  /* 3 columns x 3 rows grid */
+  .grid-container {
     display: grid;
-    grid-auto-flow: row;
-    grid-template-rows: repeat(3, 100px); /* Wraps 3 times (3 rows) */
-    grid-template-columns: repeat(3, 1fr);            /* Each column takes 100% width (1 page) */
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
-    scroll-behavior: smooth;
-    gap: 10px;
-    width: 100%;
-    
-    /* Hide scrollbar for a cleaner look */
-    scrollbar-width: none; 
-  }
-  .grid-pages::-webkit-scrollbar {
-    display: none;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 100px); /* 3 rows high */
+    gap: 12px;
+    flex: 1;
   }
 
-  .item {
-    scroll-snap-align: start;
-    background: #f0f4f8;
-    border: 1px solid #d1d9e0;
+  .grid-item {
+    background-color: #f0f4f8;
+    border: 1px solid #cbd5e1;
     border-radius: 8px;
-    padding: 20px;
-    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     font-weight: bold;
+    color: #334155;
   }
 
-  .nav-btn {
-    background: #007bff;
+  .arrow-btn {
+    background: #2563eb;
     color: white;
     border: none;
     border-radius: 50%;
@@ -53,57 +44,81 @@ title: bar
     height: 40px;
     font-size: 18px;
     cursor: pointer;
-    flex-shrink: 0;
   }
-  .nav-btn:hover {
-    background: #0056b3;
+
+  .arrow-btn:disabled {
+    background: #cbd5e1;
+    cursor: not-allowed;
   }
 </style>
 </head>
 <body>
 
 <div class="carousel-wrapper">
-  <button class="nav-btn" onclick="scrollPage(-1)">&#8592;</button>
-
-  <div class="grid-pages" id="pageContainer">
-    <!-- Page 1 -->
-    <div class="item">Item 1</div>
-    <div class="item">Item 2</div>
-    <div class="item">Item 3</div>
+  <button class="arrow-btn" id="prevBtn">&#8592;</button>
+  
+  <div class="grid-container" id="grid">
+    <!-- Items go here -->
+    <div class="grid-item">Item 1</div>
+    <div class="grid-item">Item 2</div>
+    <div class="grid-item">Item 3</div>
+    <div class="grid-item">Item 4</div>
+    <div class="grid-item">Item 5</div>
+    <div class="grid-item">Item 6</div>
+    <div class="grid-item">Item 7</div>
+    <div class="grid-item">Item 8</div>
+    <div class="grid-item">Item 9</div>
     <!-- Page 2 -->
-    <div class="item">Item 4</div>
-    <div class="item">Item 5</div>
-    <div class="item">Item 6</div>
-    <!-- Page 3 -->
-    <div class="item">Item 7</div>
-    <div class="item">Item 8</div>
-    <div class="item">Item 9</div>
-     <!-- Page 1 -->
-    <div class="item">Item 10</div>
-    <div class="item">Item 11</div>
-    <div class="item">Item 12</div>
-    <!-- Page 2 -->
-    <div class="item">Item 13</div>
-    <div class="item">Item 14</div>
-    <div class="item">Item 15</div>
-    <!-- Page 3 -->
-    <div class="item">Item 16</div>
-    <div class="item">Item 17</div>
-    <div class="item">Item 18</div>
+    <div class="grid-item">Item 10</div>
+    <div class="grid-item">Item 11</div>
+    <div class="grid-item">Item 12</div>
+    <div class="grid-item">Item 13</div>
+    <div class="grid-item">Item 14</div>
+    <div class="grid-item">Item 15</div>
   </div>
 
-  <button class="nav-btn" onclick="scrollPage(1)">&#8594;</button>
+  <button class="arrow-btn" id="nextBtn">&#8594;</button>
 </div>
 
 <script>
-  function scrollPage(direction) {
-    const container = document.getElementById('pageContainer');
-    // Scroll by the exact width of one visible page
-    container.scrollBy({
-      left: direction * container.clientWidth + 10,
-      behavior: 'smooth'
+  const items = Array.from(document.querySelectorAll('.grid-item'));
+  const prevBtn = document.getElementById('prevBtn');
+  const nextBtn = document.getElementById('nextBtn');
+  
+  const itemsPerPage = 9; // 3 rows x 3 columns
+  let currentPage = 0;
+  const totalPages = Math.ceil(items.length / itemsPerPage);
+
+  function updateGrid() {
+    const start = currentPage * itemsPerPage;
+    const end = start + itemsPerPage;
+
+    // Show only the 9 items for the current page
+    items.forEach((item, index) => {
+      item.style.display = (index >= start && index < end) ? 'flex' : 'none';
     });
+
+    // Disable arrows at the first and last pages
+    prevBtn.disabled = currentPage === 0;
+    nextBtn.disabled = currentPage >= totalPages - 1;
   }
+
+  prevBtn.addEventListener('click', () => {
+    if (currentPage > 0) {
+      currentPage--;
+      updateGrid();
+    }
+  });
+
+  nextBtn.addEventListener('click', () => {
+    if (currentPage < totalPages - 1) {
+      currentPage++;
+      updateGrid();
+    }
+  });
+
+  // Initialize first page
+  updateGrid();
 </script>
 
 </body>
