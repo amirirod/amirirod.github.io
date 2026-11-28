@@ -62,7 +62,7 @@ title: bar
 </head>
 <body>
 
-<div class="carousel-wrapper" id="width">
+<div class="carousel-wrapper">
   <button class="nav-btn" onclick="scrollPage(-1)">&#8592;</button>
 
   <div class="grid-pages" id="pageContainer">
@@ -84,10 +84,10 @@ title: bar
 
 <script>
   function scrollPage(direction) {
-    const container = document.getElementById('width');
+    const container = document.getElementById('pageContainer');
     // Scroll by the exact width of one visible page
     container.scrollBy({
-      left: direction * container.clientWidth,
+      left: direction * container.clientWidth + 10,
       behavior: 'smooth'
     });
   }
