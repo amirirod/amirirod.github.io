@@ -68,7 +68,7 @@ window_title: "Search"
       <li style="font-weight: bold; margin-top: 10px; margin-bottom: 5px;">{{ current_month }}</li>
     {% endif %}
     <li style="padding-left: 15px;">
-      <a href="{{ post.url }}" style="color: #FFFFFF !important">{{ post.date | date: "%B %d, %Y"}} - {{ post.title }}</a>
+      <a href="{{ post.url }}" style="color: white !important; letter-spacing: -1px; font-weight: 300; text-decoration: underline #BB0000;">{{ post.date | date: "%B %d, %Y"}} - {{ post.title }}</a>
     </li>
   {% endfor %}
 </ul>
