@@ -179,7 +179,7 @@ layout: window
         selectedList.innerHTML = "";
 
         if (selectedMarks.size === 0) {
-          selectedList.innerHTML = '<span class="empty-msg">None selected</span>';
+          selectedList.innerHTML = '<span class="empty-msg">All</span>';
           return;
         }
 
