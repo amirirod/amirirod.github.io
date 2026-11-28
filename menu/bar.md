@@ -18,7 +18,7 @@ title: bar
   /* Grid that flows by column, wrapping after 3 rows */
   .grid-pages {
     display: grid;
-    grid-auto-flow: column;
+    grid-auto-flow: row;
     grid-template-rows: repeat(3, 1fr); /* Wraps 3 times (3 rows) */
     grid-template-columns: repeat(3, 1fr);            /* Each column takes 100% width (1 page) */
     overflow-x: auto;
@@ -77,6 +77,19 @@ title: bar
     <!-- Page 3 -->
     <div class="item">Item 7</div>
     <div class="item">Item 8</div>
+    <div class="item">Item 9</div>
+     <!-- Page 1 -->
+    <div class="item">Item 10</div>
+    <div class="item">Item 11</div>
+    <div class="item">Item 12</div>
+    <!-- Page 2 -->
+    <div class="item">Item 13</div>
+    <div class="item">Item 14</div>
+    <div class="item">Item 15</div>
+    <!-- Page 3 -->
+    <div class="item">Item 16</div>
+    <div class="item">Item 17</div>
+    <div class="item">Item 18</div>
   </div>
 
   <button class="nav-btn" onclick="scrollPage(1)">&#8594;</button>
