@@ -6,6 +6,7 @@ blurb_text: "Its simple, its catchy, its gritty, its hard"
 tldr: "listen to song because good"
 spotify_link: https://open.spotify.com/embed/track/4KOlRlB81TAmDXHQZiVTbY?utm_source=generator&si=f79b647587164543
 apple_link: https://embed.music.apple.com/us/album/grimace/1431494221?i=1431494333
+mark: [Hard, ATL, Underground]
 ---
 ## "Grimace" by Billboard Benji
 
