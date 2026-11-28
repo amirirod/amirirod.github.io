@@ -8,4 +8,5 @@ apple_link: https://embed.music.apple.com/us/song/prince-charming/1782184925
 date: 2026-08-10
 blurb_text: "[Update Later]{Unique vibe}{Favorite}"
 tldr: "[Update Later]"
+mark: [Unique, ATL, Rage, Beautiful, Favorite]
 ---
