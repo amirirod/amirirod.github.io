@@ -172,11 +172,14 @@ layout: window
           return;
         }
 
-        selectedMarks.forEach((label) => {
-          const gorp = document.createElement("gorp-");
-          gorp.textContent = label;
-          selectedList.appendChild(gorp);
-        });
+     selectedMarks.forEach((label, index) => {
+  if (index > 0) {
+    selectedList.append(" ");
+  }
+  const gorp = document.createElement("gorp-");
+  gorp.textContent = label;
+  selectedList.appendChild(gorp);
+});
       }
 
       function filterPosts() {
