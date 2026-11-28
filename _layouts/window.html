@@ -2,7 +2,7 @@
 layout: default
 ---
 
-<div class="main-page-content">
+<div class="main-page-content" id="background">
   {{ content }}
 </div>
 
@@ -48,15 +48,16 @@ layout: default
 <script>
   function openWindow() {
     const windowEl = document.getElementById("customWindow");
+    const background = document.getlementById("background");
     
     if (windowEl.style.display === "none" || windowEl.style.display === "") {
       windowEl.style.display = "block";
       // Lock background scrolling
-      document.body.style.overflow = "hidden";
+      background.body.style.overflow = "hidden";
     } else {
       windowEl.style.display = "none";
       // Restore background scrolling
-      document.body.style.overflow = "";
+      background.body.style.overflow = "";
     }
   }
 
