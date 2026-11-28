@@ -67,7 +67,7 @@ layout: window
       </div>
       <hr>
         <!-- 3. Display the list of currently selected marks -->
-  <div style="border: 1px solid grey; text-align: justify;">
+  <div style="border: 1px solid grey; text-align: justify; text-align-last: center;">
     <strong>Showing:</strong>
     <div id="selected-marks-list">
       <span class="empty-msg">None selected</span>
