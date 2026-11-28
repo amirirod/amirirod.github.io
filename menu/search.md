@@ -3,7 +3,6 @@ tags: menu
 title: search
 layout: window
 ---
-<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <style>
