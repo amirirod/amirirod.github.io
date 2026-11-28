@@ -6,6 +6,7 @@ blurb_text: "Im honestly not sure how to describe this song. The best I can do i
 tldr: "if somebody dont make up a new word to describe whatever this song is I will (Im leaning towards supercrank or free rage)"
 spotify_link: https://open.spotify.com/embed/track/7xUt2Y9agFjeFxWaiNKxyo?utm_source=generator&si=d0ce5257d5224b2d
 apple_link: https://embed.music.apple.com/ie/song/better-than-mic/6784426796
+mark: [Rage, DMV, Loud]
 ---
 ## "BETTER THAN MIC" by SlimeGetEm
 
