@@ -11,7 +11,8 @@ window_text: "This text loads directly inside the window overlay."
   display: grid;
   grid-template-rows: repeat(3, 30px);   /* Creates 2 fixed-height rows */
   grid-auto-flow: column;                /* Fills columns top-to-bottom, adding new columns horizontally */
-  grid-auto-columns: max-content;              /* Sets width for each generated column (adjust as needed) */                         /* Optional: spacing between grid items */
+  grid-auto-columns: max-content;              /* Sets width for each generated column (adjust as needed) */    
+  gap: 10px; /* Optional: spacing between grid items */
   overflow-x: auto;                      /* Enables horizontal scrolling */
   overscroll-behavior-inline: contain;   /* Prevents page swipe navigation on touch devices */
   scroll-snap-type: x mandatory;         /* Snaps cards neatly into place when scrolling */
